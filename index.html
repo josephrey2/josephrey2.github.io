@@ -13,7 +13,7 @@
       --blue-light: #1d7dd4;
       --blue-dark: #021528;
       --blue-ink: #071427;
-      --bg-page: #020617;
+      --bg-page: #06192e;          /* constant base color, like the contact section */
       --bg-card: #041425;
       --bg-card-soft: #06192e;
       --border-subtle: rgba(148, 163, 184, 0.35);
@@ -37,32 +37,40 @@
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    /* GALAXY BACKGROUND (no dots, just smooth nebula gradients) */
+    /* CONSTANT GALAXY BACKGROUND */
     body {
       position: relative;
       min-height: 100vh;
-      background:
-        radial-gradient(circle at 12% 0%, rgba(56, 189, 248, 0.18) 0, transparent 55%),
-        radial-gradient(circle at 90% 8%, rgba(129, 140, 248, 0.30) 0, transparent 55%),
-        radial-gradient(circle at 0% 82%, rgba(236, 72, 153, 0.18) 0, transparent 60%),
-        radial-gradient(circle at 80% 88%, rgba(37, 99, 235, 0.25) 0, transparent 55%),
-        linear-gradient(145deg, #020617 0%, #000014 40%, #020617 75%, #000000 100%);
+      background: var(--bg-page);   /* constant navy everywhere */
       color: var(--text-main);
       line-height: 1.5;
       overflow-x: hidden;
     }
 
-    /* extra faint nebula glow */
+    /* subtle purple/blue nebula + scattered stars */
     body::before {
       content: "";
       position: fixed;
       inset: -120px;
       pointer-events: none;
       z-index: -1;
-      background:
-        radial-gradient(circle at 60% 30%, rgba(59, 130, 246, 0.18) 0, transparent 55%),
-        radial-gradient(circle at 20% 60%, rgba(30, 64, 175, 0.35) 0, transparent 60%);
-      opacity: 0.7;
+      background-image:
+        /* nebula glows */
+        radial-gradient(circle at 15% 15%, rgba(129, 140, 248, 0.45) 0, transparent 55%),
+        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.40) 0, transparent 55%),
+        radial-gradient(circle at 10% 80%, rgba(56, 189, 248, 0.32) 0, transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.35) 0, transparent 55%),
+
+        /* stars (small, scattered) */
+        radial-gradient(1px 1px at 10% 30%, rgba(255,255,255,0.85) 0, transparent 50%),
+        radial-gradient(1px 1px at 25% 70%, rgba(248,250,252,0.75) 0, transparent 50%),
+        radial-gradient(1px 1px at 40% 40%, rgba(255,255,255,0.7) 0, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(248,250,252,0.9) 0, transparent 50%),
+        radial-gradient(1px 1px at 75% 60%, rgba(255,255,255,0.8) 0, transparent 50%),
+        radial-gradient(1px 1px at 90% 35%, rgba(248,250,252,0.8) 0, transparent 50%),
+        radial-gradient(1px 1px at 50% 85%, rgba(255,255,255,0.85) 0, transparent 50%),
+        radial-gradient(1px 1px at 30% 90%, rgba(241,245,249,0.8) 0, transparent 50%);
+      opacity: 0.8;
       mix-blend-mode: screen;
     }
 
@@ -336,9 +344,7 @@
     .page-header {
       padding: 3rem 0 1.2rem;
       border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-      /* darker galaxy bar behind logo/text, no light blue wash */
-      background:
-        linear-gradient(135deg, rgba(3, 7, 18, 0.96), rgba(15, 23, 42, 0.98));
+      background: rgba(3, 7, 18, 0.96);
     }
 
     .page-header-inner {
@@ -1720,4 +1726,5 @@
   </script>
 </body>
 </html>
+
 

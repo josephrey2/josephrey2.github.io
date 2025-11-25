@@ -1,56 +1,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Universe Mechanical & Air Conditioning Inc. | Miami A/C Experts</title>
+  <title>Universe Mechanical & Air Conditioning Inc. | Miami A/C & Mechanical</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Universe Mechanical & Air Conditioning Inc. - Miami's trusted A/C experts for new construction, installs, repairs and maintenance." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Universe Mechanical & Air Conditioning Inc. - Miami’s trusted mechanical and A/C contractor for new construction, retrofits and service." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg-dark: #050814;
-      --bg-darker: #02030a;
-      --bg-card: #0c1020;
-      --accent: #23b1ff;
-      --accent-soft: rgba(35, 177, 255, 0.2);
-      --accent-2: #2effb9;
-      --text-main: #f5f7ff;
-      --text-muted: #a3aed0;
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --danger: #ff4d4f;
-      --radius-xl: 22px;
-      --shadow-soft: 0 18px 55px rgba(0, 0, 0, 0.65);
+      --blue-main: #00549c;
+      --blue-dark: #003b73;
+      --blue-light: #e6f0fa;
+      --bg-light: #f5f7fb;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --radius-lg: 18px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.22);
       --transition-fast: 0.18s ease-out;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
-      scroll-behavior: smooth;
-      background: radial-gradient(circle at top left, #132043 0, #050814 40%, #02030a 100%);
-      color: var(--text-main);
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background: #ffffff;
+      scroll-behavior: smooth;
     }
 
-    body {
-      line-height: 1.5;
-    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* Layout helpers */
     .container {
       width: 100%;
       max-width: 1200px;
@@ -58,120 +39,57 @@
       padding: 0 1.5rem;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.85rem 1.8rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border var(--transition-fast), color var(--transition-fast);
-      white-space: nowrap;
-      gap: 0.45rem;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #4f46e5);
-      color: white;
-      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
-    }
-
-    .btn-ghost {
-      background: rgba(9, 12, 28, 0.8);
-      color: var(--text-main);
-      border-color: rgba(255, 255, 255, 0.15);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(16, 22, 52, 0.95);
-      transform: translateY(-1px);
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.35rem 0.8rem;
-      font-size: 0.7rem;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(8, 13, 33, 0.85);
-      color: var(--text-muted);
-      gap: 0.4rem;
-    }
-
-    .badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent-2);
-      box-shadow: 0 0 14px rgba(46, 255, 185, 0.9);
-    }
-
     /* NAVBAR */
     .navbar {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      inset: 0 0 auto 0;
       z-index: 40;
       transition: background var(--transition-fast), box-shadow var(--transition-fast), border-bottom var(--transition-fast), backdrop-filter var(--transition-fast);
     }
 
     .navbar-inner {
+      height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 76px;
     }
 
     .navbar.scrolled {
-      background: rgba(3, 5, 18, 0.88);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.72);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
     }
 
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
-      font-weight: 600;
+      gap: 0.75rem;
     }
 
-    .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 16px;
-      background: radial-gradient(circle at 30% 0, #ffffff, #4f46e5 45%, #23b1ff 100%);
-      box-shadow: 0 10px 30px rgba(35, 177, 255, 0.6);
+    .logo-img {
+      height: 44px;
+      width: auto;
+    }
+
+    .logo-text-block {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .logo-main {
       font-size: 0.9rem;
-      color: var(--bg-dark);
       font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #0b1f36;
     }
 
-    .logo-text-main {
-      font-size: 0.95rem;
+    .logo-sub {
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-    }
-
-    .logo-text-sub {
-      font-size: 0.67rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
       color: var(--text-muted);
     }
 
@@ -180,29 +98,28 @@
       align-items: center;
       gap: 1.75rem;
       font-size: 0.9rem;
+      font-weight: 500;
     }
 
     .nav-links a {
-      color: var(--text-muted);
       position: relative;
-      padding-bottom: 0.1rem;
-      transition: color var(--transition-fast);
+      color: #ffffff;
+    }
+
+    .navbar.scrolled .nav-links a {
+      color: var(--text-muted);
     }
 
     .nav-links a::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -0.3rem;
+      bottom: -0.35rem;
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      background: var(--blue-main);
       border-radius: 999px;
       transition: width var(--transition-fast);
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
     }
 
     .nav-links a:hover::after {
@@ -212,43 +129,95 @@
     .nav-right {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1rem;
+      font-size: 0.8rem;
     }
 
     .nav-phone {
-      font-size: 0.8rem;
+      color: #ffffff;
+    }
+
+    .navbar.scrolled .nav-phone {
       color: var(--text-muted);
     }
 
     .nav-phone strong {
-      color: var(--accent-2);
-      font-weight: 600;
+      color: #ffffff;
     }
 
-    .nav-cta {
+    .navbar.scrolled .nav-phone strong {
+      color: var(--blue-main);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
       font-size: 0.8rem;
-      padding-inline: 1.2rem;
-      padding-block: 0.55rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), color var(--transition-fast), border var(--transition-fast);
+      white-space: nowrap;
+      gap: 0.35rem;
+    }
+
+    .btn-primary {
+      background: var(--blue-main);
+      color: #ffffff;
+      box-shadow: 0 12px 30px rgba(0, 84, 156, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(0, 84, 156, 0.55);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .navbar.scrolled .btn-outline {
+      color: var(--blue-main);
+      border-color: var(--blue-main);
+    }
+
+    .btn-outline:hover {
+      background: #ffffff;
+      color: var(--blue-main);
     }
 
     .nav-toggle {
       display: none;
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      background: rgba(15, 23, 42, 0.5);
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      background: rgba(3, 7, 18, 0.8);
+    }
+
+    .navbar.scrolled .nav-toggle {
+      border-color: rgba(148, 163, 184, 0.9);
+      background: #ffffff;
     }
 
     .nav-toggle span {
       width: 18px;
       height: 2px;
-      background: white;
-      position: relative;
       border-radius: 999px;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .navbar.scrolled .nav-toggle span {
+      background: var(--text-main);
     }
 
     .nav-toggle span::before,
@@ -258,18 +227,13 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: white;
       border-radius: 999px;
-      transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+      background: inherit;
+      transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease, opacity 0.2s ease;
     }
 
-    .nav-toggle span::before {
-      top: -5px;
-    }
-
-    .nav-toggle span::after {
-      bottom: -5px;
-    }
+    .nav-toggle span::before { top: -5px; }
+    .nav-toggle span::after { bottom: -5px; }
 
     .nav-toggle.active span {
       background: transparent;
@@ -287,100 +251,109 @@
 
     .nav-mobile {
       display: none;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
     }
 
-    /* HERO */
+    .nav-mobile-list {
+      padding: 0.9rem 1.5rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-mobile-list a {
+      color: var(--text-muted);
+    }
+
+    .nav-mobile-list a:hover {
+      color: var(--blue-main);
+    }
+
+    /* HERO WITH VIDEO */
     .hero {
-      padding-top: 110px;
-      padding-bottom: 90px;
+      position: relative;
+      min-height: 90vh;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: -2;
+    }
+
+    .hero-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(0, 59, 115, 0.92), rgba(0, 84, 156, 0.8), rgba(15, 23, 42, 0.75)),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.9), transparent 40%);
+      z-index: -1;
+    }
+
+    .hero-inner {
+      padding-top: 100px;
+      padding-bottom: 80px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
       gap: 3rem;
       align-items: center;
     }
 
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-tag {
-      background: rgba(10, 19, 48, 0.9);
-      border-radius: 999px;
-      padding: 0.1rem;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .hero-tag span {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.35rem 0.7rem;
-      font-size: 0.68rem;
+    .hero-tagline {
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-    }
-
-    .hero-tag span:nth-child(1) {
-      border-radius: 999px;
-      background: radial-gradient(circle at 20% 0, rgba(255, 255, 255, 0.3), var(--accent) 55%, #4f46e5 100%);
-      color: #050814;
-      font-weight: 600;
+      margin-bottom: 0.8rem;
+      opacity: 0.9;
     }
 
     .hero-title {
-      font-size: 2.9rem;
-      line-height: 1.1;
+      font-size: 3rem;
+      line-height: 1.05;
       font-weight: 700;
-      margin-bottom: 1.1rem;
+      margin-bottom: 0.75rem;
     }
 
     .hero-title span {
-      background: linear-gradient(135deg, #ffffff, var(--accent-2));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      color: #dbeafe;
     }
 
     .hero-subtitle {
       font-size: 0.98rem;
-      color: var(--text-muted);
       max-width: 32rem;
+      opacity: 0.9;
       margin-bottom: 1.6rem;
     }
 
-    .hero-bullets {
+    .hero-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-bottom: 2.1rem;
-      font-size: 0.8rem;
+      gap: 0.6rem;
+      margin-bottom: 1.8rem;
+      font-size: 0.78rem;
     }
 
-    .hero-bullet {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.4rem 0.9rem;
+    .hero-badge {
+      padding: 0.25rem 0.9rem;
       border-radius: 999px;
-      background: rgba(8, 13, 33, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-muted);
-    }
-
-    .hero-bullet-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: radial-gradient(circle, var(--accent-2), var(--accent));
-      box-shadow: 0 0 12px rgba(46, 255, 185, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      background: rgba(15, 23, 42, 0.35);
     }
 
     .hero-actions {
@@ -388,248 +361,72 @@
       flex-wrap: wrap;
       gap: 0.9rem;
       align-items: center;
-      margin-bottom: 1.7rem;
+      margin-bottom: 1rem;
     }
 
     .hero-note {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .hero-note span {
-      color: var(--accent-2);
-      font-weight: 500;
-    }
-
-    .hero-right {
-      position: relative;
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top, rgba(35, 177, 255, 0.16), rgba(5, 8, 20, 0.95));
-      border-radius: 32px;
-      padding: 1.6rem 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 15% 0, rgba(35, 177, 255, 0.32), transparent 55%),
-        radial-gradient(circle at 85% 100%, rgba(79, 70, 229, 0.38), transparent 55%);
-      opacity: 0.75;
-      pointer-events: none;
-    }
-
-    .hero-card-inner {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 0.8rem;
-      gap: 1rem;
-    }
-
-    .hero-card-title {
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .hero-card-pill {
-      font-size: 0.7rem;
-      color: var(--accent-2);
-      background: rgba(2, 6, 23, 0.9);
-      padding: 0.3rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(35, 177, 255, 0.25);
-    }
-
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.9rem;
-      margin-bottom: 1.2rem;
-      font-size: 0.75rem;
-    }
-
-    .metric-label {
-      color: var(--text-muted);
-      margin-bottom: 0.25rem;
-    }
-
-    .metric-value {
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .metric-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-size: 0.7rem;
-      color: var(--accent-2);
-      padding: 0.15rem 0.45rem;
-      border-radius: 999px;
-      border: 1px solid rgba(46, 255, 185, 0.35);
-      background: rgba(3, 7, 18, 0.88);
-    }
-
-    .hero-card-row {
-      display: flex;
-      gap: 1rem;
       font-size: 0.8rem;
+      opacity: 0.9;
+    }
+
+    .hero-panel {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 22px;
+      padding: 1.7rem 1.5rem;
+      color: var(--text-main);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-panel-title {
+      font-size: 1rem;
+      font-weight: 600;
       margin-bottom: 0.4rem;
     }
 
-    .hero-card-row > div {
-      flex: 1;
+    .hero-panel-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
     }
 
-    .hero-card-row strong {
-      font-size: 0.8rem;
+    .hero-panel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+      font-size: 0.78rem;
     }
 
-    .hero-card-divider {
-      height: 1px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      margin: 0.9rem 0 0.7rem;
+    .hero-metric-label {
+      color: var(--text-muted);
+      margin-bottom: 0.15rem;
     }
 
-    .hero-card-bottom {
+    .hero-metric-value {
+      font-weight: 600;
+      color: var(--blue-dark);
+    }
+
+    .hero-panel-footer {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 1.2rem;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.78rem;
+    }
+
+    .hero-panel-chip {
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: var(--blue-light);
+      color: var(--blue-main);
+      font-weight: 500;
       font-size: 0.75rem;
     }
 
-    .hero-avatar-row {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    .hero-avatars {
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .hero-avatars span {
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0, #ffffff, var(--accent));
-      border: 1px solid rgba(5, 8, 20, 0.9);
-      display: inline-block;
-      margin-left: -6px;
-    }
-
-    .hero-avatars span:first-child {
-      margin-left: 0;
-      background: radial-gradient(circle at 30% 0, #ffffff, #f97316);
-    }
-
-    .hero-card-badge {
-      font-size: 0.7rem;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(2, 6, 23, 0.9);
-      border: 1px solid rgba(35, 177, 255, 0.28);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .hero-floating {
-      position: absolute;
-      inset: auto 0 -26px auto;
-      transform: translateX(15%);
-      width: 220px;
-      padding: 0.8rem 0.95rem;
-      border-radius: 999px;
-      background: rgba(3, 7, 18, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.7rem;
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
-    }
-
-    .hero-floating-dot {
-      width: 16px;
-      height: 16px;
-      border-radius: 999px;
-      background: radial-gradient(circle, var(--accent), var(--accent-2));
-      box-shadow: 0 0 16px rgba(35, 177, 255, 0.9);
-    }
-
-    .hero-floating span {
-      color: var(--text-muted);
-    }
-
-    .hero-floating strong {
-      color: var(--accent-2);
-      font-weight: 600;
-    }
-
-    /* Strip */
-    .trust-strip {
-      border-radius: var(--radius-xl);
-      margin-bottom: 3.2rem;
-      padding: 0.85rem 1.1rem;
-      background: radial-gradient(circle at 0 0, rgba(35, 177, 255, 0.24), rgba(5, 8, 20, 0.96));
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.2rem;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .trust-strip strong {
-      color: var(--text-main);
-    }
-
-    .trust-items {
-      display: flex;
-      gap: 1.8rem;
-      flex-wrap: wrap;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      white-space: nowrap;
-    }
-
-    .trust-badge {
-      width: 16px;
-      height: 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(46, 255, 185, 0.6);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.6rem;
-      color: var(--accent-2);
-    }
-
-    /* Sections base */
+    /* SECTIONS */
     section {
-      padding: 0 0 80px;
+      padding: 80px 0;
     }
 
     .section-header {
@@ -637,21 +434,26 @@
       justify-content: space-between;
       align-items: flex-end;
       gap: 1.5rem;
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
     }
 
-    .section-title-wrap {
-      max-width: 28rem;
+    .section-heading {
+      max-width: 32rem;
     }
 
-    .section-badge {
+    .section-eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blue-main);
       margin-bottom: 0.5rem;
     }
 
     .section-title {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 600;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.4rem;
+      color: #0b1f36;
     }
 
     .section-subtitle {
@@ -660,136 +462,181 @@
     }
 
     .section-note {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
       max-width: 18rem;
       text-align: right;
     }
 
-    /* SERVICES */
-    .cards-grid {
+    /* ABOUT */
+    #about {
+      background: var(--bg-light);
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .about-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .about-highlight {
+      font-weight: 500;
+      color: #0b1f36;
+    }
+
+    .leaders-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
-    .card {
-      border-radius: var(--radius-xl);
-      padding: 1.3rem 1.2rem;
-      background: radial-gradient(circle at top, rgba(35, 177, 255, 0.15), rgba(9, 12, 30, 0.98));
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.78);
-      position: relative;
-      overflow: hidden;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border var(--transition-fast), background var(--transition-fast);
+    .leader-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 1rem 0.9rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      text-align: left;
+      font-size: 0.85rem;
     }
 
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: auto -40% -65%;
-      background: radial-gradient(circle at 50% 0, rgba(35, 177, 255, 0.28), transparent 55%);
-      opacity: 0;
-      transition: opacity 0.25s ease-out, transform 0.25s ease-out;
-      transform: translateY(10px);
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(35, 177, 255, 0.55);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
-      background: radial-gradient(circle at top, rgba(35, 177, 255, 0.22), rgba(4, 7, 20, 0.98));
-    }
-
-    .card:hover::after {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card-icon {
+    .leader-initial {
       width: 32px;
       height: 32px;
-      border-radius: 14px;
-      background: rgba(15, 23, 42, 0.95);
+      border-radius: 999px;
+      background: var(--blue-main);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 0.85rem;
-      font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .leader-name {
+      font-weight: 600;
+      color: #0b1f36;
+      margin-bottom: 0.15rem;
+    }
+
+    .leader-role {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--blue-main);
+      margin-bottom: 0.35rem;
+    }
+
+    .leader-text {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* CARDS (SERVICES) */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 1.2rem 1.1rem 1.3rem;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border var(--transition-fast);
+      font-size: 0.85rem;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+      border-color: rgba(0, 84, 156, 0.6);
     }
 
     .card-title {
-      font-size: 0.98rem;
+      font-size: 1rem;
       font-weight: 600;
-      margin-bottom: 0.45rem;
+      color: #0b1f36;
+      margin-bottom: 0.35rem;
     }
 
     .card-text {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
-      margin-bottom: 0.9rem;
-      min-height: 3rem;
+      margin-bottom: 0.8rem;
     }
 
     .card-tags {
       display: flex;
-      gap: 0.4rem;
       flex-wrap: wrap;
-      margin-bottom: 0.9rem;
+      gap: 0.4rem;
+      margin-bottom: 0.8rem;
     }
 
     .card-tag {
-      font-size: 0.7rem;
-      padding: 0.2rem 0.55rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(148, 163, 184, 0.6);
       color: var(--text-muted);
+      background: #f9fafb;
     }
 
     .card-footer {
+      font-size: 0.78rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.75rem;
+      gap: 0.6rem;
     }
 
     .card-link {
+      font-weight: 500;
+      color: var(--blue-main);
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
-      color: var(--accent);
-    }
-
-    .card-link span {
-      font-size: 0.9rem;
     }
 
     /* NEW CONSTRUCTION */
     .construction-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
       gap: 2rem;
-      align-items: flex-start;
     }
 
     .timeline {
-      border-radius: var(--radius-xl);
-      padding: 1.5rem 1.4rem;
-      background: radial-gradient(circle at 0 0, rgba(79, 70, 229, 0.2), rgba(7, 11, 31, 0.98));
+      border-radius: var(--radius-lg);
       border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
+      background: #ffffff;
+      padding: 1.3rem 1.2rem 1.4rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      font-size: 0.85rem;
     }
 
     .timeline-step {
       display: grid;
-      grid-template-columns: 32px minmax(0, 1fr);
-      gap: 0.9rem;
+      grid-template-columns: 30px minmax(0, 1fr);
+      gap: 0.8rem;
+      padding: 0.75rem 0;
       align-items: flex-start;
-      padding: 0.7rem 0;
     }
 
     .timeline-step:not(:last-child) {
-      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
     }
 
     .timeline-marker {
@@ -797,332 +644,200 @@
       flex-direction: column;
       align-items: center;
       gap: 0.2rem;
+      margin-top: 0.1rem;
     }
 
     .timeline-badge {
       width: 22px;
       height: 22px;
       border-radius: 999px;
-      border: 1px solid rgba(35, 177, 255, 0.8);
+      border: 1px solid var(--blue-main);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.7rem;
-      background: rgba(15, 23, 42, 0.96);
+      font-size: 0.75rem;
+      color: var(--blue-main);
     }
 
     .timeline-line {
       flex: 1;
       width: 1px;
-      background: linear-gradient(180deg, rgba(148, 163, 184, 0.6), transparent);
+      background: linear-gradient(to bottom, rgba(148, 163, 184, 0.9), transparent);
     }
 
     .timeline-title {
-      font-size: 0.9rem;
       font-weight: 600;
-      margin-bottom: 0.1rem;
+      color: #0b1f36;
+      margin-bottom: 0.15rem;
     }
 
     .timeline-text {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
       margin-bottom: 0.3rem;
     }
 
-    .timeline-chip-row {
+    .timeline-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.35rem;
       font-size: 0.7rem;
     }
 
-    .timeline-chip {
-      padding: 0.18rem 0.55rem;
+    .timeline-tag {
+      padding: 0.16rem 0.55rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.55);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: #f9fafb;
       color: var(--text-muted);
     }
 
-    .construction-right {
-      border-radius: var(--radius-xl);
-      padding: 1.4rem 1.3rem;
-      background: radial-gradient(circle at 100% 0, rgba(35, 177, 255, 0.22), rgba(7, 11, 31, 0.98));
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
+    .construction-side {
+      border-radius: var(--radius-lg);
+      background: var(--blue-light);
+      padding: 1.4rem 1.2rem 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.85rem;
     }
 
     .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.45rem;
       margin-bottom: 0.8rem;
     }
 
     .pill {
-      font-size: 0.7rem;
-      padding: 0.25rem 0.7rem;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.65rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.85);
       color: var(--text-muted);
-    }
-
-    .construction-subtitle {
-      font-size: 0.9rem;
-      margin-bottom: 0.7rem;
+      background: #ffffff;
     }
 
     .checklist {
       list-style: none;
-      margin: 0.4rem 0 1.1rem;
+      margin: 0.6rem 0 1rem;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
     }
 
     .checklist li {
       display: flex;
-      align-items: flex-start;
       gap: 0.5rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
     }
 
     .checkmark {
-      margin-top: 0.1rem;
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       border-radius: 999px;
-      background: rgba(34, 197, 94, 0.15);
-      border: 1px solid rgba(74, 222, 128, 0.7);
+      background: #0f766e1a;
+      border: 1px solid #0f766e;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.75rem;
-      color: #4ade80;
+      color: #0f766e;
+      margin-top: 0.05rem;
     }
 
     .construction-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.2rem;
-      font-size: 0.78rem;
-    }
-
-    .construction-footer span {
-      color: var(--text-muted);
-    }
-
-    .construction-footer strong {
-      color: var(--accent-2);
-    }
-
-    /* WHY / SERVICE AREA */
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    .stack {
-      display: flex;
-      flex-direction: column;
       gap: 1rem;
-    }
-
-    .feature-row {
-      display: flex;
-      gap: 0.85rem;
       font-size: 0.8rem;
-      padding: 0.8rem 0.85rem;
-      border-radius: 18px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.2);
-    }
-
-    .feature-icon {
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0, #ffffff, var(--accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      color: var(--bg-dark);
-    }
-
-    .feature-row strong {
-      font-size: 0.85rem;
-    }
-
-    .mini {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .map-card {
-      border-radius: var(--radius-xl);
-      padding: 1.3rem 1.3rem;
-      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.26), rgba(7, 11, 31, 0.98));
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      font-size: 0.8rem;
-    }
-
-    .map-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.65rem;
-    }
-
-    .map-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .map-tag {
-      font-size: 0.72rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: var(--text-muted);
-    }
-
-    .map-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.6rem;
-      margin-top: 0.4rem;
-    }
-
-    .map-pill {
-      padding: 0.32rem 0.55rem;
-      border-radius: 999px;
-      border: 1px dashed rgba(148, 163, 184, 0.7);
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .map-pill span {
-      font-size: 0.7rem;
-      opacity: 0.8;
+      margin-top: 0.5rem;
     }
 
     /* CONTACT */
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
       gap: 2rem;
-      align-items: flex-start;
     }
 
     .contact-card {
-      border-radius: var(--radius-xl);
-      padding: 1.4rem 1.3rem 1.6rem;
-      background: radial-gradient(circle at 100% 0, rgba(46, 255, 185, 0.24), rgba(7, 11, 31, 0.98));
+      border-radius: var(--radius-lg);
+      background: #ffffff;
       border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      padding: 1.4rem 1.3rem 1.5rem;
+      font-size: 0.85rem;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
+    form { display: flex; flex-direction: column; gap: 0.7rem; }
 
-    .field-group {
+    .field-row {
       display: flex;
-      gap: 0.7rem;
       flex-wrap: wrap;
+      gap: 0.7rem;
     }
 
-    .field {
-      flex: 1 1 150px;
-    }
+    .field { flex: 1 1 160px; }
 
     label {
       display: block;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.15rem;
     }
 
     input, textarea, select {
       width: 100%;
-      border-radius: 14px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      background: rgba(15, 23, 42, 0.92);
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
       padding: 0.55rem 0.75rem;
-      font-size: 0.8rem;
-      color: var(--text-main);
-      outline: none;
-      transition: border var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      font-size: 0.82rem;
       font-family: inherit;
+      outline: none;
+      transition: border var(--transition-fast), box-shadow var(--transition-fast);
     }
 
-    input::placeholder,
-    textarea::placeholder {
-      color: rgba(148, 163, 184, 0.7);
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--blue-main);
+      box-shadow: 0 0 0 1px rgba(0, 84, 156, 0.25);
     }
 
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: rgba(35, 177, 255, 0.8);
-      box-shadow: 0 0 0 1px rgba(35, 177, 255, 0.5);
-      background: rgba(15, 23, 42, 0.98);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
+    textarea { resize: vertical; min-height: 90px; }
 
     .contact-footer {
+      margin-top: 0.9rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 0.9rem;
       gap: 1rem;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
     }
 
     .contact-meta {
-      border-radius: var(--radius-xl);
-      padding: 1.2rem 1.1rem;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      font-size: 0.8rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 1.3rem 1.2rem;
+      background: var(--bg-light);
+      font-size: 0.82rem;
     }
 
     .contact-meta h4 {
-      font-size: 0.9rem;
-      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
     }
 
     .contact-meta-row {
-      margin-top: 0.6rem;
+      margin-top: 0.5rem;
       display: flex;
       justify-content: space-between;
-      gap: 1rem;
-      font-size: 0.78rem;
+      gap: 0.9rem;
+      font-size: 0.8rem;
     }
 
-    .contact-meta-row span {
-      color: var(--text-muted);
-    }
-
-    .contact-meta-row strong {
-      color: var(--text-main);
-      font-weight: 500;
-    }
+    .contact-meta span { color: var(--text-muted); }
+    .contact-meta strong { color: #0b1f36; font-weight: 500; }
 
     /* FOOTER */
     footer {
@@ -1130,6 +845,7 @@
       padding: 1.5rem 0 2rem;
       font-size: 0.78rem;
       color: var(--text-muted);
+      background: #ffffff;
     }
 
     .footer-row {
@@ -1142,65 +858,56 @@
 
     .footer-links {
       display: flex;
-      gap: 1.1rem;
       flex-wrap: wrap;
+      gap: 1.1rem;
     }
 
     .footer-links a:hover {
-      color: var(--text-main);
+      color: var(--blue-main);
     }
 
-    /* Floating Call CTA */
+    /* FLOATING CALL */
     .floating-call {
       position: fixed;
       right: 1.4rem;
       bottom: 1.4rem;
-      z-index: 50;
+      z-index: 30;
     }
 
     .floating-call a {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 0.75rem 1.2rem;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0, #ffffff, #22c55e 40%, #16a34a 100%);
-      color: #020617;
-      font-size: 0.85rem;
-      font-weight: 600;
-      box-shadow: 0 18px 50px rgba(22, 163, 74, 0.9);
       gap: 0.45rem;
+      padding: 0.7rem 1.15rem;
+      border-radius: 999px;
+      background: #16a34a;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.82rem;
+      box-shadow: 0 18px 40px rgba(22, 163, 74, 0.75);
     }
 
-    .floating-call span {
-      font-size: 1.05rem;
-    }
+    .floating-call span { font-size: 1.05rem; }
 
     /* RESPONSIVE */
-    @media (max-width: 960px) {
-      .hero-grid {
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .about-layout,
+      .construction-layout,
+      .contact-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .hero-right {
-        order: -1;
+      .hero-panel {
+        margin-top: 1.5rem;
       }
 
-      .hero-floating {
-        right: 0;
-        left: 0;
-        margin-inline: auto;
-        transform: translateX(0);
+      .leaders-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .cards-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .construction-layout,
-      .two-col,
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
       }
 
       .section-header {
@@ -1208,15 +915,11 @@
         align-items: flex-start;
       }
 
-      .section-note {
-        text-align: left;
-      }
+      .section-note { text-align: left; }
     }
 
     @media (max-width: 768px) {
-      .navbar-inner {
-        height: 70px;
-      }
+      .navbar-inner { height: 70px; }
 
       .nav-links,
       .nav-right {
@@ -1227,40 +930,16 @@
         display: inline-flex;
       }
 
-      .nav-mobile {
-        display: none;
-        background: rgba(3, 7, 18, 0.98);
-        border-bottom: 1px solid rgba(148, 163, 184, 0.3);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.92);
+      .hero-title { font-size: 2.2rem; }
+      .hero-inner { padding-top: 90px; }
+
+      .hero-panel-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .nav-mobile-list {
-        padding: 0.8rem 1.5rem 1.1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-
-      .nav-mobile-list a {
-        font-size: 0.9rem;
-        color: var(--text-muted);
-      }
-
-      .nav-mobile-list a:hover {
-        color: var(--text-main);
-      }
-
-      .trust-strip {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
+      .leaders-grid,
       .cards-grid {
         grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-title {
-        font-size: 2.25rem;
       }
 
       .floating-call {
@@ -1275,25 +954,27 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <div class="logo-mark">U</div>
-        <div>
-          <div class="logo-text-main">Universe Mechanical</div>
-          <div class="logo-text-sub">Air Conditioning • Miami, FL</div>
+        <!-- Change src to match your logo file in the repo -->
+        <img src="universe-logo.png" alt="Universe Mechanical & Air Conditioning Inc. logo" class="logo-img" />
+        <div class="logo-text-block">
+          <div class="logo-main">Universe Mechanical</div>
+          <div class="logo-sub">Mechanical & Air Conditioning, Inc.</div>
         </div>
       </a>
 
       <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
         <a href="#services">Services</a>
         <a href="#new-construction">New Construction</a>
-        <a href="#why">Why Universe</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="nav-right">
         <div class="nav-phone">
-          24/7 Support • <strong>(305) 555-0123</strong>
+          Main Office • <strong>(305) 555-0123</strong>
         </div>
-        <a href="#contact" class="btn btn-primary nav-cta">Book Service</a>
+        <a href="#contact" class="btn btn-outline">Request a Visit</a>
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -1301,295 +982,266 @@
       </button>
     </div>
 
-    <!-- Mobile Nav -->
+    <!-- Mobile nav -->
     <div class="nav-mobile" id="navMobile">
       <div class="nav-mobile-list container">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
         <a href="#services">Services</a>
         <a href="#new-construction">New Construction</a>
-        <a href="#why">Why Universe</a>
         <a href="#contact">Contact</a>
         <a href="tel:+13055550123">Call: (305) 555-0123</a>
       </div>
     </div>
   </header>
 
+  <!-- HERO -->
   <main id="home">
-    <div class="container hero">
-      <div class="hero-grid">
-        <div class="hero-left">
-          <div class="hero-eyebrow">
-            <div class="badge">
-              <span class="badge-dot"></span> Miami’s Modern A/C Experience
+    <section class="hero">
+      <!-- Replace construction.mp4 with your own video file or hosted URL -->
+      <div class="hero-video-wrap">
+        <video src="construction.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-tagline">Miami • Mechanical & A/C Contractor</div>
+            <h1 class="hero-title">
+              Building comfort into<br />
+              <span>every project we touch.</span>
+            </h1>
+            <p class="hero-subtitle">
+              Universe Mechanical & Air Conditioning Inc. delivers mechanical systems for new construction and existing
+              buildings across Miami-Dade & Broward — engineered for performance, schedule and long South Florida summers.
+            </p>
+
+            <div class="hero-badges">
+              <div class="hero-badge">New construction mechanical & A/C</div>
+              <div class="hero-badge">Retrofits & replacements</div>
+              <div class="hero-badge">Service & maintenance programs</div>
             </div>
-            <div class="hero-tag">
-              <span>24/7</span>
-              <span>Emergency Cooling • Same-Day Installs</span>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Request Service</a>
+              <a href="#new-construction" class="btn btn-outline">Submit Plans</a>
+            </div>
+
+            <div class="hero-note">
+              Serving single-family, multifamily & light commercial projects from our Hialeah Gardens hub.
             </div>
           </div>
 
-          <h1 class="hero-title">
-            Precision-built comfort for
-            <span>Miami heat.</span>
-          </h1>
-          <p class="hero-subtitle">
-            Universe Mechanical & Air Conditioning Inc. engineers, installs and maintains high-performance A/C systems for
-            Miami homes, condos & new construction projects — with craftsmanship you can actually feel.
-          </p>
+          <aside class="hero-panel">
+            <div class="hero-panel-title">Universe at a glance</div>
+            <div class="hero-panel-sub">
+              A focused mechanical partner for contractors, owners and property managers across South Florida.
+            </div>
 
-          <div class="hero-bullets">
-            <div class="hero-bullet">
-              <div class="hero-bullet-dot"></div>
-              Licensed & insured mechanical contractors
+            <div class="hero-panel-grid">
+              <div>
+                <div class="hero-metric-label">Average response (service)</div>
+                <div class="hero-metric-value">Same / Next Day</div>
+              </div>
+              <div>
+                <div class="hero-metric-label">New construction capacity</div>
+                <div class="hero-metric-value">50+ homes / 200+ units</div>
+              </div>
+              <div>
+                <div class="hero-metric-label">Project focus</div>
+                <div class="hero-metric-value">Miami-Dade & Broward</div>
+              </div>
             </div>
-            <div class="hero-bullet">
-              <div class="hero-bullet-dot"></div>
-              New builds, retrofits & service
+
+            <div class="hero-panel-footer">
+              <div>
+                Licensed & insured mechanical contractor specializing in Florida’s coastal environment, flat roofs and
+                high humidity.
+              </div>
+              <div class="hero-panel-chip">Built for South Florida conditions</div>
             </div>
-            <div class="hero-bullet">
-              <div class="hero-bullet-dot"></div>
-              Serving Miami-Dade & Broward
-            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-heading">
+            <div class="section-eyebrow">About Us</div>
+            <h2 class="section-title">Universe Mechanical & Air Conditioning Inc.</h2>
+            <p class="section-subtitle">
+              A family-led mechanical contractor rooted in Miami. We combine field experience, disciplined project
+              management and long-term relationships with builders and owners.
+            </p>
           </div>
-
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">
-              Book A/C Service
-              <span>➜</span>
-            </a>
-            <a href="#new-construction" class="btn btn-ghost">
-              New Construction Bid
-            </a>
-          </div>
-
-          <div class="hero-note">
-            <span>Same-day availability</span> for most calls placed before 2:00 PM.
+          <div class="section-note">
+            From early budgeting through closeout, our team is involved as a partner — not just a subcontractor.
           </div>
         </div>
 
-        <div class="hero-right">
-          <div class="hero-card">
-            <div class="hero-card-inner">
-              <div class="hero-card-header">
-                <div>
-                  <div class="hero-card-title">Miami Cooling Performance Panel</div>
-                  <div class="mini">Live look at your project with Universe Mechanical.</div>
-                </div>
-                <div class="hero-card-pill">Optimized for South Florida</div>
-              </div>
-
-              <div class="hero-metrics">
-                <div>
-                  <div class="metric-label">Average response</div>
-                  <div class="metric-value">1 hr 42 min</div>
-                  <div class="metric-pill">On-call 24/7</div>
-                </div>
-                <div>
-                  <div class="metric-label">Install turnaround</div>
-                  <div class="metric-value">1–3 days</div>
-                  <div class="metric-pill">Permit-ready</div>
-                </div>
-                <div>
-                  <div class="metric-label">Customer rating</div>
-                  <div class="metric-value">4.9 ★</div>
-                  <div class="metric-pill">310+ locals</div>
-                </div>
-              </div>
-
-              <div class="hero-card-row">
-                <div>
-                  <strong>Smart load design</strong>
-                  <p class="mini">
-                    Manual J/S/D sizing for every project — no “one-size-fits-all” tonnage guesses in Miami humidity.
-                  </p>
-                </div>
-                <div>
-                  <strong>Energy savings</strong>
-                  <p class="mini">
-                    High-SEER heat pumps & variable-speed systems tuned to Florida Power & Light incentives.
-                  </p>
-                </div>
-              </div>
-
-              <div class="hero-card-divider"></div>
-
-              <div class="hero-card-bottom">
-                <div class="hero-avatar-row">
-                  <div class="hero-avatars">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <div class="mini">
-                    <strong>120+</strong> units installed in Brickell, Doral & Miami Beach this year.
-                  </div>
-                </div>
-                <div class="hero-card-badge">
-                  <span class="badge-dot"></span>
-                  Real-time project tracking
-                </div>
-              </div>
-            </div>
+        <div class="about-layout">
+          <div class="about-text">
+            <p class="about-highlight">
+              Universe Mechanical & Air Conditioning Inc. was built around one idea: projects run smoother when the
+              mechanical team thinks like a builder and acts like an owner.
+            </p>
+            <p>
+              Based in Hialeah Gardens, we serve Miami’s core neighborhoods, surrounding suburbs and Broward’s south
+              corridor. Our work ranges from new single-family homes and townhome communities to multifamily buildings
+              and select commercial spaces.
+            </p>
+            <p>
+              We bring structure to every job — coordinated drawings, clean installs, clear turnover and support after
+              move-in. The result is fewer surprises in the field and systems that perform the way they were designed.
+            </p>
           </div>
 
-          <div class="hero-floating">
-            <div class="hero-floating-dot"></div>
-            <div>
-              <span>Condos, single-family & mid-rise builds.</span><br/>
-              <strong>Universe Mechanical keeps Miami cold.</strong>
-            </div>
+          <div class="leaders-grid">
+            <article class="leader-card">
+              <div class="leader-initial">C</div>
+              <div class="leader-name">Claudio Rey</div>
+              <div class="leader-role">Chief Executive Officer</div>
+              <p class="leader-text">
+                Leads overall vision, client relationships and project delivery, ensuring every job reflects Universe’s
+                standards in the field.
+              </p>
+            </article>
+
+            <article class="leader-card">
+              <div class="leader-initial">J</div>
+              <div class="leader-name">Joseph Rey</div>
+              <div class="leader-role">Chief Financial Officer</div>
+              <p class="leader-text">
+                Oversees financial operations, budgets and project controls so owners and GCs have clarity from bid
+                through closeout.
+              </p>
+            </article>
+
+            <article class="leader-card">
+              <div class="leader-initial">J</div>
+              <div class="leader-name">Jordi Rey</div>
+              <div class="leader-role">Chief Operating Officer</div>
+              <p class="leader-text">
+                Directs day-to-day operations, scheduling and field coordination to keep projects on time and aligned
+                with site realities.
+              </p>
+            </article>
           </div>
         </div>
       </div>
-
-      <!-- trust strip -->
-      <div class="trust-strip">
-        <div>
-          <strong>Trusted across Miami’s skyline.</strong> From single-family homes to multi-family projects.
-        </div>
-        <div class="trust-items">
-          <div class="trust-item">
-            <div class="trust-badge">FL</div>
-            Licensed & Insured
-          </div>
-          <div class="trust-item">
-            <div class="trust-badge">24</div>
-            24/7 Emergency Cooling
-          </div>
-          <div class="trust-item">
-            <div class="trust-badge">QC</div>
-            QC’d by Lead Mechanic
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
 
     <!-- SERVICES -->
     <section id="services">
       <div class="container">
         <div class="section-header">
-          <div class="section-title-wrap">
-            <div class="badge section-badge">
-              <span class="badge-dot"></span> A/C Services
-            </div>
-            <h2 class="section-title">Cooling services built for Miami’s climate.</h2>
+          <div class="section-heading">
+            <div class="section-eyebrow">Services</div>
+            <h2 class="section-title">Mechanical & A/C service for occupied spaces.</h2>
             <p class="section-subtitle">
-              From late-night no-cool calls to full-system change-outs, we engineer every visit around performance
-              and reliability — not just quick fixes.
+              Responsive service teams focused on diagnosing root causes, communicating clearly and protecting your
+              property while we work.
             </p>
           </div>
           <div class="section-note">
-            Need something specific? Describe the issue in the form below and we’ll map the right service tier & technician.
+            Ideal for homeowners, property managers and associations needing a dependable mechanical partner.
           </div>
         </div>
 
         <div class="cards-grid">
           <article class="card">
-            <div class="card-icon">❄️</div>
             <h3 class="card-title">Diagnostics & Repair</h3>
             <p class="card-text">
-              Fast, precise troubleshooting on all major brands — from coastal corrosion to refrigerant issues.
+              Troubleshooting no-cool calls, water leaks, electrical issues and comfort problems on all major brands.
             </p>
             <div class="card-tags">
-              <span class="card-tag">Same-day</span>
-              <span class="card-tag">All brands</span>
-              <span class="card-tag">Transparent pricing</span>
+              <span class="card-tag">Same / next-day</span>
+              <span class="card-tag">Clear pricing</span>
+              <span class="card-tag">All major brands</span>
             </div>
             <div class="card-footer">
-              <span>Most issues solved in one visit.</span>
-              <a href="#contact" class="card-link">
-                Book repair <span>↗</span>
-              </a>
+              <span>Most calls resolved in one visit.</span>
+              <a href="#contact" class="card-link">Book repair ↗</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="card-icon">🔁</div>
-            <h3 class="card-title">System Change-Outs</h3>
+            <h3 class="card-title">System Replacements</h3>
             <p class="card-text">
-              High-efficiency replacements with proper duct evaluation, line-set practices & permit handling.
+              Full change-outs with duct review, proper line-set practices, permitting and homeowner orientation.
             </p>
             <div class="card-tags">
-              <span class="card-tag">High-SEER</span>
+              <span class="card-tag">High-efficiency</span>
               <span class="card-tag">Heat pumps</span>
-              <span class="card-tag">Financing available</span>
+              <span class="card-tag">Financing options</span>
             </div>
             <div class="card-footer">
-              <span>Designed for long Miami summers.</span>
-              <a href="#contact" class="card-link">
-                Request quote <span>↗</span>
-              </a>
+              <span>Designed for Miami’s heat and humidity.</span>
+              <a href="#contact" class="card-link">Request quote ↗</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="card-icon">🌀</div>
-            <h3 class="card-title">Ductless Mini-Splits</h3>
+            <h3 class="card-title">Ductless & Additions</h3>
             <p class="card-text">
-              Sleek, quiet comfort for condos, garages & additions where traditional ductwork doesn’t make sense.
+              Mini-splits and supplemental systems for additions, garages, home offices and spaces that need extra control.
             </p>
             <div class="card-tags">
               <span class="card-tag">Single & multi-zone</span>
-              <span class="card-tag">Inverter tech</span>
+              <span class="card-tag">Inverter technology</span>
             </div>
             <div class="card-footer">
-              <span>Perfect for home offices & studios.</span>
-              <a href="#contact" class="card-link">
-                Design my zones <span>↗</span>
-              </a>
+              <span>Great fit for targeted comfort.</span>
+              <a href="#contact" class="card-link">Design my zones ↗</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="card-icon">🧪</div>
             <h3 class="card-title">Indoor Air Quality</h3>
             <p class="card-text">
-              Filtration, UV lights & dehumidification to handle Miami moisture, allergies & coastal living.
+              Filtration, UV lights, dehumidification and ventilation strategies tailored to coastal living and allergies.
             </p>
             <div class="card-tags">
               <span class="card-tag">Humidity control</span>
-              <span class="card-tag">UV & HEPA</span>
+              <span class="card-tag">UV / filtration</span>
             </div>
             <div class="card-footer">
-              <span>Better air, better coils, better comfort.</span>
-              <a href="#contact" class="card-link">
-                IAQ consult <span>↗</span>
-              </a>
+              <span>Cleaner air and longer coil life.</span>
+              <a href="#contact" class="card-link">IAQ consult ↗</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="card-icon">📱</div>
-            <h3 class="card-title">Smart Thermostats</h3>
+            <h3 class="card-title">Controls & Smart Thermostats</h3>
             <p class="card-text">
-              Wi-Fi thermostats & zoning controls tuned for condos, short-term rentals & busy Miami schedules.
+              Upgrading controls, zoning and smart thermostats for homes, rentals and small commercial spaces.
             </p>
             <div class="card-tags">
               <span class="card-tag">Nest & Ecobee</span>
-              <span class="card-tag">Energy insights</span>
+              <span class="card-tag">Zoning</span>
             </div>
             <div class="card-footer">
-              <span>Control your comfort from anywhere.</span>
-              <a href="#contact" class="card-link">
-                Upgrade controls <span>↗</span>
-              </a>
+              <span>Control comfort from anywhere.</span>
+              <a href="#contact" class="card-link">Upgrade controls ↗</a>
             </div>
           </article>
 
           <article class="card">
-            <div class="card-icon">🛡️</div>
-            <h3 class="card-title">Maintenance Memberships</h3>
+            <h3 class="card-title">Maintenance Programs</h3>
             <p class="card-text">
-              Planned tune-ups, coil cleaning, drain line protection & priority response when Miami heat spikes.
+              Planned inspections, cleaning and checks to keep systems reliable through long cooling seasons.
             </p>
             <div class="card-tags">
-              <span class="card-tag">Priority service</span>
-              <span class="card-tag">Member pricing</span>
+              <span class="card-tag">Priority response</span>
+              <span class="card-tag">Program pricing</span>
             </div>
             <div class="card-footer">
-              <span>Protect your system before it fails.</span>
-              <a href="#contact" class="card-link">
-                Join membership <span>↗</span>
-              </a>
+              <span>Prevent issues before they show up.</span>
+              <a href="#contact" class="card-link">Join program ↗</a>
             </div>
           </article>
         </div>
@@ -1600,18 +1252,16 @@
     <section id="new-construction">
       <div class="container">
         <div class="section-header">
-          <div class="section-title-wrap">
-            <div class="badge section-badge">
-              <span class="badge-dot"></span> New Construction
-            </div>
-            <h2 class="section-title">Mechanical systems for projects that matter.</h2>
+          <div class="section-heading">
+            <div class="section-eyebrow">New Construction</div>
+            <h2 class="section-title">Mechanical systems that support the schedule.</h2>
             <p class="section-subtitle">
-              Universe Mechanical & Air Conditioning Inc. partners with GCs, developers and owners to deliver
-              clean, code-tight mechanical systems — from design-assist to final inspection.
+              From early budgets and design-assist to final inspections, our new construction team works alongside your
+              supers and PMs to keep projects on track.
             </p>
           </div>
           <div class="section-note">
-            Serving single-family, luxury homes, townhomes & mid-rise multifamily across Miami-Dade & Broward.
+            Ideal for single-family communities, custom homes, townhomes and mid-rise multifamily.
           </div>
         </div>
 
@@ -1623,14 +1273,15 @@
                 <div class="timeline-line"></div>
               </div>
               <div>
-                <div class="timeline-title">Design & Load Calculations</div>
+                <div class="timeline-title">Preconstruction & Design</div>
                 <p class="timeline-text">
-                  Heat-gain calculations (Manual J/S) modeled for Miami’s humidity, glazing, orientation and envelope.
+                  Load calculations, equipment selections and layout input so mechanical scopes are coordinated before
+                  the job hits the field.
                 </p>
-                <div class="timeline-chip-row">
-                  <span class="timeline-chip">Manual J/S/D</span>
-                  <span class="timeline-chip">Duct design</span>
-                  <span class="timeline-chip">Equipment schedules</span>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Budgets & options</span>
+                  <span class="timeline-tag">Manual J/S</span>
+                  <span class="timeline-tag">Value engineering</span>
                 </div>
               </div>
             </div>
@@ -1641,13 +1292,14 @@
                 <div class="timeline-line"></div>
               </div>
               <div>
-                <div class="timeline-title">Rough-In & Set</div>
+                <div class="timeline-title">Rough-in & Set</div>
                 <p class="timeline-text">
-                  Clean install, pitched drain lines, strapped duct, sealed air handlers and hurricane-rated pads.
+                  Clean, organized rough-ins tied to your schedule — with attention to penetrations, drains, supports
+                  and interaction with other trades.
                 </p>
-                <div class="timeline-chip-row">
-                  <span class="timeline-chip">Condensate management</span>
-                  <span class="timeline-chip">Inspected supports</span>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Coordinated with framing</span>
+                  <span class="timeline-tag">Drain & line-set routing</span>
                 </div>
               </div>
             </div>
@@ -1658,14 +1310,14 @@
                 <div class="timeline-line"></div>
               </div>
               <div>
-                <div class="timeline-title">Startup & Commissioning</div>
+                <div class="timeline-title">Trim, Startup & Commissioning</div>
                 <p class="timeline-text">
-                  Charge verification, static pressure testing & control checks documented for your close-out package.
+                  Verified charge, airflow and controls documented for your closeout package and future service teams.
                 </p>
-                <div class="timeline-chip-row">
-                  <span class="timeline-chip">Static pressure</span>
-                  <span class="timeline-chip">Refrigerant charge</span>
-                  <span class="timeline-chip">Owner training</span>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Static pressure</span>
+                  <span class="timeline-tag">Owner orientation</span>
+                  <span class="timeline-tag">Punch support</span>
                 </div>
               </div>
             </div>
@@ -1675,168 +1327,52 @@
                 <div class="timeline-badge">4</div>
               </div>
               <div>
-                <div class="timeline-title">Warranty & Turnover</div>
+                <div class="timeline-title">Turnover & Warranty</div>
                 <p class="timeline-text">
-                  Builder & homeowner support, documentation and maintenance options to keep your reputation strong.
+                  Ongoing support after move-in, protecting your reputation with homeowners and associations.
                 </p>
-                <div class="timeline-chip-row">
-                  <span class="timeline-chip">GC-friendly scheduling</span>
-                  <span class="timeline-chip">Post-move-in support</span>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Warranty response</span>
+                  <span class="timeline-tag">Service partnership</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <aside class="construction-right">
+          <aside class="construction-side">
             <div class="pill-row">
-              <span class="pill">Single-family & luxury customs</span>
+              <span class="pill">Single-family & customs</span>
               <span class="pill">Townhomes & multifamily</span>
-              <span class="pill">Light commercial build-outs</span>
+              <span class="pill">Select commercial build-outs</span>
             </div>
 
-            <p class="construction-subtitle">
-              One team that understands drawings, inspections and what it takes to pass in Miami-Dade the first time.
+            <p>
+              One mechanical partner for your community or building, from the first model home to the last warranty call.
+              We understand jobsite logistics, inspections and the importance of clean mechanical rooms when you turn over keys.
             </p>
 
             <ul class="checklist">
               <li>
                 <div class="checkmark">✓</div>
-                <div>
-                  <strong>Permit-ready submittals.</strong> We help assemble the mechanical portion of your permit package
-                  with specs, cutsheets & load calcs.
-                </div>
+                <div><strong>Permit-ready documentation</strong> with equipment schedules, cutsheets and load data.</div>
               </li>
               <li>
                 <div class="checkmark">✓</div>
-                <div>
-                  <strong>Schedule-driven installs.</strong> We coordinate with your super to align rough, trim and startup
-                  around critical path items.
-                </div>
+                <div><strong>Schedule-driven manpower</strong> to support multiple phases across your sites.</div>
               </li>
               <li>
                 <div class="checkmark">✓</div>
-                <div>
-                  <strong>Post-turnover partnership.</strong> Warranty service that treats your homeowners like our own clients.
-                </div>
+                <div><strong>Warranty & service alignment</strong> so homeowners know who to call and what to expect.</div>
               </li>
             </ul>
 
             <div class="construction-footer">
               <div>
-                <span>Current capacity:</span><br/>
-                <strong>Up to 50+ houses or 200+ units/year.</strong>
+                Current capacity:<br />
+                <strong>Up to 50+ homes or 200+ units per year.</strong>
               </div>
-              <a href="#contact" class="btn btn-primary btn-sm" style="padding: 0.55rem 1.2rem; font-size: 0.8rem;">
-                Submit plans
-              </a>
+              <a href="#contact" class="btn btn-primary">Send us your plans</a>
             </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY & SERVICE AREA -->
-    <section id="why">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-title-wrap">
-            <div class="badge section-badge">
-              <span class="badge-dot"></span> Why Universe
-            </div>
-            <h2 class="section-title">Built like a high-end brand, focused on your comfort.</h2>
-            <p class="section-subtitle">
-              We combine mechanical engineering discipline with hospitality-level customer experience — so every visit
-              feels clean, sharp and under control.
-            </p>
-          </div>
-        </div>
-
-        <div class="two-col">
-          <div class="stack">
-            <div class="feature-row">
-              <div class="feature-icon">⚙️</div>
-              <div>
-                <strong>Engineered – not guessed.</strong>
-                <p class="mini">
-                  We size and design your system based on actual loads, not rules of thumb — critical in Miami’s humidity
-                  where oversizing kills comfort.
-                </p>
-              </div>
-            </div>
-
-            <div class="feature-row">
-              <div class="feature-icon">🧼</div>
-              <div>
-                <strong>Clean, respectful installs.</strong>
-                <p class="mini">
-                  Drop cloths, shoe covers, organized trucks and post-job cleanups are standard. Your home shouldn’t feel
-                  like a job site.
-                </p>
-              </div>
-            </div>
-
-            <div class="feature-row">
-              <div class="feature-icon">📊</div>
-              <div>
-                <strong>Transparent, modern quoting.</strong>
-                <p class="mini">
-                  Clear options with good/better/best equipment tiers, financing paths and energy savings estimates — no
-                  surprise line items.
-                </p>
-              </div>
-            </div>
-
-            <div class="feature-row">
-              <div class="feature-icon">📍</div>
-              <div>
-                <strong>Miami-first expertise.</strong>
-                <p class="mini">
-                  Salt air, flat roofs, hurricane shutters & older condos each change how systems should be designed.
-                  We live and build here too.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <aside class="map-card">
-            <div class="map-header">
-              <div>
-                <div class="map-title">Service Area Coverage</div>
-                <div class="mini">Fast response from our Hialeah Gardens hub.</div>
-              </div>
-              <div class="map-tag">Miami-Dade • Broward</div>
-            </div>
-
-            <div class="map-grid">
-              <div class="map-pill">
-                Miami & Brickell
-                <span>Core city</span>
-              </div>
-              <div class="map-pill">
-                Doral & Hialeah
-                <span>Shop-adjacent</span>
-              </div>
-              <div class="map-pill">
-                Miami Beach
-                <span>Barrier island</span>
-              </div>
-              <div class="map-pill">
-                Kendall & Pinecrest
-                <span>South corridor</span>
-              </div>
-              <div class="map-pill">
-                Aventura & North Miami
-                <span>NE corridor</span>
-              </div>
-              <div class="map-pill">
-                Hollywood & Pembroke Pines
-                <span>Broward south</span>
-              </div>
-            </div>
-
-            <p class="mini" style="margin-top: 0.8rem;">
-              Not sure if you’re in range? Send your address and we’ll confirm response times and scheduling windows.
-            </p>
           </aside>
         </div>
       </div>
@@ -1846,88 +1382,82 @@
     <section id="contact">
       <div class="container">
         <div class="section-header">
-          <div class="section-title-wrap">
-            <div class="badge section-badge">
-              <span class="badge-dot"></span> Book A Visit
-            </div>
-            <h2 class="section-title">Tell us what’s going on with your A/C.</h2>
+          <div class="section-heading">
+            <div class="section-eyebrow">Contact</div>
+            <h2 class="section-title">Tell us about your project or service need.</h2>
             <p class="section-subtitle">
-              A dispatcher from Universe Mechanical & Air Conditioning Inc. will review your request and confirm a time
-              by text or phone.
+              Share a few details and a member of the Universe team will follow up to review scope, timing and next steps.
             </p>
           </div>
           <div class="section-note">
-            For emergencies, call us directly at <strong>(305) 555-0123</strong> — 24/7. We’ll still log the job in our system.
+            For urgent no-cool calls, please call our office directly at <strong>(305) 555-0123</strong>.
           </div>
         </div>
 
         <div class="contact-grid">
           <div class="contact-card">
             <form>
-              <div class="field-group">
+              <div class="field-row">
                 <div class="field">
-                  <label for="name">Full Name</label>
+                  <label for="name">Full name</label>
                   <input id="name" type="text" placeholder="Your name" />
                 </div>
                 <div class="field">
-                  <label for="phone">Mobile Phone</label>
+                  <label for="phone">Mobile phone</label>
                   <input id="phone" type="tel" placeholder="(305) 555-0123" />
                 </div>
               </div>
 
-              <div class="field-group">
+              <div class="field-row">
                 <div class="field">
                   <label for="email">Email</label>
                   <input id="email" type="email" placeholder="you@example.com" />
                 </div>
                 <div class="field">
-                  <label for="city">City / Neighborhood</label>
+                  <label for="city">City / neighborhood</label>
                   <input id="city" type="text" placeholder="Miami, Doral, Kendall..." />
                 </div>
               </div>
 
-              <div class="field-group">
+              <div class="field-row">
                 <div class="field">
-                  <label for="serviceType">I’m interested in</label>
+                  <label for="serviceType">I’m reaching out about</label>
                   <select id="serviceType">
-                    <option>Service / Repair</option>
-                    <option>System Replacement</option>
-                    <option>New Construction Project</option>
-                    <option>Maintenance Membership</option>
-                    <option>Indoor Air Quality / Other</option>
+                    <option>Service / repair</option>
+                    <option>System replacement</option>
+                    <option>New construction project</option>
+                    <option>Maintenance program</option>
+                    <option>Other mechanical / A/C need</option>
                   </select>
                 </div>
                 <div class="field">
                   <label for="timeframe">Ideal timeframe</label>
                   <select id="timeframe">
-                    <option>ASAP (no cooling / emergency)</option>
+                    <option>ASAP / emergency</option>
                     <option>This week</option>
                     <option>Within 30 days</option>
-                    <option>Project planning / bidding</option>
+                    <option>Longer-term planning / budgeting</option>
                   </select>
                 </div>
               </div>
 
               <div class="field">
-                <label for="message">Describe what’s happening</label>
-                <textarea id="message" placeholder="Example: 2nd floor not cooling, unit is 8 years old, breaker tripped last night..."></textarea>
+                <label for="message">Project or issue details</label>
+                <textarea id="message" placeholder="Example: 2nd floor not cooling, planning a remodel, submitting plans for new townhomes, etc."></textarea>
               </div>
 
               <div class="contact-footer">
-                <div>
-                  By submitting, you agree to be contacted by phone, text or email about your request.
-                </div>
-                <button type="button" class="btn btn-primary">
-                  Send request
-                </button>
+                <div>By submitting, you agree we may contact you by phone, text or email regarding your request.</div>
+                <button type="button" class="btn btn-primary">Submit request</button>
               </div>
             </form>
           </div>
 
           <aside class="contact-meta">
-            <h4>Need a new construction bid?</h4>
-            <p class="mini">
-              Email your plans or drawings and we’ll follow up with any mechanical questions before pricing your project.
+            <h4>New construction & plan review</h4>
+            <p>
+              For bid invitations, design-assist or to review specific plans, send drawings and details to our estimating
+              team below.
             </p>
 
             <div class="contact-meta-row">
@@ -1948,7 +1478,7 @@
               </div>
               <div>
                 <span>Hours</span><br />
-                <strong>Mon–Sat • 8a–7p</strong>
+                <strong>Mon–Sat • 8:00a–7:00p</strong>
               </div>
             </div>
           </aside>
@@ -1959,11 +1489,10 @@
 
   <footer>
     <div class="container footer-row">
-      <div>
-        © <span id="year"></span> Universe Mechanical & Air Conditioning Inc. All rights reserved.
-      </div>
+      <div>© <span id="year"></span> Universe Mechanical & Air Conditioning Inc. All rights reserved.</div>
       <div class="footer-links">
         <a href="#home">Home</a>
+        <a href="#about">About Us</a>
         <a href="#services">Services</a>
         <a href="#new-construction">New Construction</a>
         <a href="#contact">Contact</a>
@@ -1980,7 +1509,6 @@
   </div>
 
   <script>
-    // Navbar scroll effect
     const navbar = document.getElementById("navbar");
     const navToggle = document.getElementById("navToggle");
     const navMobile = document.getElementById("navMobile");
@@ -1993,14 +1521,12 @@
       }
     });
 
-    // Mobile nav toggle
     navToggle.addEventListener("click", () => {
       navToggle.classList.toggle("active");
       const isOpen = navMobile.style.display === "block";
       navMobile.style.display = isOpen ? "none" : "block";
     });
 
-    // Close mobile nav on link click
     navMobile.addEventListener("click", (e) => {
       if (e.target.tagName.toLowerCase() === "a") {
         navMobile.style.display = "none";
@@ -2008,7 +1534,6 @@
       }
     });
 
-    // Set current year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>

@@ -1,390 +1,327 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Universe Services — Miami A/C Experts | Repair • Installation • Maintenance</title>
-  <meta name="description" content="Universe Services — Miami's trusted HVAC company. Fast A/C repair, energy-efficient installations, duct cleaning, and maintenance plans. 24/7 emergency service." />
-  <meta name="theme-color" content="#0d47a1" />
+  <title>Universe Mechanical & Air Conditioning, Inc. — Miami HVAC Contractors</title>
+  <meta name="description" content="Universe Mechanical & Air Conditioning, Inc. - Commercial & residential HVAC: new construction, installations, repairs, maintenance, and indoor air quality in Miami." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Universe Services — Miami A/C Experts" />
-  <meta property="og:description" content="Fast, reliable A/C repair, installation and maintenance in Miami. 24/7 emergency service and affordable maintenance plans." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1581093448799-ecf9c7c8e1f0?auto=format&fit=crop&w=1200&q=80" />
-  <meta property="og:type" content="website" />
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --brand:#0d47a1;
-      --brand-dark:#09367c;
-      --accent:#00bcd4;
-      --muted:#6b7280;
-      --radius:12px;
-      --container:1200px;
-    }
-
+    :root{--brand:#0d47a1;--brand-dark:#09367c;--accent:#00bcd4;--muted:#6b7280;--radius:12px;--max:1200px}
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      color:#111827;
-      background:linear-gradient(180deg,#f6fbfc 0%, #eef6f9 100%);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-    }
+    body{margin:0;font-family:Inter,system-ui,Arial;background:#f6fbfc;color:#0b1220}
+    a{color:var(--brand);text-decoration:none}
 
-    /* Top bar */
-    .topbar{
-      background:var(--brand);
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:10px 20px;
-    }
-    .topbar .contact{font-weight:600}
-    .topbar a{color:white; text-decoration:none}
+    /* Header / Nav */
+    .site-wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    header .brand{display:flex;align-items:center;gap:14px}
+    header .brand img{height:64px}
+    nav.primary{display:flex;gap:18px;align-items:center}
+    nav.primary a{padding:8px 12px;border-radius:8px;font-weight:600}
+    nav.primary a:hover{background:rgba(13,71,161,0.06)}
 
-    header.hero{
-      background-image:linear-gradient(rgba(13,71,161,0.6), rgba(9,54,124,0.55)), url('https://images.unsplash.com/photo-1581093448799-ecf9c7c8e1f0?auto=format&fit=crop&w=1800&q=80');
-      background-size:cover;
-      background-position:center center;
-      color:white;
-      padding:72px 20px;
-      text-align:left;
-    }
-    .wrap{max-width:var(--container);margin:0 auto}
-    .hero-grid{display:grid;grid-template-columns:1fr 380px;gap:30px;align-items:center}
+    .cta-phone{background:var(--brand);color:white;padding:10px 14px;border-radius:10px;font-weight:700}
 
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{
-      width:64px;height:64px;border-radius:14px;background:white;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(13,71,161,0.18)
-    }
-    .logo svg{width:36px;height:36px}
+    /* Hero */
+    .hero{background:linear-gradient(180deg,rgba(13,71,161,0.06),rgba(9,54,124,0.04));border-radius:14px;padding:36px;margin-bottom:20px;display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
+    .hero h1{margin:0;font-size:1.9rem;color:var(--brand-dark)}
+    .hero p.lead{margin:10px 0;color:#334155}
+    .hero .actions{display:flex;gap:12px;margin-top:12px}
+    .btn{background:var(--brand);color:white;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+    .btn.ghost{background:transparent;border:2px solid var(--brand);color:var(--brand)}
 
-    h1{font-size:2.25rem;margin:0 0 10px 0;line-height:1.05}
-    p.lead{font-size:1.05rem;margin:0;color:rgba(255,255,255,0.95)}
+    .quick-card{background:white;padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(13,71,161,0.06)}
 
-    .cta {
-      margin-top:18px;
-      display:flex;gap:12px;flex-wrap:wrap
-    }
-    .btn{background:var(--accent);border:none;color:#042331;padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer}
-    .btn.secondary{background:transparent;border:2px solid rgba(255,255,255,0.18);color:white}
+    /* Section headings */
+    section{margin-bottom:28px}
+    .section-head{display:flex;justify-content:space-between;align-items:center}
+    .section-head h2{margin:0;color:var(--brand)}
 
-    .card-cta{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));padding:18px;border-radius:12px}
-    .quick-info{display:flex;flex-direction:column;gap:10px}
-    .quick-info .item{display:flex;gap:12px;align-items:center}
-    .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);padding:8px 10px;border-radius:999px}
-
-    main{padding:40px 20px}
-
-    /* Services */
-    .section-head{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    h2{color:var(--brand);font-size:1.5rem;margin:0}
-
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:18px}
-    .service{background:white;padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.06);border:1px solid rgba(15,23,42,0.03)}
-    .service img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:12px}
-    .service h3{margin:0 0 8px 0;color:var(--brand)}
+    /* Services grid */
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:14px}
+    .service{background:white;border-radius:10px;padding:14px;box-shadow:0 8px 24px rgba(2,6,23,0.04);border:1px solid rgba(2,6,23,0.04)}
+    .service img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .service h3{margin:10px 0 6px;color:var(--brand)}
     .service p{margin:0;color:var(--muted)}
 
-    /* Benefits bar */
-    .benefits{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px}
-    .benefit{background:white;padding:14px;border-radius:10px;display:flex;gap:12px;align-items:center;box-shadow:0 6px 16px rgba(13,71,161,0.04)}
+    /* New construction layout */
+    .new-construction{display:grid;grid-template-columns:1fr 420px;gap:18px;align-items:start}
+    .proj-list{background:white;padding:18px;border-radius:10px}
+    .proj-list li{margin:8px 0}
 
-    /* Testimonials */
-    .testimonials{margin-top:34px}
-    .testimonial-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .testimonial{background:white;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
-    .stars{color:#f59e0b}
+    /* Testimonials and FAQ */
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .testimonial{background:white;padding:14px;border-radius:10px}
 
-    /* FAQ & footer grid */
-    .two-col{display:grid;grid-template-columns:1fr 420px;gap:24px;margin-top:30px}
-    .faq{background:white;padding:20px;border-radius:12px}
+    /* Contact */
+    form.card{background:white;padding:18px;border-radius:10px;display:flex;flex-direction:column;gap:10px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6eef6}
+    button.form-submit{background:var(--brand);color:white;border:none;padding:12px;border-radius:8px;font-weight:700}
 
-    .map-placeholder{border-radius:12px;overflow:hidden;border:1px solid rgba(2,6,23,0.06)}
+    footer{margin-top:20px;padding:18px 0;background:linear-gradient(90deg,var(--brand),var(--brand-dark));color:white;border-radius:8px}
 
-    /* Contact form */
-    form.card{background:white;padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.06);display:flex;flex-direction:column;gap:12px}
-    input, textarea, select{padding:12px;border-radius:8px;border:1px solid #e6eef6;font-size:0.95rem}
-    button.form-submit{background:var(--brand);color:white;padding:12px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
-
-    footer{margin-top:40px;padding:26px 20px;background:linear-gradient(90deg,var(--brand),var(--brand-dark));color:white}
-    .footer-grid{max-width:var(--container);margin:0 auto;display:flex;justify-content:space-between;gap:18px;align-items:center}
-
-    /* Responsive */
-    @media (max-width:900px){
-      .hero-grid{grid-template-columns:1fr}
-      .two-col{grid-template-columns:1fr}
-    }
+    @media (max-width:960px){.hero{grid-template-columns:1fr}.new-construction{grid-template-columns:1fr}.site-wrap{padding:0 14px}}
   </style>
 </head>
 <body>
-
-  <div class="topbar" role="banner">
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="logo" aria-hidden="true">
-          <!-- simple AC / snowflake icon -->
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M12 2v20" stroke="#0d47a1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M20 6l-8 6-8-6 8 6v8" stroke="#0d47a1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div style="line-height:1">
-          <div style="font-weight:700">Universe Services</div>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.9)">Miami A/C Repair & Installation</div>
-        </div>
-      </div>
-
-      <div class="contact">
-        <span style="margin-right:14px;font-weight:600">24/7 Emergency: (305) 555-1234</span>
-        <a href="#contact" style="background:rgba(255,255,255,0.12);padding:8px 10px;border-radius:8px">Request Service</a>
-      </div>
-    </div>
-  </div>
-
-  <header class="hero" role="region" aria-label="Hero">
-    <div class="wrap">
-      <div class="hero-grid">
-
+  <div class="site-wrap">
+    <header class="top">
+      <div class="brand">
+        <img src="/mnt/data/f2dcdb57-0a81-43f4-aff1-3ff4764ccde4.png" alt="Universe Mechanical & Air Conditioning Inc. logo">
         <div>
-          <div class="brand">
-            <div class="logo" style="background:white"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20" stroke="#0d47a1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 6l-8 6-8-6 8 6v8" stroke="#0d47a1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div>
-              <div style="font-weight:800;font-size:1rem">Universe Services</div>
-              <div style="font-size:0.85rem;opacity:0.95">Licensed • Insured • EPA-Certified Technicians</div>
+          <div style="font-weight:800">Universe Mechanical & Air Conditioning, Inc.</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Commercial & Residential HVAC • Licensed & Insured</div>
+        </div>
+      </div>
+
+      <nav class="primary" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#new-construction">New Construction</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+13055551234" class="cta-phone">(305) 555-1234</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div>
+          <h1>Miami HVAC experts for new construction, commercial projects, and home comfort.</h1>
+          <p class="lead">Universe Mechanical & Air Conditioning designs, installs, and maintains high-performance HVAC systems throughout South Florida. Fast response, transparent pricing, and code-compliant workmanship.</p>
+
+          <div class="actions">
+            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Service</button>
+            <button class="btn ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">See Services</button>
+          </div>
+
+          <div style="display:flex;gap:10px;margin-top:16px">
+            <div class="quick-card" style="flex:1">
+              <strong>24/7 Emergency Service</strong>
+              <div style="color:var(--muted);margin-top:6px">Rapid dispatch for emergencies across Miami-Dade County.</div>
+            </div>
+            <div class="quick-card" style="width:220px;text-align:center">
+              <strong>Financing Available</strong>
+              <div style="color:var(--muted);margin-top:6px">Flexible payment options for installations.</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="quick-card">
+          <strong>Get a Free Estimate</strong>
+          <form style="margin-top:10px" onsubmit="event.preventDefault();alert('Placeholder: integrate your backend to receive leads.');">
+            <input placeholder="Name" required style="width:100%;margin-bottom:8px">
+            <input placeholder="Phone" required style="width:100%;margin-bottom:8px">
+            <select style="width:100%;margin-bottom:8px">
+              <option>Service type</option>
+              <option>New Construction</option>
+              <option>Installation</option>
+              <option>Repair</option>
+              <option>Maintenance</option>
+            </select>
+            <button class="btn" style="width:100%">Request Estimate</button>
+          </form>
+        </aside>
+      </section>
+
+      <!-- New Construction -->
+      <section id="new-construction">
+        <div class="section-head">
+          <h2>New Construction HVAC Services</h2>
+          <div style="color:var(--muted)">Design • Install • Commission • Maintain</div>
+        </div>
+
+        <div class="new-construction" style="margin-top:14px">
+          <div>
+            <p style="color:var(--muted)">Universe Mechanical specializes in turnkey HVAC services for new construction and major renovations. We partner with builders, architects, and project managers to deliver systems that meet performance, efficiency, and code requirements.</p>
+
+            <ul class="proj-list">
+              <li><strong>System design & load calculation</strong> — ACCA Manual J & D compliant.</li>
+              <li><strong>Commercial rooftop units & VRF systems</strong> — large-scale solutions.</li>
+              <li><strong>Residential central systems</strong> — high-efficiency splits and heat pumps.</li>
+              <li><strong>Controls & building automation</strong> — smart integration for energy savings.</li>
+              <li><strong>Permit coordination & inspections</strong> — we handle paperwork and testing.</li>
+            </ul>
+
+            <h3 style="color:var(--brand);margin-top:14px">Sample projects</h3>
+            <ol style="color:var(--muted)">
+              <li>5-story mixed-use development — full HVAC design & rooftop units</li>
+              <li>Custom luxury home — ducted multi-zone system with smart thermostat</li>
+              <li>Retail center retrofit — system replacement and demand-control ventilation</li>
+            </ol>
+          </div>
+
+          <aside>
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80" alt="New construction HVAC" style="width:100%;border-radius:10px;object-fit:cover">
+            <div style="margin-top:12px;background:white;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.04)">
+              <strong>Why choose us?</strong>
+              <p style="margin:8px 0;color:var(--muted)">Licensed technicians, project management experience, and a track record of on-time delivery.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services">
+        <div class="section-head">
+          <h2>Our Services</h2>
+          <div style="color:var(--muted)">Comprehensive HVAC services for homes & businesses</div>
+        </div>
+
+        <div class="services-grid" style="margin-top:14px">
+
+          <article class="service">
+            <img src="https://images.unsplash.com/photo-1578926378152-2a3a5f8eb5a5?auto=format&fit=crop&w=900&q=80" alt="AC repair">
+            <h3>24/7 A/C Repair</h3>
+            <p>Rapid diagnostics, transparent pricing, and fully stocked trucks to get systems cooling fast. Emergency response available.</p>
+            <p style="margin-top:8px;color:var(--muted)"><strong>Typical response:</strong> same day</p>
+          </article>
+
+          <article class="service">
+            <img src="https://images.unsplash.com/photo-1581093806997-124204d9b7d3?auto=format&fit=crop&w=900&q=80" alt="New installs">
+            <h3>New System Installation</h3>
+            <p>Proper equipment sizing (Manual J), professional installation, and system commissioning to ensure efficient operation and warranty compliance.</p>
+            <p style="margin-top:8px;color:var(--muted)"><strong>Brands:</strong> Carrier, Trane, Lennox, Mitsubishi</p>
+          </article>
+
+          <article class="service">
+            <img src="https://images.unsplash.com/photo-1597003555553-8c2cc74f36bb?auto=format&fit=crop&w=900&q=80" alt="maintenance">
+            <h3>Maintenance Plans</h3>
+            <p>Seasonal tune-ups reduce breakdowns and improve efficiency. Membership options include priority scheduling and discounts on repairs.</p>
+            <p style="margin-top:8px;color:var(--muted)"><strong>Includes:</strong> coil cleaning, refrigerant check, filter change, safety inspection.</p>
+          </article>
+
+          <article class="service">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80" alt="duct cleaning">
+            <h3>Duct Cleaning & IAQ</h3>
+            <p>Improve indoor air quality with professional duct cleaning, UV lights, and high-efficiency filtration upgrades.</p>
+            <p style="margin-top:8px;color:var(--muted)"><strong>Benefits:</strong> better airflow, fewer allergens, longer equipment life.</p>
+          </article>
+
+          <article class="service">
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80" alt="controls">
+            <h3>Controls & Smart Thermostats</h3>
+            <p>Smart thermostats and building controls that reduce energy use and give you remote control over comfort settings.</p>
+          </article>
+
+        </div>
+
+        <div style="margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+          <div class="quick-card">
+            <strong>Licensed & Insured</strong>
+            <div style="color:var(--muted);margin-top:6px">EPA-certified technicians and full liability coverage.</div>
+          </div>
+          <div class="quick-card">
+            <strong>Transparent Pricing</strong>
+            <div style="color:var(--muted);margin-top:6px">Clear estimates and no surprise fees.</div>
+          </div>
+          <div class="quick-card">
+            <strong>Maintenance Plans</strong>
+            <div style="color:var(--muted);margin-top:6px">Keep systems efficient with seasonal visits.</div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Testimonials + FAQ + Contact -->
+      <section style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+        <div>
+          <div class="section-head">
+            <h2>Customer Stories</h2>
+            <div style="color:var(--muted)">Trusted by homeowners and contractors</div>
+          </div>
+
+          <div class="testimonials" style="margin-top:12px">
+            <div class="testimonial">
+              <strong>Maria G. — Coral Gables</strong>
+              <div style="color:var(--muted);margin-top:6px">"They fixed our AC the same day and were so professional. Transparent pricing and clean work — highly recommend!"</div>
+            </div>
+            <div class="testimonial">
+              <strong>Anthony R. — Miami Beach</strong>
+              <div style="color:var(--muted);margin-top:6px">"Installed a new energy-efficient system and saved us on monthly bills. Great crew and quick turnaround."</div>
+            </div>
+            <div class="testimonial">
+              <strong>Jessie L. — Little Havana</strong>
+              <div style="color:var(--muted);margin-top:6px">"Friendly tech, showed me what was wrong and explained options. I signed up for the maintenance plan."</div>
             </div>
           </div>
 
-          <h1>Fast A/C repair, energy-smart installations, and maintenance plans — Miami's trusted team.</h1>
-          <p class="lead">Same-day service available. Transparent pricing, family-owned, and ready for emergency calls 24/7.</p>
-
-          <div class="cta">
-            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Service</button>
-            <a class="btn secondary" href="#services">View Services</a>
-            <span style="align-self:center;color:rgba(255,255,255,0.9);font-weight:600">Free estimates • Financing available</span>
+          <div style="margin-top:18px">
+            <h3 style="color:var(--brand)">FAQ</h3>
+            <details style="margin-top:8px"><summary><strong>Do you offer emergency service?</strong></summary><p style="color:var(--muted)">Yes — 24/7 emergency dispatch across Miami-Dade County.</p></details>
+            <details style="margin-top:6px"><summary><strong>How often should I service my A/C?</strong></summary><p style="color:var(--muted)">We recommend two seasonal tune-ups per year; heavy-use properties may need more frequent checks.</p></details>
+            <details style="margin-top:6px"><summary><strong>Do you handle permits?</strong></summary><p style="color:var(--muted)">Yes — for new construction and major replacements we handle permit coordination and inspections.</p></details>
           </div>
         </div>
 
-        <aside class="card-cta">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-            <strong>Get a Fast Quote</strong>
-            <small style="color:rgba(255,255,255,0.95)">Avg. response: <strong>15 min</strong></small>
+        <aside>
+          <div class="quick-card">
+            <h3 id="contact">Request Service</h3>
+            <form class="card" onsubmit="handleSubmit(event)">
+              <input name="name" placeholder="Full name" required>
+              <input name="phone" placeholder="Phone" required>
+              <input name="email" placeholder="Email (optional)">
+              <select name="service">
+                <option>Emergency Repair</option>
+                <option>New Installation</option>
+                <option>Maintenance</option>
+                <option>Duct Cleaning</option>
+                <option>New Construction Consultation</option>
+              </select>
+              <textarea name="message" rows="3" placeholder="Describe the issue or project (optional)"></textarea>
+              <button class="form-submit" type="submit">Send Request</button>
+              <div style="color:var(--muted);margin-top:8px">Or call <strong>(305) 555-1234</strong></div>
+            </form>
           </div>
 
-          <form onsubmit="event.preventDefault();alert('Thanks! This is a placeholder form — integrate your backend or replace with mailto.');" aria-label="Quick quote form">
-            <input name="name" placeholder="Full name" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:8px" required>
-            <input name="phone" placeholder="Phone" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:8px" required>
-            <select name="service" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:8px">
-              <option>-- Select Service --</option>
-              <option>Emergency Repair</option>
-              <option>New Installation</option>
-              <option>Maintenance Plan</option>
-              <option>Duct Cleaning</option>
-            </select>
-            <button type="submit" class="btn" style="width:100%">Get Quote</button>
-          </form>
-
-          <div style="margin-top:14px;font-size:0.9rem;color:rgba(255,255,255,0.95)">
-            <div class="chip">🔧 Licensed technicians</div>
-            <div style="height:8px"></div>
-            <div class="chip">🕒 24/7 Emergency</div>
+          <div style="margin-top:12px;background:white;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.04)">
+            <strong>Service Area</strong>
+            <div style="color:var(--muted);margin-top:6px">Miami • Miami Beach • Coral Gables • Hialeah • Doral • Kendall</div>
           </div>
         </aside>
-
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap">
-
-    <section aria-labelledby="services-heading">
-      <div class="section-head">
-        <h2 id="services-heading">Services We Offer</h2>
-        <div style="color:var(--muted);font-size:0.95rem">Serving all of Miami-Dade County • Residential & Commercial</div>
-      </div>
-
-      <div class="services-grid" id="services">
-
-        <article class="service" aria-labelledby="s1">
-          <img src="https://images.unsplash.com/photo-1578926378152-2a3a5f8eb5a5?auto=format&fit=crop&w=900&q=80" alt="Technician repairing an AC unit">
-          <h3 id="s1">24/7 A/C Repair</h3>
-          <p>Fast diagnostics and repair for all major brands. We stock common parts to get your system cooling again quickly.</p>
-        </article>
-
-        <article class="service" aria-labelledby="s2">
-          <img src="https://images.unsplash.com/photo-1581093806997-124204d9b7d3?auto=format&fit=crop&w=900&q=80" alt="Installation of a new energy efficient AC unit">
-          <h3 id="s2">New System Installation</h3>
-          <p>Energy-efficient systems sized for your home or business. We handle permits and full-system commissioning.</p>
-        </article>
-
-        <article class="service" aria-labelledby="s3">
-          <img src="https://images.unsplash.com/photo-1597003555553-8c2cc74f36bb?auto=format&fit=crop&w=900&q=80" alt="Routine maintenance checklist">
-          <h3 id="s3">Maintenance Plans</h3>
-          <p>Keep your A/C running efficiently year-round with seasonal tune-ups and priority scheduling for members.</p>
-        </article>
-
-        <article class="service" aria-labelledby="s4">
-          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80" alt="Duct cleaning">
-          <h3 id="s4">Duct Cleaning & Indoor Air Quality</h3>
-          <p>Improve airflow and reduce allergens with professional duct cleaning and UV/filtration upgrades.</p>
-        </article>
-
-        <article class="service" aria-labelledby="s5">
-          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80" alt="Smart thermostat installation">
-          <h3 id="s5">Smart Thermostats & Controls</h3>
-          <p>Upgrade to smart thermostats to save energy and control comfort from your phone.</p>
-        </article>
-
-      </div>
-
-      <div class="benefits">
-        <div class="benefit"><strong>✅ Licensed & Insured</strong><div style="color:var(--muted)">EPA & local certified</div></div>
-        <div class="benefit"><strong>⏱️ Fast Response</strong><div style="color:var(--muted)">Same-day available</div></div>
-        <div class="benefit"><strong>💳 Financing</strong><div style="color:var(--muted)">Flexible payment plans</div></div>
-        <div class="benefit"><strong>🔁 Maintenance Plans</strong><div style="color:var(--muted)">Priority scheduling</div></div>
-      </div>
-
-    </section>
-
-    <section class="testimonials" aria-labelledby="testimonials-heading">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <h2 id="testimonials-heading">What Our Customers Say</h2>
-        <div style="color:var(--muted);font-size:0.95rem">Real reviews from Miami homeowners</div>
-      </div>
-
-      <div class="testimonial-list">
-        <blockquote class="testimonial">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <strong>Maria G. — Coral Gables</strong>
-            <div class="stars">★★★★★</div>
-          </div>
-          <p style="margin-top:8px;color:var(--muted)">"They fixed our AC the same day and were so professional. Transparent pricing and clean work — highly recommend!"</p>
-        </blockquote>
-
-        <blockquote class="testimonial">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <strong>Anthony R. — Miami Beach</strong>
-            <div class="stars">★★★★★</div>
-          </div>
-          <p style="margin-top:8px;color:var(--muted)">"Installed a new energy-efficient system and saved us on monthly bills. Great crew and quick turnaround."</p>
-        </blockquote>
-
-        <blockquote class="testimonial">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <strong>Jessie L. — Little Havana</strong>
-            <div class="stars">★★★★★</div>
-          </div>
-          <p style="margin-top:8px;color:var(--muted)">"Friendly tech, showed me what was wrong and explained options. I signed up for the maintenance plan."</p>
-        </blockquote>
-      </div>
-    </section>
-
-    <div class="two-col" style="margin-top:34px">
-
-      <section class="faq" aria-labelledby="faq-heading">
-        <h2 id="faq-heading">Frequently Asked Questions</h2>
-        <details style="margin-top:12px"><summary><strong>Do you offer emergency service?</strong></summary><p style="color:var(--muted)">Yes — we offer 24/7 emergency repair with rapid dispatch across Miami-Dade County.</p></details>
-        <details style="margin-top:8px"><summary><strong>How often should I service my A/C?</strong></summary><p style="color:var(--muted)">We recommend seasonal tune-ups at least twice a year. For heavy use, quarterly inspections help maintain efficiency.</p></details>
-        <details style="margin-top:8px"><summary><strong>Do you provide estimates?</strong></summary><p style="color:var(--muted)">Yes — free on-site estimates for installs and transparent diagnostic pricing for repairs.</p></details>
-
-        <h3 style="margin-top:16px;color:var(--brand)">Our Service Area</h3>
-        <p style="color:var(--muted);margin-top:6px">Miami • Miami Beach • Coral Gables • Little Havana • Hialeah • Doral • Kendall and surrounding neighborhoods.</p>
       </section>
 
-      <aside>
-        <div class="map-placeholder">
-          <!-- Placeholder map: swap with your Google Maps iframe or static image -->
-          <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80" alt="Map placeholder" style="width:100%;height:100%;object-fit:cover">
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:var(--max);margin:0 auto">
+        <div>
+          <div style="font-weight:700">Universe Mechanical & Air Conditioning, Inc.</div>
+          <div style="color:rgba(255,255,255,0.92)">Licensed & Insured • EPA Certified</div>
         </div>
-
-        <div style="margin-top:16px">
-          <form id="contact" class="card" onsubmit="handleSubmit(event)">
-            <h3 style="margin:0 0 4px 0">Request Service</h3>
-            <small style="color:var(--muted)">Fill the form and we’ll call you to confirm.</small>
-            <input type="text" name="name" placeholder="Full name" required>
-            <input type="tel" name="phone" placeholder="Phone (e.g. 305-555-1234)" required>
-            <input type="email" name="email" placeholder="Email (optional)">
-            <select name="service">
-              <option>Emergency Repair</option>
-              <option>System Installation</option>
-              <option>Maintenance</option>
-              <option>Duct Cleaning</option>
-            </select>
-            <textarea name="message" rows="4" placeholder="Describe the issue or request (optional)"></textarea>
-            <button class="form-submit" type="submit">Send Request</button>
-            <small style="color:var(--muted);margin-top:6px">Or call: <strong>(305) 555-1234</strong></small>
-          </form>
+        <div style="text-align:right">
+          <div style="font-weight:700">(305) 555-1234</div>
+          <div style="color:rgba(255,255,255,0.92)">info@universe-mech.example</div>
         </div>
-      </aside>
-
-    </div>
-
-  </main>
-
-  <footer>
-    <div class="footer-grid wrap">
-      <div>
-        <div style="font-weight:700">Universe Services</div>
-        <div style="font-size:0.9rem;color:rgba(255,255,255,0.92)">Licensed & Insured • EPA Certified</div>
       </div>
+    </footer>
 
-      <div style="text-align:right">
-        <div style="font-weight:700">(305) 555-1234</div>
-        <div style="font-size:0.9rem;color:rgba(255,255,255,0.95)">info@universe-services.example</div>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script>
-    // Placeholder form handler — replace with real integration (email API / backend)
     function handleSubmit(e){
       e.preventDefault();
       const form = e.target;
-      const data = new FormData(form);
-      const name = data.get('name');
-      const phone = data.get('phone');
-      alert(`Thanks ${name}! We received your request and will call ${phone} shortly. (This is a placeholder alert.)`);
+      const fd = new FormData(form);
+      const name = fd.get('name');
+      const phone = fd.get('phone');
+      alert(`Thanks ${name}! We received your request and will call ${phone} shortly. (Placeholder)`);
       form.reset();
-      window.location.hash = '#contact';
+      location.hash = '#contact';
     }
-
-    // Simple accessibility enhancement: focus outline for keyboard users only
-    (function(){
-      function handleFirstTab(e){
-        if(e.key === 'Tab'){
-          document.body.classList.add('user-is-tabbing');
-          window.removeEventListener('keydown', handleFirstTab);
-        }
-      }
-      window.addEventListener('keydown', handleFirstTab);
-    })();
   </script>
 
-  <!-- JSON-LD structured data for SEO -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "HVACBusiness",
-    "name": "Universe Services",
-    "url": "https://your-github-username.github.io/universe-services/",
-    "telephone": "+1-305-555-1234",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Miami",
-      "addressRegion": "FL",
-      "postalCode": "33101",
-      "streetAddress": "Miami, FL (service area)"
-    },
-    "description": "A/C repair, installation, and maintenance services serving Miami-Dade County.",
-    "areaServed": "Miami-Dade County"
+    "@context":"https://schema.org",
+    "@type":"HVACBusiness",
+    "name":"Universe Mechanical & Air Conditioning, Inc.",
+    "telephone":"+1-305-555-1234",
+    "address":{ "@type":"PostalAddress", "addressLocality":"Miami", "addressRegion":"FL" },
+    "description":"Commercial and residential HVAC services including new construction, installs, repairs, and maintenance in Miami-Dade County."
   }
   </script>
 

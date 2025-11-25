@@ -37,46 +37,32 @@
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    /* GALAXY BACKGROUND */
+    /* GALAXY BACKGROUND (clean, no dot grid) */
     body {
       position: relative;
       min-height: 100vh;
       background:
-        radial-gradient(circle at 20% 0%, #0f172a 0, #020617 40%, #000000 100%);
+        radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.28) 0, transparent 55%),
+        radial-gradient(circle at 85% 10%, rgba(129, 140, 248, 0.35) 0, transparent 60%),
+        radial-gradient(circle at 0% 80%, rgba(15, 23, 42, 0.9) 0, transparent 60%),
+        linear-gradient(145deg, #020617 0%, #000010 40%, #020617 75%, #000000 100%);
       color: var(--text-main);
       line-height: 1.5;
       overflow-x: hidden;
     }
 
+    /* A couple subtle “nebula glows” behind content */
     body::before {
       content: "";
       position: fixed;
-      inset: -80px;
-      pointer-events: none;
-      z-index: -2;
-      background-image:
-        radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.22) 0, transparent 55%),
-        radial-gradient(circle at 80% 10%, rgba(59, 130, 246, 0.20) 0, transparent 55%),
-        radial-gradient(circle at 20% 80%, rgba(8, 47, 73, 0.35) 0, transparent 65%);
-      opacity: 0.8;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: -80px;
+      inset: -100px;
       pointer-events: none;
       z-index: -1;
-      background-image: radial-gradient(#ffffff 1px, transparent 1px);
-      background-size: 3px 3px;
-      opacity: 0.18;
+      background:
+        radial-gradient(circle at 70% 85%, rgba(37, 99, 235, 0.35) 0, transparent 60%),
+        radial-gradient(circle at 15% 50%, rgba(30, 64, 175, 0.5) 0, transparent 65%);
+      opacity: 0.65;
       mix-blend-mode: screen;
-      animation: twinkle 16s linear infinite alternate;
-    }
-
-    @keyframes twinkle {
-      from { opacity: 0.12; }
-      to   { opacity: 0.24; }
     }
 
     a {
@@ -255,9 +241,7 @@
       white-space: nowrap;
     }
 
-    .nav-phone strong {
-      color: #e5e7eb;
-    }
+    /* we removed the phone text; this just keeps the Book Service button aligned */
 
     .nav-toggle {
       display: none;
@@ -353,7 +337,7 @@
     .page-header {
       padding: 3rem 0 1.2rem;
       border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-      background: radial-gradient(circle at 0 0, rgba(59, 130, 246, 0.18), transparent 60%);
+      background: radial-gradient(circle at 0 0, rgba(59, 130, 246, 0.22), transparent 60%);
     }
 
     .page-header-inner {
@@ -1116,8 +1100,7 @@
       </nav>
 
       <div class="nav-right">
-        <!-- 24/7 Support removed so this fits one line cleanly -->
-        <div class="nav-phone"><strong>Call (305) 555-0123</strong></div>
+        <!-- Phone text removed per your request -->
         <a href="index.html?page=home#contact" class="btn btn-primary nav-cta">Book Service</a>
       </div>
 
@@ -1733,5 +1716,6 @@
   </script>
 </body>
 </html>
+
 
 

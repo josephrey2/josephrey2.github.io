@@ -11,9 +11,7 @@
       --blue-main: #0056a6;
       --blue-main-soft: rgba(0, 86, 166, 0.08);
       --blue-light: #1d7dd4;
-      --blue-dark: #020617;
-      --blue-ink: #071427;
-      --bg-page: #020617;
+      --bg-page: #020b1f;
       --bg-card: #041425;
       --bg-card-soft: #06192e;
       --border-subtle: rgba(148, 163, 184, 0.35);
@@ -39,17 +37,37 @@
     }
 
     body {
-      /* Galaxy background: navy + subtle purple + star specks */
-      background:
-        /* big nebula glows */
-        radial-gradient(circle at 10% 0%, rgba(88, 28, 135, 0.45), transparent 60%),
-        radial-gradient(circle at 85% 100%, rgba(37, 99, 235, 0.45), transparent 60%),
-        radial-gradient(circle at 50% 40%, rgba(15, 23, 42, 0.9), #020617),
-        /* subtle star clusters */
-        radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.45), transparent 55%),
-        radial-gradient(1px 1px at 70% 80%, rgba(191, 219, 254, 0.4), transparent 55%),
-        radial-gradient(1px 1px at 40% 60%, rgba(148, 163, 184, 0.35), transparent 55%);
+      /* Strong galaxy background: navy + purple with lots of clear stars */
       background-color: var(--bg-page);
+      background-image:
+        /* nebula glows */
+        radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.35), transparent 60%),
+        radial-gradient(circle at 85% 10%, rgba(76, 29, 149, 0.4), transparent 65%),
+        radial-gradient(circle at 20% 80%, rgba(30, 64, 175, 0.35), transparent 60%),
+        radial-gradient(circle at 80% 85%, rgba(37, 99, 235, 0.35), transparent 60%),
+        /* star fields (lots of white dots) */
+        repeating-radial-gradient(circle at 5% 10%,
+          rgba(255, 255, 255, 0.85) 0px,
+          rgba(255, 255, 255, 0.85) 1px,
+          transparent 1px,
+          transparent 4px),
+        repeating-radial-gradient(circle at 80% 25%,
+          rgba(255, 255, 255, 0.75) 0px,
+          rgba(255, 255, 255, 0.75) 1px,
+          transparent 1px,
+          transparent 5px),
+        repeating-radial-gradient(circle at 30% 70%,
+          rgba(255, 255, 255, 0.7) 0px,
+          rgba(255, 255, 255, 0.7) 1px,
+          transparent 1px,
+          transparent 5px),
+        repeating-radial-gradient(circle at 95% 90%,
+          rgba(191, 219, 254, 0.8) 0px,
+          rgba(191, 219, 254, 0.8) 1px,
+          transparent 1px,
+          transparent 5px);
+      background-attachment: fixed;
+      background-size: cover;
     }
 
     a {
@@ -222,8 +240,6 @@
     .nav-right {
       display: flex;
       align-items: center;
-      gap: 0.9rem;
-      font-size: 0.8rem;
     }
 
     .nav-toggle {
@@ -320,11 +336,7 @@
     .page-header {
       padding: 3rem 0 1.2rem;
       border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-      /* Dark galaxy bar behind titles */
-      background:
-        radial-gradient(circle at 0 0, rgba(59, 130, 246, 0.18), transparent 55%),
-        radial-gradient(circle at 100% 100%, rgba(76, 29, 149, 0.28), transparent 55%),
-        rgba(3, 7, 18, 0.98);
+      background: rgba(3, 7, 18, 0.75); /* semi-transparent so stars show through a bit */
     }
 
     .page-header-inner {
@@ -348,7 +360,7 @@
 
     .page-header-logo {
       height: 38px;
-      opacity: 0.85;
+      opacity: 0.9;
       filter: drop-shadow(0 0 10px rgba(15, 23, 42, 0.9));
     }
 
@@ -358,7 +370,7 @@
       min-height: 80vh;
       color: #f9fafb;
       overflow: hidden;
-      background: #020617;
+      background: transparent;
     }
 
     .hero video {
@@ -505,8 +517,7 @@
     }
 
     .home-strip {
-      /* Make this blend with overall galaxy theme */
-      background: rgba(3, 7, 18, 0.96);
+      background: rgba(3, 7, 18, 0.75);
       border-top: 1px solid rgba(15, 23, 42, 0.95);
       border-bottom: 1px solid rgba(15, 23, 42, 0.95);
       padding: 1rem 0;
@@ -827,13 +838,12 @@
       color: #bbf7d0;
     }
 
-    /* CONTACT (used from all pages) ----------------------------------------- */
+    /* CONTACT (HOME) --------------------------------------------------------- */
     .contact-section {
       padding: 3rem 0 1rem;
       border-top: 1px solid rgba(15, 23, 42, 0.9);
       margin-top: 3rem;
-      /* Keep this aligned with galaxy feel */
-      background: rgba(3, 7, 18, 0.9);
+      background: rgba(3, 7, 18, 0.82); /* dark panel over stars */
     }
 
     .contact-grid {
@@ -950,7 +960,7 @@
     footer {
       padding: 1.5rem 0 2rem;
       border-top: 1px solid rgba(15, 23, 42, 0.95);
-      background: #020617;
+      background: rgba(2, 6, 23, 0.94);
       font-size: 0.78rem;
       color: var(--text-muted);
     }
@@ -965,7 +975,7 @@
 
     .footer-logo {
       height: 26px;
-      opacity: 0.8;
+      opacity: 0.85;
       filter: drop-shadow(0 0 8px rgba(15, 23, 42, 0.9));
     }
 
@@ -1708,5 +1718,6 @@
   </script>
 </body>
 </html>
+
 
 

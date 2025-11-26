@@ -1,57 +1,9 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Universe Mechanical & Air Conditioning Inc.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Universe Mechanical & Air Conditioning Inc. - Mechanical & Air Conditioning contractor based in Miami, FL." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --blue-main: #0056a6;
-      --blue-main-soft: rgba(0, 86, 166, 0.08);
-      --blue-light: #1d7dd4;
-      --bg-page: #020b1f;
-      --bg-card: #041425;
-      --bg-card-soft: #06192e;
-      --border-subtle: rgba(148, 163, 184, 0.35);
-      --radius-xl: 20px;
-      --shadow-soft: 0 20px 60px rgba(15, 23, 42, 0.7);
-      --transition-fast: 0.2s ease-out;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --accent-green: #22c55e;
-      --starfield:
-        repeating-radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.8) 0px, rgba(255, 255, 255, 0.8) 1px, transparent 1px, transparent 4px),
-        repeating-radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.7) 0px, rgba(255, 255, 255, 0.7) 1px, transparent 1px, transparent 5px),
-        repeating-radial-gradient(circle at 30% 78%, rgba(191, 219, 254, 0.78) 0px, rgba(191, 219, 254, 0.78) 1px, transparent 1px, transparent 5px),
-        repeating-radial-gradient(circle at 95% 88%, rgba(255, 255, 255, 0.75) 0px, rgba(255, 255, 255, 0.75) 1px, transparent 1px, transparent 4px);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-      scroll-behavior: smooth;
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text-main);
-    }
-
-    body {
-      /* Strong galaxy background: navy + purple with lots of clear stars */
-      background-color: var(--bg-page);
-      background-image:
-        /* nebula glows */
-        radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.35), transparent 60%),
-        radial-gradient(circle at 85% 10%, rgba(76, 29, 149, 0.4), transparent 65%),
-        radial-gradient(circle at 20% 80%, rgba(30, 64, 175, 0.35), transparent 60%),
-        radial-gradient(circle at 80% 85%, rgba(37, 99, 235, 0.35), transparent 60%),
-        /* star fields (lots of white dots) */
-        var(--starfield);
+          transparent 5px),
+        repeating-radial-gradient(circle at 95% 90%,
+          rgba(191, 219, 254, 0.8) 0px,
+          rgba(191, 219, 254, 0.8) 1px,
+          transparent 1px,
+          transparent 5px);
       background-attachment: fixed;
       background-size: cover;
     }
@@ -322,11 +274,7 @@
     .page-header {
       padding: 3rem 0 1.2rem;
       border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-      background:
-        linear-gradient(to bottom, rgba(3, 7, 18, 0.78), rgba(3, 7, 18, 0.72)),
-        radial-gradient(circle at 10% 0, rgba(59, 130, 246, 0.28), transparent 50%),
-        radial-gradient(circle at 85% 20%, rgba(124, 58, 237, 0.28), transparent 50%),
-        var(--starfield);
+      background: rgba(3, 7, 18, 0.75); /* semi-transparent so stars show through a bit */
     }
 
     .page-header-inner {
@@ -376,11 +324,9 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(120deg, rgba(2, 6, 23, 0.85), rgba(0, 86, 166, 0.45)),
-        radial-gradient(circle at 12% 18%, rgba(59, 130, 246, 0.35), transparent 60%),
-        radial-gradient(circle at 82% 80%, rgba(88, 28, 135, 0.35), transparent 60%),
-        var(--starfield);
-      background-blend-mode: screen, normal, normal, normal;
+        linear-gradient(120deg, rgba(2, 6, 23, 0.96), rgba(0, 86, 166, 0.7)),
+        radial-gradient(circle at 10% 0, rgba(255, 255, 255, 0.16), transparent 55%),
+        radial-gradient(circle at 80% 100%, rgba(88, 28, 135, 0.32), transparent 60%);
       z-index: -1;
     }
 
@@ -453,10 +399,7 @@
     }
 
     .hero-panel {
-      background:
-        linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(4, 21, 42, 0.85)),
-        radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.18), transparent 40%),
-        var(--starfield);
+      background: rgba(15, 23, 42, 0.9);
       border-radius: 24px;
       border: 1px solid rgba(148, 163, 184, 0.7);
       padding: 1.4rem 1.25rem;
@@ -512,9 +455,7 @@
     }
 
     .home-strip {
-      background:
-        linear-gradient(to right, rgba(3, 7, 18, 0.8), rgba(4, 6, 21, 0.7)),
-        var(--starfield);
+      background: rgba(3, 7, 18, 0.75);
       border-top: 1px solid rgba(15, 23, 42, 0.95);
       border-bottom: 1px solid rgba(15, 23, 42, 0.95);
       padding: 1rem 0;
@@ -587,10 +528,7 @@
     }
 
     .leader-card {
-      background:
-        linear-gradient(165deg, rgba(4, 20, 37, 0.9), rgba(6, 22, 41, 0.82)),
-        radial-gradient(circle at 75% 12%, rgba(59, 130, 246, 0.18), transparent 45%),
-        var(--starfield);
+      background: var(--bg-card);
       border-radius: 18px;
       border: 1px solid var(--border-subtle);
       padding: 0.9rem 1rem 1rem;
@@ -632,10 +570,7 @@
     }
 
     .card {
-      background:
-        linear-gradient(165deg, rgba(6, 25, 46, 0.9), rgba(4, 20, 37, 0.82)),
-        radial-gradient(circle at 20% 15%, rgba(59, 130, 246, 0.14), transparent 45%),
-        var(--starfield);
+      background: var(--bg-card-soft);
       border-radius: var(--radius-xl);
       padding: 1.3rem 1.2rem;
       border: 1px solid var(--border-subtle);
@@ -718,10 +653,7 @@
     }
 
     .timeline {
-      background:
-        linear-gradient(160deg, rgba(6, 25, 46, 0.86), rgba(4, 20, 37, 0.78)),
-        radial-gradient(circle at 12% 20%, rgba(59, 130, 246, 0.18), transparent 50%),
-        var(--starfield);
+      background: var(--bg-card-soft);
       border-radius: var(--radius-xl);
       padding: 1.4rem 1.3rem;
       border: 1px solid var(--border-subtle);
@@ -794,10 +726,7 @@
     }
 
     .construction-right {
-      background:
-        linear-gradient(180deg, rgba(6, 22, 41, 0.9), rgba(5, 18, 34, 0.8)),
-        radial-gradient(circle at 70% 0%, rgba(37, 99, 235, 0.2), transparent 45%),
-        var(--starfield);
+      background: var(--bg-card);
       border-radius: var(--radius-xl);
       padding: 1.4rem 1.3rem;
       border: 1px solid var(--border-subtle);
@@ -852,11 +781,7 @@
       padding: 3rem 0 1rem;
       border-top: 1px solid rgba(15, 23, 42, 0.9);
       margin-top: 3rem;
-      background:
-        linear-gradient(180deg, rgba(3, 7, 18, 0.86), rgba(3, 7, 18, 0.78)),
-        radial-gradient(circle at 8% 5%, rgba(59, 130, 246, 0.25), transparent 50%),
-        radial-gradient(circle at 92% 10%, rgba(124, 58, 237, 0.22), transparent 55%),
-        var(--starfield);
+      background: rgba(3, 7, 18, 0.82); /* dark panel over stars */
     }
 
     .contact-grid {
@@ -870,10 +795,7 @@
     .contact-card {
       border-radius: var(--radius-xl);
       padding: 1.4rem 1.3rem;
-      background:
-        linear-gradient(170deg, rgba(6, 25, 46, 0.9), rgba(4, 20, 37, 0.84)),
-        radial-gradient(circle at 85% 12%, rgba(59, 130, 246, 0.16), transparent 38%),
-        var(--starfield);
+      background: var(--bg-card-soft);
       border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
       font-size: 0.82rem;
@@ -1734,4 +1656,5 @@
   </script>
 </body>
 </html>
+
 

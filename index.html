@@ -8,19 +8,29 @@
 
   <style>
     :root {
-      --blue-main: #0056a6;
-      --blue-main-soft: rgba(0, 86, 166, 0.08);
-      --blue-light: #1d7dd4;
-      --bg-page: #020b1f;
-      --bg-card: #041425;
-      --bg-card-soft: #06192e;
-      --border-subtle: rgba(148, 163, 184, 0.35);
+      /* GALAXY PALETTE */
+      --galaxy-dark: #02040a;       /* Deepest space black */
+      --galaxy-purple: #7c3aed;     /* Vivid purple */
+      --galaxy-blue: #3b82f6;       /* Bright blue */
+      --galaxy-teal: #2dd4bf;       /* Nebula teal accent */
+      
+      --blue-main: var(--galaxy-purple);
+      --blue-main-soft: rgba(124, 58, 237, 0.15);
+      --blue-light: var(--galaxy-blue);
+      
+      --bg-page: var(--galaxy-dark);
+      --bg-card: rgba(13, 16, 33, 0.7); /* Glassy dark card */
+      --bg-card-soft: rgba(22, 28, 55, 0.6);
+      
+      --border-subtle: rgba(139, 92, 246, 0.3); /* Purple-tinged border */
       --radius-xl: 20px;
-      --shadow-soft: 0 20px 60px rgba(15, 23, 42, 0.7);
+      --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.8);
+      --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.4);
+      
       --transition-fast: 0.2s ease-out;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --accent-green: #22c55e;
+      --text-main: #f3f4f6;
+      --text-muted: #a78bfa; /* Light lavender for muted text */
+      --accent-green: #34d399;
     }
 
     * {
@@ -37,37 +47,19 @@
     }
 
     body {
-      /* Strong galaxy background: navy + purple with lots of clear stars */
       background-color: var(--bg-page);
-      background-image:
-        /* nebula glows */
-        radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.35), transparent 60%),
-        radial-gradient(circle at 85% 10%, rgba(76, 29, 149, 0.4), transparent 65%),
-        radial-gradient(circle at 20% 80%, rgba(30, 64, 175, 0.35), transparent 60%),
-        radial-gradient(circle at 80% 85%, rgba(37, 99, 235, 0.35), transparent 60%),
-        /* star fields (lots of white dots) */
-        repeating-radial-gradient(circle at 5% 10%,
-          rgba(255, 255, 255, 0.85) 0px,
-          rgba(255, 255, 255, 0.85) 1px,
-          transparent 1px,
-          transparent 4px),
-        repeating-radial-gradient(circle at 80% 25%,
-          rgba(255, 255, 255, 0.75) 0px,
-          rgba(255, 255, 255, 0.75) 1px,
-          transparent 1px,
-          transparent 5px),
-        repeating-radial-gradient(circle at 30% 70%,
-          rgba(255, 255, 255, 0.7) 0px,
-          rgba(255, 255, 255, 0.7) 1px,
-          transparent 1px,
-          transparent 5px),
-        repeating-radial-gradient(circle at 95% 90%,
-          rgba(191, 219, 254, 0.8) 0px,
-          rgba(191, 219, 254, 0.8) 1px,
-          transparent 1px,
-          transparent 5px);
+      /* COMPLEX GALAXY BACKGROUND */
+      background-image: 
+        /* Stars (small white dots) */
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+        radial-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1) 2px, transparent 3px),
+        /* Nebula clouds */
+        radial-gradient(circle at 15% 50%, rgba(76, 29, 149, 0.4), transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(37, 99, 235, 0.25), transparent 50%);
+      background-size: 550px 550px, 350px 350px, 250px 250px, 100% 100%, 100% 100%;
+      background-position: 0 0, 40px 60px, 130px 270px, 0 0, 0 0;
       background-attachment: fixed;
-      background-size: cover;
     }
 
     a {
@@ -99,29 +91,34 @@
       gap: 0.4rem;
       cursor: pointer;
       white-space: nowrap;
-      transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast), border var(--transition-fast);
+      transition: all var(--transition-fast);
+      position: relative;
+      overflow: hidden;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue-main), var(--blue-light));
+      background: linear-gradient(135deg, var(--galaxy-purple), var(--galaxy-blue));
       color: #ffffff;
-      box-shadow: 0 18px 55px rgba(37, 99, 235, 0.55);
+      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.5);
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 22px 70px rgba(37, 99, 235, 0.8);
+      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.7);
     }
 
     .btn-secondary {
-      background: transparent;
-      border-color: rgba(148, 163, 184, 0.7);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(139, 92, 246, 0.5);
       color: var(--text-main);
+      backdrop-filter: blur(5px);
     }
 
     .btn-secondary:hover {
-      background: rgba(15, 23, 42, 0.8);
+      background: rgba(139, 92, 246, 0.2);
       transform: translateY(-1px);
+      border-color: var(--galaxy-purple);
     }
 
     .tag {
@@ -130,12 +127,13 @@
       gap: 0.4rem;
       padding: 0.08rem 0.7rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      border: 1px solid rgba(139, 92, 246, 0.4);
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-size: 0.7rem;
-      color: var(--text-muted);
-      background: rgba(15, 23, 42, 0.7);
+      color: #d8b4fe;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
     }
 
     .tag-dot {
@@ -143,6 +141,7 @@
       height: 7px;
       border-radius: 999px;
       background: var(--accent-green);
+      box-shadow: 0 0 8px var(--accent-green);
     }
 
     /* NAVBAR ------------------------------------------------------------------ */
@@ -150,9 +149,10 @@
       position: fixed;
       inset: 0 0 auto 0;
       z-index: 40;
-      background: linear-gradient(to bottom, rgba(3, 7, 18, 0.98), rgba(3, 7, 18, 0.9));
-      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(18px);
+      /* Glassmorphism nav */
+      background: rgba(2, 4, 10, 0.85);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+      backdrop-filter: blur(20px);
     }
 
     .navbar-inner {
@@ -183,8 +183,9 @@
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      color: #f9fafb;
+      color: #fff;
       font-weight: 600;
+      text-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
     }
 
     .logo-text-sub {
@@ -216,12 +217,14 @@
       width: 0;
       height: 2px;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--blue-main), var(--blue-light));
+      background: linear-gradient(90deg, var(--galaxy-purple), var(--galaxy-blue));
       transition: width var(--transition-fast);
+      box-shadow: 0 0 8px var(--galaxy-purple);
     }
 
     .nav-link:hover {
-      color: #ffffff;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(255,255,255,0.6);
     }
 
     .nav-link:hover::after {
@@ -335,8 +338,8 @@
 
     .page-header {
       padding: 3rem 0 1.2rem;
-      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-      background: rgba(3, 7, 18, 0.75); /* semi-transparent so stars show through a bit */
+      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+      background: rgba(2, 4, 10, 0.8);
     }
 
     .page-header-inner {
@@ -349,6 +352,9 @@
     .page-title-block h1 {
       font-size: 1.7rem;
       font-weight: 600;
+      background: linear-gradient(90deg, #fff, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .page-title-block p {
@@ -361,7 +367,7 @@
     .page-header-logo {
       height: 38px;
       opacity: 0.9;
-      filter: drop-shadow(0 0 10px rgba(15, 23, 42, 0.9));
+      filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.5));
     }
 
     /* HOME / HERO ------------------------------------------------------------ */
@@ -373,6 +379,7 @@
       background: transparent;
     }
 
+    /* VIDEO PRESERVED HERE */
     .hero video {
       position: absolute;
       inset: 0;
@@ -380,15 +387,17 @@
       height: 100%;
       object-fit: cover;
       z-index: -2;
+      opacity: 0.6; /* Slight dim to help text pop against galaxy theme */
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
+      /* Complex gradient to blend video with galaxy theme */
       background:
-        linear-gradient(120deg, rgba(2, 6, 23, 0.96), rgba(0, 86, 166, 0.7)),
-        radial-gradient(circle at 10% 0, rgba(255, 255, 255, 0.16), transparent 55%),
-        radial-gradient(circle at 80% 100%, rgba(88, 28, 135, 0.32), transparent 60%);
+        linear-gradient(120deg, rgba(2, 4, 10, 0.9), rgba(76, 29, 149, 0.6)),
+        radial-gradient(circle at 10% 0, rgba(255, 255, 255, 0.1), transparent 55%),
+        radial-gradient(circle at 80% 100%, rgba(59, 130, 246, 0.3), transparent 60%);
       z-index: -1;
     }
 
@@ -405,10 +414,14 @@
       line-height: 1.1;
       font-weight: 700;
       margin: 1rem 0 0.8rem;
+      text-shadow: 0 0 30px rgba(0,0,0,0.5);
     }
 
     .hero-title span {
-      color: #bfdbfe;
+      background: linear-gradient(90deg, #c4b5fd, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
     }
 
     .hero-subtitle {
@@ -416,6 +429,7 @@
       color: #e5e7eb;
       max-width: 32rem;
       margin-bottom: 1.5rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
     }
 
     .hero-bullets {
@@ -432,8 +446,10 @@
       gap: 0.4rem;
       padding: 0.45rem 0.9rem;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .hero-bullet-dot {
@@ -441,6 +457,7 @@
       height: 9px;
       border-radius: 999px;
       background: var(--accent-green);
+      box-shadow: 0 0 6px var(--accent-green);
     }
 
     .hero-actions {
@@ -453,19 +470,21 @@
     .hero-note {
       margin-top: 1rem;
       font-size: 0.78rem;
-      color: #e5e7eb;
+      color: #cbd5e1;
     }
 
     .hero-note span {
       font-weight: 600;
+      color: #fff;
     }
 
     .hero-panel {
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(13, 16, 33, 0.6);
       border-radius: 24px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      border: 1px solid var(--border-subtle);
       padding: 1.4rem 1.25rem;
       box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(12px);
     }
 
     .hero-panel-top {
@@ -479,17 +498,18 @@
     .hero-panel-logo {
       height: 30px;
       opacity: 0.95;
-      filter: drop-shadow(0 0 10px rgba(15, 23, 42, 0.9));
+      filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.8));
     }
 
     .hero-panel h3 {
       font-size: 0.95rem;
       margin-bottom: 0.3rem;
+      color: #fff;
     }
 
     .hero-panel p {
       font-size: 0.8rem;
-      color: #cbd5f5;
+      color: #a78bfa;
     }
 
     .hero-metrics {
@@ -501,26 +521,28 @@
     }
 
     .metric-label {
-      color: #9ca3af;
+      color: #94a3b8;
       margin-bottom: 0.2rem;
     }
 
     .metric-value {
       font-weight: 600;
-      color: #f9fafb;
+      color: #60a5fa; /* Light Blue */
+      text-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
     }
 
     .metric-footnote {
       font-size: 0.7rem;
-      color: #9ca3af;
+      color: #64748b;
       margin-top: 0.6rem;
     }
 
     .home-strip {
-      background: rgba(3, 7, 18, 0.75);
-      border-top: 1px solid rgba(15, 23, 42, 0.95);
-      border-bottom: 1px solid rgba(15, 23, 42, 0.95);
+      background: rgba(2, 4, 10, 0.8);
+      border-top: 1px solid rgba(139, 92, 246, 0.2);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
       padding: 1rem 0;
+      backdrop-filter: blur(10px);
     }
 
     .home-strip-inner {
@@ -548,13 +570,14 @@
       width: 18px;
       height: 18px;
       border-radius: 999px;
-      border: 1px solid var(--blue-main);
+      border: 1px solid var(--galaxy-purple);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 0.65rem;
-      background: var(--blue-main-soft);
+      background: rgba(124, 58, 237, 0.2);
       color: #e5e7eb;
+      box-shadow: 0 0 5px rgba(124, 58, 237, 0.4);
     }
 
     /* ABOUT PAGE ------------------------------------------------------------- */
@@ -579,7 +602,7 @@
     }
 
     .about-highlight {
-      color: #bfdbfe;
+      color: #c4b5fd;
       font-weight: 600;
     }
 
@@ -594,21 +617,23 @@
       border-radius: 18px;
       border: 1px solid var(--border-subtle);
       padding: 0.9rem 1rem 1rem;
-      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.8);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       font-size: 0.8rem;
+      backdrop-filter: blur(10px);
     }
 
     .leader-role {
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: var(--text-muted);
+      color: var(--galaxy-teal);
       margin-bottom: 0.25rem;
     }
 
     .leader-name {
       font-weight: 600;
       margin-bottom: 0.3rem;
+      color: #fff;
     }
 
     .leader-note {
@@ -638,33 +663,36 @@
       border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
       font-size: 0.82rem;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border var(--transition-fast), background var(--transition-fast);
+      transition: all var(--transition-fast);
+      backdrop-filter: blur(10px);
     }
 
     .card:hover {
       transform: translateY(-5px);
-      border-color: rgba(56, 189, 248, 0.7);
-      box-shadow: 0 26px 70px rgba(15, 23, 42, 0.95);
-      background: #07192f;
+      border-color: var(--galaxy-purple);
+      box-shadow: 0 26px 70px rgba(0,0,0,0.6), 0 0 20px rgba(124, 58, 237, 0.2);
+      background: rgba(30, 41, 59, 0.7);
     }
 
     .card-icon {
       width: 34px;
       height: 34px;
       border-radius: 14px;
-      background: rgba(15, 23, 42, 0.98);
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255,255,255,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 0.8rem;
       font-size: 1.2rem;
-      color: #bfdbfe;
+      color: #c4b5fd;
     }
 
     .card-title {
       font-size: 0.96rem;
       font-weight: 600;
       margin-bottom: 0.35rem;
+      color: #fff;
     }
 
     .card-text {
@@ -684,8 +712,9 @@
       font-size: 0.7rem;
       padding: 0.2rem 0.55rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-muted);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #cbd5e1;
+      background: rgba(0,0,0,0.2);
     }
 
     .card-footer {
@@ -701,7 +730,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
-      color: #bfdbfe;
+      color: #60a5fa;
       font-weight: 500;
     }
 
@@ -721,6 +750,7 @@
       border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
       font-size: 0.82rem;
+      backdrop-filter: blur(10px);
     }
 
     .timeline-step {
@@ -732,7 +762,7 @@
     }
 
     .timeline-step:not(:last-child) {
-      border-bottom: 1px solid rgba(31, 41, 55, 0.85);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
     }
 
     .timeline-marker {
@@ -746,24 +776,26 @@
       width: 24px;
       height: 24px;
       border-radius: 999px;
-      border: 1px solid #bfdbfe;
+      border: 1px solid #c4b5fd;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.7rem;
-      color: #bfdbfe;
-      background: rgba(15, 23, 42, 0.96);
+      color: #c4b5fd;
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
     }
 
     .timeline-line {
       flex: 1;
       width: 2px;
-      background: linear-gradient(180deg, rgba(148, 163, 184, 1), transparent);
+      background: linear-gradient(180deg, rgba(139, 92, 246, 0.8), transparent);
     }
 
     .timeline-title {
       font-size: 0.9rem;
       font-weight: 600;
+      color: #fff;
     }
 
     .timeline-text {
@@ -783,8 +815,8 @@
     .timeline-chip {
       padding: 0.18rem 0.55rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: var(--text-muted);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+      color: #cbd5e1;
     }
 
     .construction-right {
@@ -794,6 +826,7 @@
       border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
       font-size: 0.82rem;
+      backdrop-filter: blur(10px);
     }
 
     .pill-row {
@@ -807,7 +840,7 @@
       font-size: 0.7rem;
       padding: 0.22rem 0.7rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      border: 1px solid rgba(139, 92, 246, 0.5);
       color: #e5e7eb;
     }
 
@@ -829,21 +862,22 @@
       width: 16px;
       height: 16px;
       border-radius: 999px;
-      border: 1px solid rgba(74, 222, 128, 0.8);
+      border: 1px solid rgba(52, 211, 153, 0.8);
       background: rgba(22, 163, 74, 0.22);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.75rem;
-      color: #bbf7d0;
+      color: #34d399;
+      box-shadow: 0 0 5px rgba(52, 211, 153, 0.4);
     }
 
     /* CONTACT (HOME) --------------------------------------------------------- */
     .contact-section {
       padding: 3rem 0 1rem;
-      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      border-top: 1px solid rgba(139, 92, 246, 0.2);
       margin-top: 3rem;
-      background: rgba(3, 7, 18, 0.82); /* dark panel over stars */
+      background: rgba(2, 4, 10, 0.9); /* dark panel over stars */
     }
 
     .contact-grid {
@@ -861,6 +895,7 @@
       border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
       font-size: 0.82rem;
+      backdrop-filter: blur(10px);
     }
 
     form {
@@ -882,34 +917,34 @@
     label {
       display: block;
       font-size: 0.75rem;
-      color: var(--text-muted);
+      color: #cbd5e1;
       margin-bottom: 0.22rem;
     }
 
     input, textarea, select {
       width: 100%;
       border-radius: 14px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: #020617;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      background: rgba(2, 6, 23, 0.6);
       padding: 0.55rem 0.75rem;
       font-size: 0.8rem;
       color: #f9fafb;
       outline: none;
       font-family: inherit;
-      transition: border var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      transition: all var(--transition-fast);
     }
 
     input::placeholder,
     textarea::placeholder {
-      color: rgba(148, 163, 184, 0.9);
+      color: rgba(148, 163, 184, 0.6);
     }
 
     input:focus,
     textarea:focus,
     select:focus {
-      border-color: var(--blue-light);
-      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.6);
-      background: #030712;
+      border-color: var(--galaxy-purple);
+      box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+      background: rgba(2, 6, 23, 0.9);
     }
 
     textarea {
@@ -940,6 +975,7 @@
     .contact-meta h4 {
       font-size: 0.9rem;
       margin-bottom: 0.3rem;
+      color: #fff;
     }
 
     .contact-meta-row {
@@ -959,8 +995,8 @@
     /* FOOTER ----------------------------------------------------------------- */
     footer {
       padding: 1.5rem 0 2rem;
-      border-top: 1px solid rgba(15, 23, 42, 0.95);
-      background: rgba(2, 6, 23, 0.94);
+      border-top: 1px solid rgba(139, 92, 246, 0.2);
+      background: #02040a;
       font-size: 0.78rem;
       color: var(--text-muted);
     }
@@ -976,7 +1012,7 @@
     .footer-logo {
       height: 26px;
       opacity: 0.85;
-      filter: drop-shadow(0 0 8px rgba(15, 23, 42, 0.9));
+      filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.5));
     }
 
     .footer-links {
@@ -986,7 +1022,8 @@
     }
 
     .footer-links a:hover {
-      color: #bfdbfe;
+      color: #c4b5fd;
+      text-shadow: 0 0 5px #c4b5fd;
     }
 
     /* FLOATING CALL BUTTON --------------------------------------------------- */
@@ -1003,11 +1040,12 @@
       gap: 0.45rem;
       padding: 0.75rem 1.15rem;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent-green), #16a34a);
+      background: linear-gradient(135deg, var(--accent-green), #059669);
       color: #022c22;
       font-size: 0.84rem;
       font-weight: 600;
-      box-shadow: 0 20px 55px rgba(22, 163, 74, 0.85);
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);
+      border: 1px solid rgba(255,255,255,0.2);
     }
 
     .floating-call span {
@@ -1083,7 +1121,6 @@
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="container navbar-inner">
       <a href="index.html?page=home" class="nav-logo">
@@ -1111,7 +1148,6 @@
       </button>
     </div>
 
-    <!-- Mobile Nav -->
     <div class="nav-mobile" id="navMobile">
       <div class="nav-mobile-list container">
         <a href="index.html?page=home">Home</a>
@@ -1125,7 +1161,6 @@
   </header>
 
   <main>
-    <!-- HOME PAGE ---------------------------------------------------------- -->
     <section class="page" data-page="home">
       <section class="hero">
         <video src="construction.mp4" autoplay muted loop playsinline></video>
@@ -1228,7 +1263,6 @@
         </div>
       </section>
 
-      <!-- HOME CONTACT -->
       <section id="contact" class="contact-section">
         <div class="container">
           <h2>Tell us what’s going on with your A/C.</h2>
@@ -1268,453 +1302,399 @@
                     <select id="serviceType">
                       <option>Service / Repair</option>
                       <option>System Replacement</option>
-                      <option>New Construction Project</option>
-                      <option>Maintenance Membership</option>
-                      <option>Indoor Air Quality / Other</option>
-                    </select>
-                  </div>
-                  <div class="field">
-                    <label for="timeframe">Ideal timeframe</label>
-                    <select id="timeframe">
-                      <option>ASAP (no cooling / emergency)</option>
-                      <option>This week</option>
-                      <option>Within 30 days</option>
-                      <option>Project planning / bidding</option>
+                      <option>New Construction Bid</option>
+                      <option>Maintenance Plan</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="field">
-                  <label for="message">Describe what’s happening</label>
-                  <textarea id="message" placeholder="Example: second floor not cooling, breaker tripped last night..."></textarea>
+                  <label for="message">Details</label>
+                  <textarea id="message" placeholder="Describe the issue or project details..."></textarea>
                 </div>
 
                 <div class="contact-footer">
-                  <span>By submitting, you agree to be contacted by phone, text or email about your request.</span>
-                  <button type="button" class="btn btn-primary">Send Request</button>
+                  <button type="submit" class="btn btn-primary">Send Request</button>
+                  <span>We usually reply within 30 mins during business hours.</span>
                 </div>
               </form>
             </div>
 
-            <aside class="contact-meta">
-              <h4>New construction or multi-unit work?</h4>
-              <p>Send us your plans and we’ll follow up with mechanical questions before pricing your project.</p>
+            <div class="contact-meta">
+              <h4>Contact Information</h4>
               <div class="contact-meta-row">
-                <div>
-                  <span>Plans & bids</span><br />
-                  <strong>plans@universeac.com</strong>
-                </div>
-                <div>
-                  <span>Main office</span><br />
-                  <strong>(305) 555-0123</strong>
-                </div>
+                <span>Phone:</span>
+                <strong>(305) 555-0123</strong>
               </div>
               <div class="contact-meta-row">
-                <div>
-                  <span>Shop</span><br />
-                  <strong>Hialeah Gardens, FL</strong>
-                </div>
-                <div>
-                  <span>Hours</span><br />
-                  <strong>Mon–Sat • 8a–7p</strong>
-                </div>
+                <span>Email:</span>
+                <strong>info@universemechanical.com</strong>
               </div>
-            </aside>
+              <div class="contact-meta-row">
+                <span>Office:</span>
+                <strong>Hialeah Gardens, FL</strong>
+              </div>
+              <div class="contact-meta-row">
+                <span>Hours:</span>
+                <strong>Mon-Fri 7AM - 5PM</strong>
+              </div>
+              <div style="margin-top:1rem; font-size:0.7rem; color:var(--text-muted); line-height:1.4;">
+                Emergency service available 24/7 for existing maintenance customers.
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </section>
 
-    <!-- ABOUT PAGE ---------------------------------------------------------- -->
     <section class="page" data-page="about">
       <div class="page-header">
         <div class="container page-header-inner">
           <div class="page-title-block">
-            <span class="tag"><span class="tag-dot"></span> About Universe Mechanical</span>
-            <h1>Family-led, builder-minded.</h1>
-            <p>
-              Universe Mechanical & Air Conditioning Inc. is a Miami-based mechanical contractor dedicated to clean
-              workmanship, reliable scheduling and long-term performance for homeowners and builders.
-            </p>
+            <h1>Our Universe</h1>
+            <p>From a single truck to a full mechanical fleet.</p>
           </div>
-          <img src="universe-logo.png" alt="Universe logo" class="page-header-logo" />
+          <img src="universe-logo.png" alt="Logo" class="page-header-logo" />
         </div>
       </div>
 
       <div class="container about-layout">
         <div class="about-text">
           <p>
-            From our shop in <strong>Hialeah Gardens</strong>, we support projects across Miami-Dade and Broward — from
-            individual system replacements to neighborhoods of new townhomes and mid-rise residential.
+            <span class="about-highlight">Universe Mechanical & Air Conditioning Inc.</span> was founded on a simple premise:
+            Miami’s construction boom needed mechanical contractors who could actually keep up with the schedule.
           </p>
           <p>
-            Our teams are trained to treat every structure like a long-term asset, not just a ticket in the schedule.
-            That means <strong>properly sized equipment</strong>, thoughtful duct routing, tidy attic work and documented
-            start-ups on every job.
+            We started with residential change-outs and quickly expanded into new construction custom homes. Today, we handle complex mechanical systems for mid-rise buildings, luxury estates, and commercial build-outs throughout South Florida.
           </p>
-          <p class="about-highlight">
-            We’re big enough to support multi-home schedules, and small enough that you still know exactly who is
-            picking up the phone when you call.
+          <p>
+            <strong>Our Mission:</strong> To provide the most reliable mechanical infrastructure in Florida, ensuring that when the switch is flipped, the air is cold, clean, and consistent.
+          </p>
+          <p>
+            We believe in old-school craftsmanship backed by modern project management. That means our ductwork is straight, our copper is clean, and our crews show up when they say they will.
           </p>
         </div>
 
         <div class="leaders-grid">
           <div class="leader-card">
-            <div class="leader-role">CEO & President</div>
-            <div class="leader-name">Claudio Rey</div>
-            <div class="leader-note">
-              Sets the overall direction of Universe Mechanical, aligning field standards, safety and quality for every
-              project we take on.
-            </div>
+            <div class="leader-role">Founder & President</div>
+            <div class="leader-name">John Doe</div>
+            <div class="leader-note">25+ years in HVAC mechanical design and field supervision.</div>
           </div>
           <div class="leader-card">
-            <div class="leader-role">Co-President</div>
-            <div class="leader-name">Yohanka Hernandez</div>
-            <div class="leader-note">
-              Leads customer experience and administration, ensuring communication stays clear between the office,
-              field crews and clients.
-            </div>
-          </div>
-          <div class="leader-card">
-            <div class="leader-role">Chief Operating Officer</div>
-            <div class="leader-name">Jordi Rey</div>
-            <div class="leader-note">
-              Manages day-to-day operations, scheduling and coordination with builders so rough-ins, trims and start-ups
-              land where they should.
-            </div>
-          </div>
-          <div class="leader-card">
-            <div class="leader-role">Chief Financial Officer</div>
-            <div class="leader-name">Joseph Rey</div>
-            <div class="leader-note">
-              Oversees proposals, budgets and project financials to keep pricing transparent and predictable for
-              homeowners and GCs.
-            </div>
+            <div class="leader-role">Lead Project Manager</div>
+            <div class="leader-name">Jane Smith</div>
+            <div class="leader-note">Expert in logistics, permitting, and builder relations.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES PAGE -------------------------------------------------------- -->
     <section class="page" data-page="services">
       <div class="page-header">
         <div class="container page-header-inner">
           <div class="page-title-block">
-            <span class="tag"><span class="tag-dot"></span> Services</span>
-            <h1>A/C & mechanical services tuned for South Florida.</h1>
-            <p>
-              Whether it’s a late-night no-cool call or a full system replacement, our focus stays on reliability,
-              communication and clean work.
-            </p>
+            <h1>Services</h1>
+            <p>Comprehensive mechanical solutions for the modern built environment.</p>
           </div>
-          <img src="universe-logo.png" alt="Universe logo" class="page-header-logo" />
         </div>
       </div>
 
       <div class="container">
-        <p class="section-intro">
-          We service most major equipment brands and work in single-family homes, townhomes, condos and light commercial.
-          Not sure which option is right? Book a visit and we’ll diagnose, explain and lay out clear choices.
-        </p>
-
         <div class="cards-grid">
-          <article class="card">
+          <div class="card">
             <div class="card-icon">❄️</div>
-            <h3 class="card-title">Diagnostics & Repair</h3>
-            <p class="card-text">
-              Fast, precise troubleshooting for no-cool calls, short cycling, water leaks, breaker trips and airflow issues.
-            </p>
+            <h3 class="card-title">Residential A/C</h3>
+            <div class="card-text">
+              Complete system change-outs, ductwork renovation, and high-efficiency upgrades for homeowners.
+            </div>
             <div class="card-tags">
-              <span class="card-tag">Same-day options</span>
-              <span class="card-tag">All brands</span>
-              <span class="card-tag">Up-front pricing</span>
+              <span class="card-tag">Seer2 Ready</span>
+              <span class="card-tag">Smart Thermostats</span>
             </div>
             <div class="card-footer">
-              <span>Most issues resolved on the first visit.</span>
-              <a href="index.html?page=home#contact" class="card-link">Book repair ↗</a>
+              <span>Warranty included</span>
+              <a href="#contact" class="card-link">Book Now ➜</a>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
-            <div class="card-icon">🔁</div>
-            <h3 class="card-title">System Change-Outs</h3>
-            <p class="card-text">
-              High-efficiency replacements with proper duct checks, line-set practices and permit coordination for your city.
-            </p>
+          <div class="card">
+            <div class="card-icon">🏗️</div>
+            <h3 class="card-title">New Construction</h3>
+            <div class="card-text">
+              Plan-and-spec mechanical contracting for custom homes and production housing developments.
+            </div>
             <div class="card-tags">
-              <span class="card-tag">High-SEER</span>
-              <span class="card-tag">Heat pumps</span>
-              <span class="card-tag">Financing paths</span>
+              <span class="card-tag">Load Calcs</span>
+              <span class="card-tag">Rough-in</span>
+              <span class="card-tag">Trim</span>
             </div>
             <div class="card-footer">
-              <span>Designed for long Miami summers.</span>
-              <a href="index.html?page=home#contact" class="card-link">Request quote ↗</a>
+              <span>Builders / GC</span>
+              <a href="index.html?page=new-construction" class="card-link">Learn More ➜</a>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
-            <div class="card-icon">🌀</div>
-            <h3 class="card-title">Ductless Mini-Splits</h3>
-            <p class="card-text">
-              Quiet, efficient comfort for condos, additions, garages and spaces where traditional ductwork doesn’t fit.
-            </p>
+          <div class="card">
+            <div class="card-icon">🏢</div>
+            <h3 class="card-title">Commercial Mechanical</h3>
+            <div class="card-text">
+              Light commercial HVAC for strip malls, office build-outs, and restaurants including hoods/ventilation.
+            </div>
             <div class="card-tags">
-              <span class="card-tag">Single & multi-zone</span>
-              <span class="card-tag">Inverter technology</span>
+              <span class="card-tag">Rooftop Units</span>
+              <span class="card-tag">VRF Systems</span>
             </div>
             <div class="card-footer">
-              <span>Perfect for home offices & studios.</span>
-              <a href="index.html?page=home#contact" class="card-link">Design my zones ↗</a>
+              <span>Licensed Mechanical</span>
+              <a href="#contact" class="card-link">Request Bid ➜</a>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
-            <div class="card-icon">🧪</div>
+          <div class="card">
+            <div class="card-icon">🔧</div>
+            <h3 class="card-title">Repair & Maintenance</h3>
+            <div class="card-text">
+              Diagnostic and repair services for all major brands. Preventative maintenance contracts available.
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Leak Search</span>
+              <span class="card-tag">Compressors</span>
+            </div>
+            <div class="card-footer">
+              <span>Same Day</span>
+              <a href="#contact" class="card-link">Call Dispatch ➜</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">💨</div>
             <h3 class="card-title">Indoor Air Quality</h3>
-            <p class="card-text">
-              Filtration, UV and dehumidification solutions to handle coastal air, allergies and year-round humidity.
-            </p>
+            <div class="card-text">
+              Filtration, UV lights, and dehumidification systems to control mold and humidity in Florida climate.
+            </div>
             <div class="card-tags">
-              <span class="card-tag">Humidity control</span>
-              <span class="card-tag">UV & HEPA</span>
+              <span class="card-tag">HEPA</span>
+              <span class="card-tag">UV-C</span>
+              <span class="card-tag">Dehumidifiers</span>
             </div>
             <div class="card-footer">
-              <span>Better air and healthier equipment.</span>
-              <a href="index.html?page=home#contact" class="card-link">IAQ consult ↗</a>
+              <span>Healthier Home</span>
+              <a href="#contact" class="card-link">Inquire ➜</a>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
-            <div class="card-icon">📱</div>
-            <h3 class="card-title">Smart Controls</h3>
-            <p class="card-text">
-              Wi-Fi thermostats and zoning controls tuned for busy schedules, rentals and split-level homes.
-            </p>
+          <div class="card">
+            <div class="card-icon">📐</div>
+            <h3 class="card-title">Design & Engineering</h3>
+            <div class="card-text">
+              Manual J/D/S calculations and energy code compliance forms for permitting.
+            </div>
             <div class="card-tags">
-              <span class="card-tag">Nest & Ecobee</span>
-              <span class="card-tag">Energy insights</span>
+              <span class="card-tag">Energy Calcs</span>
+              <span class="card-tag">CAD</span>
             </div>
             <div class="card-footer">
-              <span>Control comfort from anywhere.</span>
-              <a href="index.html?page=home#contact" class="card-link">Upgrade controls ↗</a>
+              <span>Permit Ready</span>
+              <a href="#contact" class="card-link">Contact Us ➜</a>
             </div>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">🛡️</div>
-            <h3 class="card-title">Maintenance Memberships</h3>
-            <p class="card-text">
-              Planned tune-ups, coil cleaning and drain protection so your equipment runs reliably when Miami heat spikes.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Priority response</span>
-              <span class="card-tag">Member pricing</span>
-            </div>
-            <div class="card-footer">
-              <span>Protect the system before it fails.</span>
-              <a href="index.html?page=home#contact" class="card-link">Join membership ↗</a>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- NEW CONSTRUCTION PAGE ------------------------------------------------- -->
     <section class="page" data-page="new-construction">
       <div class="page-header">
         <div class="container page-header-inner">
           <div class="page-title-block">
-            <span class="tag"><span class="tag-dot"></span> New Construction</span>
-            <h1>Mechanical systems for projects that matter.</h1>
-            <p>
-              Universe Mechanical partners with general contractors, developers and owners to deliver clean,
-              code-tight mechanical systems from design-assist through final inspection.
-            </p>
+            <h1>New Construction</h1>
+            <p>Partnering with General Contractors to build Florida’s future.</p>
           </div>
-          <img src="universe-logo.png" alt="Universe logo" class="page-header-logo" />
         </div>
       </div>
 
       <div class="container construction-layout">
-        <div class="timeline">
-          <div class="timeline-step">
-            <div class="timeline-marker">
-              <div class="timeline-badge">1</div>
-              <div class="timeline-line"></div>
-            </div>
-            <div>
-              <div class="timeline-title">Design & Load Calculations</div>
-              <p class="timeline-text">
-                Heat-gain calculations modeled for Miami’s humidity, glazing, orientation and envelope — not rules of thumb.
-              </p>
-              <div class="timeline-chip-row">
-                <span class="timeline-chip">Manual J/S/D</span>
-                <span class="timeline-chip">Duct design</span>
-                <span class="timeline-chip">Equipment schedules</span>
+        <div>
+          <h3 style="margin-bottom:1rem; font-size:1.1rem;">The Universe Workflow</h3>
+          <div class="timeline">
+            <div class="timeline-step">
+              <div class="timeline-marker">
+                <div class="timeline-badge">1</div>
+                <div class="timeline-line"></div>
+              </div>
+              <div>
+                <div class="timeline-title">Pre-Con & Estimating</div>
+                <div class="timeline-text">
+                  Send us your plans (PDF). We perform a digital takeoff and provide a detailed scope of work including equipment specs and optional upgrades.
+                </div>
+                <div class="timeline-chip-row">
+                  <span class="timeline-chip">Digital Takeoff</span>
+                  <span class="timeline-chip">Value Engineering</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="timeline-step">
-            <div class="timeline-marker">
-              <div class="timeline-badge">2</div>
-              <div class="timeline-line"></div>
-            </div>
-            <div>
-              <div class="timeline-title">Rough-In & Set</div>
-              <p class="timeline-text">
-                Clean installs with pitched drains, strapped duct, sealed air handlers and hurricane-rated pads where required.
-              </p>
-              <div class="timeline-chip-row">
-                <span class="timeline-chip">Condensate management</span>
-                <span class="timeline-chip">Inspected supports</span>
+            <div class="timeline-step">
+              <div class="timeline-marker">
+                <div class="timeline-badge">2</div>
+                <div class="timeline-line"></div>
+              </div>
+              <div>
+                <div class="timeline-title">Rough-In</div>
+                <div class="timeline-text">
+                  Our crews install ductwork, copper linesets, and low voltage wiring. We coordinate with framers and electricians to ensure no clashes.
+                </div>
+                <div class="timeline-chip-row">
+                  <span class="timeline-chip">Duct Sealing</span>
+                  <span class="timeline-chip">Pressure Test</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="timeline-step">
-            <div class="timeline-marker">
-              <div class="timeline-badge">3</div>
-              <div class="timeline-line"></div>
-            </div>
-            <div>
-              <div class="timeline-title">Startup & Commissioning</div>
-              <p class="timeline-text">
-                Charge verification, static pressure testing and control checks documented for your close-out package.
-              </p>
-              <div class="timeline-chip-row">
-                <span class="timeline-chip">Static pressure</span>
-                <span class="timeline-chip">Refrigerant charge</span>
-                <span class="timeline-chip">Owner training</span>
+            <div class="timeline-step">
+              <div class="timeline-marker">
+                <div class="timeline-badge">3</div>
+                <div class="timeline-line"></div>
+              </div>
+              <div>
+                <div class="timeline-title">Trim & Startup</div>
+                <div class="timeline-text">
+                  We set the condensers and air handlers, braze connections, vacuum down the system, and perform a manufacturer-spec startup.
+                </div>
+                <div class="timeline-chip-row">
+                  <span class="timeline-chip">Micron Gauge</span>
+                  <span class="timeline-chip">Superheat/Subcool</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="timeline-step">
-            <div class="timeline-marker">
-              <div class="timeline-badge">4</div>
-            </div>
-            <div>
-              <div class="timeline-title">Warranty & Turnover</div>
-              <p class="timeline-text">
-                Builder and homeowner support, documentation and maintenance options to keep reputations strong long
-                after closing.
-              </p>
-              <div class="timeline-chip-row">
-                <span class="timeline-chip">GC-friendly schedules</span>
-                <span class="timeline-chip">Post-move-in support</span>
+            <div class="timeline-step">
+              <div class="timeline-marker">
+                <div class="timeline-badge">4</div>
+              </div>
+              <div>
+                <div class="timeline-title">Handover</div>
+                <div class="timeline-text">
+                  We provide the balance report, warranty registration, and walk the homeowner through their new thermostat.
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <aside class="construction-right">
+        <div class="construction-right">
+          <h3 style="margin-bottom:0.8rem; font-size:1.1rem;">Why Builders Choose Us</h3>
           <div class="pill-row">
-            <span class="pill">Single-family & luxury customs</span>
-            <span class="pill">Townhomes & multifamily</span>
-            <span class="pill">Light commercial build-outs</span>
+            <span class="pill">Reliable Scheduling</span>
+            <span class="pill">Clean Jobsites</span>
+            <span class="pill">Passed Inspections</span>
           </div>
-
-          <p>
-            One team that understands drawings, inspections and what it takes to pass in Miami-Dade and Broward the first time.
-            We coordinate with supers and other trades so our roughs, trims and start-ups protect your critical path.
+          <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.6; margin-bottom:1rem;">
+            We understand that a mechanical delay stalls the drywall, the paint, and the closing. Our project managers communicate proactively to keep the critical path moving.
           </p>
 
+          <h4 style="font-size:0.9rem; margin-bottom:0.5rem;">Our Quality Control</h4>
           <ul class="checklist">
-            <li>
-              <div class="checkmark">✓</div>
-              <span><strong>Permit-ready submittals.</strong> We support the mechanical portion of your permit package with specs, cut sheets and load calculations.</span>
-            </li>
-            <li>
-              <div class="checkmark">✓</div>
-              <span><strong>Schedule-driven installs.</strong> Rough, trim and startup coordinated around framing, electrical and inspections.</span>
-            </li>
-            <li>
-              <div class="checkmark">✓</div>
-              <span><strong>Post-turnover partnership.</strong> Homeowner warranty service that reflects well on your brand.</span>
-            </li>
+            <li><span class="checkmark">✓</span> Nitrogen purge while brazing</li>
+            <li><span class="checkmark">✓</span> Mastic seal on all plenums</li>
+            <li><span class="checkmark">✓</span> Secondary drain safety switches</li>
+            <li><span class="checkmark">✓</span> 500-micron vacuum standard</li>
+            <li><span class="checkmark">✓</span> Labeled breakers and units</li>
           </ul>
 
-          <p style="margin-top:0.4rem;">
-            Current capacity: <strong>50+ houses or 200+ units per year</strong>, depending on scope and equipment selection.
-          </p>
-
-          <div style="margin-top:1.1rem;">
-            <a href="index.html?page=home#contact" class="btn btn-primary">Share plans with Universe</a>
-          </div>
-        </aside>
+          <a href="#contact" class="btn btn-primary" style="width:100%">Submit Plans for Bid</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER ----------------------------------------------------------------- -->
   <footer>
     <div class="container footer-row">
-      <div style="display:flex;align-items:center;gap:0.6rem;">
-        <img src="universe-logo.png" alt="Universe Mechanical logo" class="footer-logo" />
-        <span>© <span id="year"></span> Universe Mechanical & Air Conditioning Inc. All rights reserved.</span>
+      <div class="footer-logo-area">
+        <img src="universe-logo.png" alt="Universe Mechanical" class="footer-logo" />
+        <div style="margin-top:0.3rem;">© 2024 Universe Mechanical & Air Conditioning Inc.</div>
       </div>
       <div class="footer-links">
-        <a href="index.html?page=home">Home</a>
-        <a href="index.html?page=about">About Us</a>
-        <a href="index.html?page=services">Services</a>
-        <a href="index.html?page=new-construction">New Construction</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+        <a href="#">FL License #CMC1234567</a>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Call CTA -->
   <div class="floating-call">
     <a href="tel:+13055550123">
-      <span>📞</span>
-      Call Universe Mechanical
+      <span>📞</span> Call Now
     </a>
   </div>
 
   <script>
-    // Determine active page from ?page=
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      const currentPage = params.get("page") || "home";
+    // Simple Router and Navigation Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll(".nav-link");
+      const pages = document.querySelectorAll(".page");
+      const navToggle = document.getElementById("navToggle");
+      const navMobile = document.getElementById("navMobile");
 
-      // Activate page sections
-      document.querySelectorAll(".page").forEach(section => {
-        if (section.getAttribute("data-page") === currentPage) {
-          section.classList.add("page-active");
-        } else {
-          section.classList.remove("page-active");
-        }
-      });
+      // Function to switch pages
+      function switchPage(pageName) {
+        // Hide all pages
+        pages.forEach(page => page.classList.remove("page-active"));
+        // Show target page (default to home)
+        const target = document.querySelector(`.page[data-page="${pageName}"]`) || document.querySelector(`.page[data-page="home"]`);
+        target.classList.add("page-active");
 
-      // Highlight nav links
-      document.querySelectorAll("[data-page-link]").forEach(link => {
-        if (link.getAttribute("data-page-link") === currentPage) {
-          link.classList.add("nav-link-active");
-        } else {
+        // Update nav state
+        navLinks.forEach(link => {
           link.classList.remove("nav-link-active");
+          if(link.getAttribute("data-page-link") === pageName) {
+            link.classList.add("nav-link-active");
+          }
+        });
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+      }
+
+      // Handle URL params on load
+      const params = new URLSearchParams(window.location.search);
+      const initialPage = params.get("page") || "home";
+      switchPage(initialPage);
+
+      // Handle Nav Clicks (Desktop & Mobile)
+      document.querySelectorAll("a").forEach(anchor => {
+        anchor.addEventListener("click", (e) => {
+          const href = anchor.getAttribute("href");
+          
+          // Internal page link?
+          if (href && href.includes("?page=")) {
+            // e.preventDefault(); // Uncomment if you want SPA behavior without reload
+            // For this static example, we let it reload or just parse the param if using SPA logic below:
+            
+            // Simple SPA logic override for demo purposes:
+            const urlParams = new URLSearchParams(href.split("?")[1]);
+            const pageName = urlParams.get("page");
+            
+            // If it has a hash, let it scroll after switching
+            if(href.includes("#")) {
+               // Allow default behavior for hash jumping usually, 
+               // but for a true SPA feel you'd switch page then scrollIntoView.
+            } 
+          }
+        });
+      });
+
+      // Mobile Menu Toggle
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+        if (navMobile.style.display === "block") {
+          navMobile.style.display = "none";
+        } else {
+          navMobile.style.display = "block";
         }
       });
-    })();
-
-    // Mobile nav toggle
-    const navToggle = document.getElementById("navToggle");
-    const navMobile = document.getElementById("navMobile");
-
-    navToggle.addEventListener("click", () => {
-      navToggle.classList.toggle("active");
-      const open = navMobile.style.display === "block";
-      navMobile.style.display = open ? "none" : "block";
     });
-
-    navMobile.addEventListener("click", (e) => {
-      if (e.target.tagName.toLowerCase() === "a") {
-        navMobile.style.display = "none";
-        navToggle.classList.remove("active");
-      }
-    });
-
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

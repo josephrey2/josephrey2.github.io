@@ -315,24 +315,11 @@
       overflow: hidden;
     }
 
-    .hero-video-wrap {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .hero-video-wrap video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
     .hero-overlay {
       position: absolute;
       inset: 0;
       z-index: 1;
-      background:
-        linear-gradient(135deg, rgba(0,30,80,.72) 0%, rgba(0,60,130,.55) 50%, rgba(0,20,50,.55) 100%);
+      background: linear-gradient(135deg, #1a6fbe 0%, #3d9be0 55%, #6ab8f0 100%);
     }
 
     /* subtle diagonal texture */
@@ -1244,9 +1231,6 @@
 
     <!-- ─── HERO ─────────────────────────────── -->
     <section class="hero">
-      <div class="hero-video-wrap">
-        <video src="construction.mp4" autoplay muted loop playsinline></video>
-      </div>
       <div class="hero-overlay"></div>
 
       <div class="container hero-inner">

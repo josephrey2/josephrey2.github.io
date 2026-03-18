@@ -1300,7 +1300,56 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-texture"></div>
-      <canvas id="snowCanvas" style="position:absolute;inset:0;z-index:2;pointer-events:none;width:100%;height:100%;"></canvas>
+      <canvas id="snowCanvas" style="position:absolute;inset:0;z-index:2;pointer-events:none;"></canvas>
+      <!-- Thermostat widget -->
+      <div id="thermostat" style="
+        position:absolute;
+        bottom:2.5rem;
+        right:2.5rem;
+        z-index:4;
+        width:110px;
+        background:rgba(10,30,80,.35);
+        border:1px solid rgba(255,255,255,.22);
+        border-radius:20px;
+        padding:1rem .85rem 1.1rem;
+        backdrop-filter:blur(16px);
+        -webkit-backdrop-filter:blur(16px);
+        text-align:center;
+        pointer-events:none;
+        box-shadow:0 8px 32px rgba(0,10,40,.4), inset 0 1px 0 rgba(255,255,255,.15);
+      ">
+        <div style="font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.5rem;">TEMPERATURE</div>
+        <svg viewBox="0 0 60 110" width="44" style="display:block;margin:0 auto .6rem;" id="thermoSvg">
+          <defs>
+            <linearGradient id="mercGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#7dd3fc"/>
+              <stop offset="100%" stop-color="#bfdbfe"/>
+            </linearGradient>
+            <clipPath id="mercClip">
+              <rect id="mercRect" x="22" y="10" width="16" height="70" rx="4"/>
+            </clipPath>
+          </defs>
+          <!-- Thermometer tube -->
+          <rect x="22" y="10" width="16" height="70" rx="8" fill="rgba(255,255,255,.15)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+          <!-- Tick marks -->
+          <line x1="38" y1="20" x2="44" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+          <line x1="38" y1="30" x2="44" y2="30" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+          <line x1="38" y1="40" x2="44" y2="40" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+          <line x1="38" y1="50" x2="44" y2="50" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+          <line x1="38" y1="60" x2="44" y2="60" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+          <line x1="38" y1="70" x2="44" y2="70" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+          <!-- Mercury fill -->
+          <rect id="mercury" x="25" y="40" width="10" height="38" rx="3" fill="url(#mercGrad)"/>
+          <!-- Bulb -->
+          <circle cx="30" cy="88" r="10" fill="url(#mercGrad)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+          <!-- Bulb shine -->
+          <circle cx="26" cy="84" r="2.5" fill="rgba(255,255,255,.3)"/>
+        </svg>
+        <div id="thermoTemp" style="font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;color:#fff;line-height:1;margin-bottom:.15rem;">78°</div>
+        <div style="font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);">Cooling down</div>
+        <!-- Snowflake accents -->
+        <div style="font-size:.9rem;margin-top:.5rem;letter-spacing:.2rem;color:rgba(255,255,255,.5);">❄ ❄ ❄</div>
+      </div>
 
       <div class="container hero-inner">
         <div class="hero-grid">
@@ -1707,76 +1756,7 @@
     </a>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-
-    // Snow effect
-    (function() {
-      const canvas = document.getElementById('snowCanvas');
-      const ctx = canvas.getContext('2d');
-      let flakes = [];
-      const COUNT = 120;
-
-      function resize() {
-        const hero = canvas.parentElement;
-        canvas.width  = hero.offsetWidth;
-        canvas.height = hero.offsetHeight;
-      }
-
-      function rand(min, max) { return Math.random() * (max - min) + min; }
-
-      function createFlake() {
-        return {
-          x: rand(0, canvas.width),
-          y: rand(-20, -5),
-          r: rand(1.5, 4.5),
-          speed: rand(0.6, 2.2),
-          drift: rand(-0.35, 0.35),
-          opacity: rand(0.25, 0.75),
-          wobble: rand(0, Math.PI * 2),
-          wobbleSpeed: rand(0.008, 0.022)
-        };
-      }
-
-      resize();
-      for (let i = 0; i < COUNT; i++) {
-        const f = createFlake();
-        f.y = rand(0, canvas.height);
-        flakes.push(f);
-      }
-
-      window.addEventListener('resize', resize, { passive: true });
-
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (const f of flakes) {
-          ctx.beginPath();
-          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(255,255,255,' + f.opacity + ')';
-          ctx.fill();
-        }
-      }
-
-      function update() {
-        for (let i = 0; i < flakes.length; i++) {
-          const f = flakes[i];
-          f.wobble += f.wobbleSpeed;
-          f.x += f.drift + Math.sin(f.wobble) * 0.4;
-          f.y += f.speed;
-          if (f.y > canvas.height + 10) {
-            flakes[i] = createFlake();
-          }
-        }
-      }
-
-      function loop() {
-        update();
-        draw();
-        requestAnimationFrame(loop);
-      }
-      loop();
-    })();
-
-  </script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Navbar scroll state
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
@@ -1813,4 +1793,111 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll(".service-card, .leader-card, .process-step, .contact-info-card, .con
+    tact-cta-card"]).forEach(el => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(20px)";
+      el.style.transition = "opacity .45s ease, transform .45s ease";
+      observer.observe(el);
+    });
+
+    // ── Snow effect ──────────────────────────────────────
+    (function initSnow() {
+      const canvas = document.getElementById('snowCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const hero = canvas.closest('.hero');
+      let flakes = [];
+      const COUNT = 140;
+
+      function resize() {
+        canvas.width  = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+      }
+
+      function rand(a, b) { return Math.random() * (b - a) + a; }
+
+      function newFlake(scattered) {
+        return {
+          x: rand(0, canvas.width),
+          y: scattered ? rand(0, canvas.height) : rand(-20, -5),
+          r: rand(1.2, 4.2),
+          speed: rand(0.5, 2.0),
+          drift: rand(-0.3, 0.3),
+          opacity: rand(0.2, 0.7),
+          wobble: rand(0, Math.PI * 2),
+          wSpeed: rand(0.007, 0.02)
+        };
+      }
+
+      resize();
+      for (let i = 0; i < COUNT; i++) flakes.push(newFlake(true));
+      window.addEventListener('resize', function() { resize(); }, { passive: true });
+
+      function tick() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < flakes.length; i++) {
+          var f = flakes[i];
+          f.wobble += f.wSpeed;
+          f.x += f.drift + Math.sin(f.wobble) * 0.5;
+          f.y += f.speed;
+          if (f.y > canvas.height + 8) flakes[i] = newFlake(false);
+          ctx.beginPath();
+          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,255,255,' + f.opacity + ')';
+          ctx.fill();
+        }
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+
+    // ── Thermostat animation ──────────────────────────────
+    (function initThermostat() {
+      var tempEl  = document.getElementById('thermoTemp');
+      var mercury = document.getElementById('mercury');
+      if (!tempEl || !mercury) return;
+
+      var current = 78, target = 62;
+      var MIN = 62, MAX = 78;
+
+      function tempToMercury(t) {
+        var pct = (t - MIN) / (MAX - MIN);
+        var maxH = 58, minH = 4;
+        var h = minH + pct * (maxH - minH);
+        var y = 78 - h;
+        return { y: y, h: h };
+      }
+
+      function updateDisplay(t) {
+        tempEl.textContent = Math.round(t) + '°';
+        var m = tempToMercury(t);
+        mercury.setAttribute('y', m.y);
+        mercury.setAttribute('height', m.h);
+        var pct = (t - MIN) / (MAX - MIN);
+        var r = Math.round(125 + pct * 50);
+        var g = Math.round(200 + pct * 20);
+        mercury.setAttribute('fill', 'rgb(' + r + ',' + g + ',252)');
+      }
+
+      var frame = 0;
+      function animate() {
+        frame++;
+        if (frame % 3 === 0) {
+          var diff = target - current;
+          if (Math.abs(diff) < 0.15) {
+            current = target;
+            target = (target === MIN) ? MAX : MIN;
+          } else {
+            current += diff * 0.012;
+          }
+          updateDisplay(current);
+        }
+        requestAnimationFrame(animate);
+      }
+      updateDisplay(current);
+      animate();
+    })();
+
+  </script>
+</body>
+</html>

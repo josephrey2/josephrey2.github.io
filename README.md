@@ -115,6 +115,18 @@
       background: var(--blue-dark);
     }
 
+    /* Hero-specific primary button — white on blue bg */
+    .hero .btn-primary {
+      background: #ffffff;
+      color: #0a3d7a;
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+    }
+
+    .hero .btn-primary:hover {
+      background: #f0f7ff;
+      box-shadow: 0 18px 44px rgba(0,0,0,.3);
+    }
+
     .btn-ghost {
       background: rgba(255,255,255,.1);
       color: #fff;
@@ -314,35 +326,51 @@
       position: absolute;
       inset: 0;
       z-index: 1;
-      background: linear-gradient(135deg, #1a6fbe 0%, #3d9be0 55%, #6ab8f0 100%);
+      background: linear-gradient(135deg, #0a3d7a 0%, #1565c0 45%, #1e88e5 75%, #29b6f6 100%);
     }
 
-    /* subtle diagonal texture */
+    /* Large decorative orbs for depth */
+    .hero-overlay::before {
+      content: "";
+      position: absolute;
+      top: -180px; right: -120px;
+      width: 650px; height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.13) 0%, transparent 70%);
+    }
+
     .hero-overlay::after {
       content: "";
       position: absolute;
+      bottom: -200px; left: -100px;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,20,80,.25) 0%, transparent 70%);
+    }
+
+    /* Diagonal grid lines texture */
+    .hero-texture {
+      position: absolute;
       inset: 0;
-      background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 80px,
-        rgba(255,255,255,.018) 80px,
-        rgba(255,255,255,.018) 81px
-      );
+      z-index: 2;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
     }
 
     .hero-inner {
       position: relative;
-      z-index: 2;
-      padding-top: 120px;
-      padding-bottom: 80px;
+      z-index: 3;
+      padding-top: 130px;
+      padding-bottom: 90px;
       width: 100%;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 3.5rem;
+      grid-template-columns: 1fr 400px;
+      gap: 4rem;
       align-items: center;
     }
 
@@ -368,40 +396,44 @@
       font-size: .72rem;
       letter-spacing: .22em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.82);
-      margin-bottom: .8rem;
-      display: flex;
+      color: rgba(255,255,255,.9);
+      margin-bottom: 1.1rem;
+      display: inline-flex;
       align-items: center;
-      gap: .5rem;
+      gap: .6rem;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      padding: .3rem .9rem .3rem .7rem;
+      border-radius: 99px;
+      backdrop-filter: blur(8px);
     }
 
     .hero-tag::before {
-      content: "";
-      display: block;
-      width: 28px; height: 1.5px;
-      background: rgba(255,255,255,.7);
-      border-radius: 99px;
+      content: "📍";
+      font-size: .8rem;
     }
 
     .hero-headline {
       font-family: "DM Serif Display", Georgia, serif;
-      font-size: clamp(2.8rem, 5.5vw, 4.5rem);
-      line-height: 1.03;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: 1.0;
       font-weight: 400;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.4rem;
+      text-shadow: 0 2px 20px rgba(0,20,80,.3);
     }
 
     .hero-headline em {
       font-style: italic;
-      color: #a8d4ff;
+      color: #fde68a;
+      display: block;
     }
 
     .hero-sub {
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.75;
       color: rgba(255,255,255,.92);
       max-width: 34rem;
-      margin-bottom: 2.2rem;
+      margin-bottom: 2.4rem;
     }
 
     .hero-actions {
@@ -415,27 +447,41 @@
     .hero-trust {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.8rem;
-      font-size: .78rem;
-      color: rgba(255,255,255,.75);
+      gap: 0;
+      font-size: .8rem;
+      color: rgba(255,255,255,.8);
+      background: rgba(0,0,0,.15);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 14px;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      width: fit-content;
     }
 
     .hero-trust-item {
       display: flex;
       align-items: center;
-      gap: .4rem;
+      gap: .45rem;
+      padding: .65rem 1.1rem;
+      border-right: 1px solid rgba(255,255,255,.12);
     }
 
-    .hero-trust-item strong { color: #fff; }
+    .hero-trust-item:last-child { border-right: none; }
+
+    .hero-trust-item strong { color: #fff; font-weight: 600; }
+
+    .hero-trust-icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
 
     /* Glance panel */
     .glance-panel {
-      background: rgba(255,255,255,.97);
-      border-radius: var(--r-lg);
-      padding: 1.8rem 1.6rem;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
       color: var(--ink);
-      box-shadow: 0 30px 70px rgba(0,15,50,.35);
-      backdrop-filter: blur(20px);
+      box-shadow: 0 40px 80px rgba(0,15,60,.4), 0 0 0 1px rgba(255,255,255,.6);
       position: relative;
       overflow: hidden;
     }
@@ -444,67 +490,92 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--blue), #56b4e9);
+      height: 4px;
+      background: linear-gradient(90deg, #0a3d7a, #1e88e5, #29b6f6);
+    }
+
+    /* Decorative circle inside panel */
+    .glance-panel::after {
+      content: "";
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #e6f1ff 0%, transparent 70%);
+      pointer-events: none;
     }
 
     .glance-title {
       font-family: "DM Serif Display", Georgia, serif;
-      font-size: 1.15rem;
-      margin-bottom: .25rem;
+      font-size: 1.3rem;
+      margin-bottom: .3rem;
       color: var(--ink);
     }
 
     .glance-sub {
-      font-size: .78rem;
+      font-size: .8rem;
       color: #4a6280;
-      margin-bottom: 1.4rem;
-      line-height: 1.5;
+      margin-bottom: 1.6rem;
+      line-height: 1.55;
     }
 
     .glance-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.1rem;
+      gap: 0;
       margin-bottom: 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
     }
 
+    .glance-stats > div {
+      padding: .85rem 1rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .glance-stats > div:nth-child(2n) { border-right: none; }
+    .glance-stats > div:nth-child(3),
+    .glance-stats > div:nth-child(4) { border-bottom: none; }
+
     .glance-stat-label {
-      font-size: .7rem;
+      font-size: .66rem;
       text-transform: uppercase;
       letter-spacing: .1em;
       color: #4a6280;
-      margin-bottom: .2rem;
+      margin-bottom: .25rem;
     }
 
     .glance-stat-value {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--blue-dark);
+      font-size: .95rem;
+      font-weight: 700;
+      color: #0a3d7a;
       line-height: 1.2;
     }
 
     .glance-divider {
       height: 1px;
       background: var(--border);
-      margin: 1.1rem 0;
+      margin: 1.2rem 0;
     }
 
     .glance-footer {
-      font-size: .75rem;
+      font-size: .76rem;
       color: #4a6280;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .glance-chip {
       display: inline-flex;
       align-items: center;
       gap: .35rem;
-      margin-top: .8rem;
-      padding: .3rem .8rem;
+      margin-top: .9rem;
+      padding: .35rem .9rem;
       border-radius: 99px;
-      background: var(--blue-xlight);
-      color: var(--blue);
+      background: #ecfdf5;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
       font-size: .72rem;
       font-weight: 600;
       letter-spacing: .04em;
@@ -512,9 +583,10 @@
 
     .glance-chip::before {
       content: "";
-      width: 6px; height: 6px;
+      width: 7px; height: 7px;
       border-radius: 50%;
       background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34,197,94,.2);
     }
 
     /* ─── MARQUEE BAND ────────────────────────── */
@@ -1227,6 +1299,8 @@
     <!-- ─── HERO ─────────────────────────────── -->
     <section class="hero">
       <div class="hero-overlay"></div>
+      <div class="hero-texture"></div>
+      <canvas id="snowCanvas" style="position:absolute;inset:0;z-index:2;pointer-events:none;width:100%;height:100%;"></canvas>
 
       <div class="container hero-inner">
         <div class="hero-grid">
@@ -1234,8 +1308,8 @@
             <div class="hero-tag">Miami &bull; Mechanical &amp; A/C Contractor</div>
 
             <h1 class="hero-headline">
-              Comfort systems,<br />
-              <em>done right</em> in South Florida.
+              Comfort systems,
+              <em>done right.</em>
             </h1>
 
             <p class="hero-sub">
@@ -1248,9 +1322,9 @@
             </div>
 
             <div class="hero-trust">
-              <div class="hero-trust-item"><strong>Same/Next-Day</strong>&nbsp;Response</div>
-              <div class="hero-trust-item"><strong>Miami-Dade</strong>&nbsp;&amp; Broward</div>
-              <div class="hero-trust-item">Licensed &amp;&nbsp;<strong>Insured</strong></div>
+              <div class="hero-trust-item"><span class="hero-trust-icon">⚡</span><strong>Same/Next-Day</strong>&nbsp;Response</div>
+              <div class="hero-trust-item"><span class="hero-trust-icon">📍</span><strong>Miami-Dade</strong>&nbsp;&amp; Broward</div>
+              <div class="hero-trust-item"><span class="hero-trust-icon">✓</span>Licensed &amp;&nbsp;<strong>Insured</strong></div>
             </div>
           </div>
 
@@ -1633,7 +1707,76 @@
     </a>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+
+    // Snow effect
+    (function() {
+      const canvas = document.getElementById('snowCanvas');
+      const ctx = canvas.getContext('2d');
+      let flakes = [];
+      const COUNT = 120;
+
+      function resize() {
+        const hero = canvas.parentElement;
+        canvas.width  = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+      }
+
+      function rand(min, max) { return Math.random() * (max - min) + min; }
+
+      function createFlake() {
+        return {
+          x: rand(0, canvas.width),
+          y: rand(-20, -5),
+          r: rand(1.5, 4.5),
+          speed: rand(0.6, 2.2),
+          drift: rand(-0.35, 0.35),
+          opacity: rand(0.25, 0.75),
+          wobble: rand(0, Math.PI * 2),
+          wobbleSpeed: rand(0.008, 0.022)
+        };
+      }
+
+      resize();
+      for (let i = 0; i < COUNT; i++) {
+        const f = createFlake();
+        f.y = rand(0, canvas.height);
+        flakes.push(f);
+      }
+
+      window.addEventListener('resize', resize, { passive: true });
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const f of flakes) {
+          ctx.beginPath();
+          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,255,255,' + f.opacity + ')';
+          ctx.fill();
+        }
+      }
+
+      function update() {
+        for (let i = 0; i < flakes.length; i++) {
+          const f = flakes[i];
+          f.wobble += f.wobbleSpeed;
+          f.x += f.drift + Math.sin(f.wobble) * 0.4;
+          f.y += f.speed;
+          if (f.y > canvas.height + 10) {
+            flakes[i] = createFlake();
+          }
+        }
+      }
+
+      function loop() {
+        update();
+        draw();
+        requestAnimationFrame(loop);
+      }
+      loop();
+    })();
+
+  </script><script>
     // Navbar scroll state
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {

@@ -1202,7 +1202,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <img src="universe-logo.png" alt="Universe Services logo" class="logo-img" />
+        <img src="Universe Logo White.png" alt="Universe Services logo" class="logo-img" />
         <div class="logo-wordmark">
           <div class="logo-primary">Universe Services</div>
         </div>

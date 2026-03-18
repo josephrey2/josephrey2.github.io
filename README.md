@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Universe Mechanical & Air Conditioning Inc. | Miami A/C & Mechanical</title>
+  <title>Universe Services | Miami A/C & Mechanical</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Universe Mechanical & Air Conditioning Inc. — Miami's trusted mechanical and A/C contractor for service, retrofits, and replacements." />
+  <meta name="description" content="Universe Services — Miami's trusted mechanical and A/C contractor for service, retrofits, and replacements." />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
 
   <style>
@@ -13,13 +13,13 @@
       --blue-dark:   #00336b;
       --blue-mid:    #1a6fbe;
       --blue-light:  #deeeff;
-      --blue-xlight: #f0f6ff;
+      --blue-xlight: #e6f1ff;
       --sky:         #e8f2ff;
       --white:       #ffffff;
-      --ink:         #0c1929;
-      --ink-mid:     #2c3e55;
-      --muted:       #637a93;
-      --border:      rgba(100,130,160,.18);
+      --ink:         #0a1520;
+      --ink-mid:     #1e3048;
+      --muted:       #445d78;
+      --border:      rgba(80,110,145,.28);
       --shadow-card: 0 8px 32px rgba(0,26,64,.09);
       --shadow-lift: 0 20px 50px rgba(0,26,64,.16);
       --r:           16px;
@@ -332,7 +332,7 @@
       inset: 0;
       z-index: 1;
       background:
-        linear-gradient(135deg, rgba(0,30,80,.93) 0%, rgba(0,60,130,.8) 50%, rgba(0,20,50,.75) 100%);
+        linear-gradient(135deg, rgba(0,30,80,.72) 0%, rgba(0,60,130,.55) 50%, rgba(0,20,50,.55) 100%);
     }
 
     /* subtle diagonal texture */
@@ -386,7 +386,7 @@
       font-size: .72rem;
       letter-spacing: .22em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.6);
+      color: rgba(255,255,255,.82);
       margin-bottom: .8rem;
       display: flex;
       align-items: center;
@@ -397,7 +397,7 @@
       content: "";
       display: block;
       width: 28px; height: 1.5px;
-      background: rgba(255,255,255,.5);
+      background: rgba(255,255,255,.7);
       border-radius: 99px;
     }
 
@@ -417,7 +417,7 @@
     .hero-sub {
       font-size: 1rem;
       line-height: 1.75;
-      color: rgba(255,255,255,.78);
+      color: rgba(255,255,255,.92);
       max-width: 34rem;
       margin-bottom: 2.2rem;
     }
@@ -435,7 +435,7 @@
       flex-wrap: wrap;
       gap: 1.8rem;
       font-size: .78rem;
-      color: rgba(255,255,255,.55);
+      color: rgba(255,255,255,.75);
     }
 
     .hero-trust-item {
@@ -444,7 +444,7 @@
       gap: .4rem;
     }
 
-    .hero-trust-item strong { color: rgba(255,255,255,.9); }
+    .hero-trust-item strong { color: #fff; }
 
     /* Glance panel */
     .glance-panel {
@@ -475,7 +475,7 @@
 
     .glance-sub {
       font-size: .78rem;
-      color: var(--muted);
+      color: #4a6280;
       margin-bottom: 1.4rem;
       line-height: 1.5;
     }
@@ -491,7 +491,7 @@
       font-size: .7rem;
       text-transform: uppercase;
       letter-spacing: .1em;
-      color: var(--muted);
+      color: #4a6280;
       margin-bottom: .2rem;
     }
 
@@ -510,7 +510,7 @@
 
     .glance-footer {
       font-size: .75rem;
-      color: var(--muted);
+      color: #4a6280;
       line-height: 1.55;
     }
 
@@ -563,7 +563,7 @@
       font-size: .72rem;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.55);
+      color: rgba(255,255,255,.72);
     }
 
     .marquee-dot {
@@ -1202,10 +1202,9 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <img src="universe-logo.png" alt="Universe Mechanical logo" class="logo-img" />
+        <img src="universe-logo.png" alt="Universe Services logo" class="logo-img" />
         <div class="logo-wordmark">
-          <div class="logo-primary">Universe Mechanical</div>
-          <div class="logo-secondary">Mechanical &amp; Air Conditioning, Inc.</div>
+          <div class="logo-primary">Universe Services</div>
         </div>
       </a>
 
@@ -1261,7 +1260,7 @@
             </h1>
 
             <p class="hero-sub">
-              Universe Mechanical &amp; Air Conditioning delivers expert A/C repairs, system replacements, and maintenance programs for homes and properties across Miami-Dade and Broward.
+              Universe Services delivers expert A/C repairs, system replacements, and maintenance programs for homes and properties across Miami-Dade and Broward.
             </p>
 
             <div class="hero-actions">
@@ -1343,7 +1342,7 @@
             <h2 class="section-title">A family-led team<br />built on <em style="font-style:italic;color:var(--blue);">trust</em>.</h2>
 
             <div class="about-body">
-              <p><strong>Universe Mechanical &amp; Air Conditioning Inc.</strong> was founded on a simple belief: projects run smoother when the mechanical team thinks like a builder and acts like an owner.</p>
+              <p><strong>Universe Services</strong> was founded on a simple belief: projects run smoother when the mechanical team thinks like a builder and acts like an owner.</p>
               <p>Based in Hialeah Gardens, we serve Miami's core neighborhoods, surrounding suburbs, and Broward's south corridor. Our work ranges from service and repairs on occupied homes to full system replacements and maintenance programs for property managers and associations.</p>
               <p>We bring structure to every job — clear communication, clean work, and support long after the last visit. The result is systems that perform the way they were designed, and clients who know exactly who to call.</p>
             </div>
@@ -1594,7 +1593,7 @@
                 </div>
                 <div class="contact-info-item">
                   <span class="contact-info-label">Email</span>
-                  <span class="contact-info-value"><a href="mailto:info@universeac.com">info@universeac.com</a></span>
+                  <span class="contact-info-value"><a href="/cdn-cgi/l/email-protection#325b5c545d72475c5b445740415753511c515d5f"><span class="__cf_email__" data-cfemail="8de4e3ebe2cdf8e3e4fbe8fffee8eceea3eee2e0">[email&#160;protected]</span></a></span>
                 </div>
                 <div class="contact-info-item">
                   <span class="contact-info-label">Location</span>
@@ -1636,7 +1635,7 @@
   <!-- ─── FOOTER ────────────────────────────── -->
   <footer>
     <div class="container footer-inner">
-      <div class="footer-logo">Universe Mechanical &amp; Air Conditioning, Inc.</div>
+      <div class="footer-logo">Universe Services</div>
       <div>© <span id="year"></span> All rights reserved. Hialeah Gardens, FL</div>
       <div class="footer-links">
         <a href="#home">Home</a>
@@ -1651,11 +1650,11 @@
   <div class="floating-call">
     <a href="tel:+13055550123">
       <span>📞</span>
-      Call Universe Mechanical
+      Call Universe Services
     </a>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Navbar scroll state
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
@@ -1692,12 +1691,4 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll(".service-card, .leader-card, .process-step, .contact-info-card, .contact-cta-card").forEach(el => {
-      el.style.opacity = "0";
-      el.style.transform = "translateY(20px)";
-      el.style.transition = "opacity .45s ease, transform .45s ease";
-      observer.observe(el);
-    });
-  </script>
-</body>
-</html>
+    document.querySelectorAll(".service-card, .leader-card, .process-step, .contact-info-card, .con

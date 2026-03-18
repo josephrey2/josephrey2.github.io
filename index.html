@@ -348,20 +348,11 @@
       background: radial-gradient(circle, rgba(0,20,80,.25) 0%, transparent 70%);
     }
 
-    /* Diagonal grid lines texture */
-    .hero-texture {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background-image:
-        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
+
 
     .hero-inner {
       position: relative;
-      z-index: 3;
+      z-index: 5;
       padding-top: 130px;
       padding-bottom: 90px;
       width: 100%;
@@ -1299,14 +1290,13 @@
     <!-- ─── HERO ─────────────────────────────── -->
     <section class="hero">
       <div class="hero-overlay"></div>
-      <div class="hero-texture"></div>
-      <canvas id="snowCanvas" style="position:absolute;inset:0;z-index:2;pointer-events:none;"></canvas>
+      <canvas id="snowCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none;display:block;"></canvas>
       <!-- Thermostat widget -->
       <div id="thermostat" style="
         position:absolute;
         bottom:2.5rem;
         right:2.5rem;
-        z-index:4;
+        z-index:6;
         width:110px;
         background:rgba(10,30,80,.35);
         border:1px solid rgba(255,255,255,.22);
@@ -1319,31 +1309,32 @@
         box-shadow:0 8px 32px rgba(0,10,40,.4), inset 0 1px 0 rgba(255,255,255,.15);
       ">
         <div style="font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.5rem;">TEMPERATURE</div>
-        <svg viewBox="0 0 60 110" width="44" style="display:block;margin:0 auto .6rem;" id="thermoSvg">
+        <svg viewBox="0 0 60 105" width="50" style="display:block;margin:0 auto .7rem;overflow:visible;" id="thermoSvg">
           <defs>
-            <linearGradient id="mercGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#7dd3fc"/>
-              <stop offset="100%" stop-color="#bfdbfe"/>
-            </linearGradient>
-            <clipPath id="mercClip">
-              <rect id="mercRect" x="22" y="10" width="16" height="70" rx="4"/>
+            <clipPath id="tubeClip">
+              <rect x="24" y="10" width="12" height="68" rx="6"/>
             </clipPath>
           </defs>
-          <!-- Thermometer tube -->
-          <rect x="22" y="10" width="16" height="70" rx="8" fill="rgba(255,255,255,.15)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
-          <!-- Tick marks -->
-          <line x1="38" y1="20" x2="44" y2="20" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
-          <line x1="38" y1="30" x2="44" y2="30" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
-          <line x1="38" y1="40" x2="44" y2="40" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
-          <line x1="38" y1="50" x2="44" y2="50" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
-          <line x1="38" y1="60" x2="44" y2="60" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
-          <line x1="38" y1="70" x2="44" y2="70" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
-          <!-- Mercury fill -->
-          <rect id="mercury" x="25" y="40" width="10" height="38" rx="3" fill="url(#mercGrad)"/>
-          <!-- Bulb -->
-          <circle cx="30" cy="88" r="10" fill="url(#mercGrad)" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
-          <!-- Bulb shine -->
-          <circle cx="26" cy="84" r="2.5" fill="rgba(255,255,255,.3)"/>
+          <!-- Tube background (empty) -->
+          <rect x="24" y="10" width="12" height="68" rx="6"
+                fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
+          <!-- Mercury fill — clipped to tube, grows/shrinks via JS -->
+          <rect id="mercury" x="24" y="20" width="12" height="58" rx="4"
+                fill="#7dd3fc" clip-path="url(#tubeClip)"/>
+          <!-- Tick marks on right -->
+          <line x1="36" y1="18" x2="42" y2="18" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/>
+          <line x1="36" y1="29" x2="40" y2="29" stroke="rgba(255,255,255,.35)" stroke-width="1"/>
+          <line x1="36" y1="40" x2="42" y2="40" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/>
+          <line x1="36" y1="51" x2="40" y2="51" stroke="rgba(255,255,255,.35)" stroke-width="1"/>
+          <line x1="36" y1="62" x2="42" y2="62" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/>
+          <line x1="36" y1="73" x2="40" y2="73" stroke="rgba(255,255,255,.35)" stroke-width="1"/>
+          <!-- Tube glass shine -->
+          <rect x="26" y="13" width="3" height="58" rx="2" fill="rgba(255,255,255,.18)"/>
+          <!-- Bulb outer -->
+          <circle id="thermoBulb" cx="30" cy="89" r="11"
+                  fill="#7dd3fc" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
+          <!-- Bulb inner shine -->
+          <circle cx="26" cy="85" r="3" fill="rgba(255,255,255,.35)"/>
         </svg>
         <div id="thermoTemp" style="font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;color:#fff;line-height:1;margin-bottom:.15rem;">78°</div>
         <div style="font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);">Cooling down</div>
@@ -1793,7 +1784,7 @@
       });
     }, { threshold: 0.08 });
 
-    tact-cta-card"]).forEach(el => {
+    document.querySelectorAll(".service-card, .leader-card, .process-step, .contact-info-card, .contact-cta-card").forEach(el => {
       el.style.opacity = "0";
       el.style.transform = "translateY(20px)";
       el.style.transition = "opacity .45s ease, transform .45s ease";
@@ -1802,100 +1793,122 @@
 
     // ── Snow effect ──────────────────────────────────────
     (function initSnow() {
-      const canvas = document.getElementById('snowCanvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      const hero = canvas.closest('.hero');
-      let flakes = [];
-      const COUNT = 140;
+      var canvas = document.getElementById('snowCanvas');
+      if (!canvas) { console.warn('No snow canvas'); return; }
+      var ctx = canvas.getContext('2d');
+      var hero = document.querySelector('.hero');
+      var flakes = [];
+      var COUNT = 150;
 
-      function resize() {
-        canvas.width  = hero.offsetWidth;
-        canvas.height = hero.offsetHeight;
+      function setSize() {
+        var r = hero.getBoundingClientRect();
+        canvas.width  = r.width  || window.innerWidth;
+        canvas.height = r.height || window.innerHeight;
       }
 
       function rand(a, b) { return Math.random() * (b - a) + a; }
 
-      function newFlake(scattered) {
+      function newFlake(atTop) {
         return {
-          x: rand(0, canvas.width),
-          y: scattered ? rand(0, canvas.height) : rand(-20, -5),
-          r: rand(1.2, 4.2),
-          speed: rand(0.5, 2.0),
-          drift: rand(-0.3, 0.3),
-          opacity: rand(0.2, 0.7),
-          wobble: rand(0, Math.PI * 2),
-          wSpeed: rand(0.007, 0.02)
+          x:       rand(0, canvas.width),
+          y:       atTop ? rand(0, canvas.height) : -rand(2, 15),
+          r:       rand(2, 5),
+          vy:      rand(0.6, 2.2),
+          vx:      rand(-0.5, 0.5),
+          alpha:   rand(0.4, 0.9),
+          wobble:  rand(0, Math.PI * 2),
+          wFreq:   rand(0.01, 0.03),
+          wAmp:    rand(0.3, 0.8)
         };
       }
 
-      resize();
-      for (let i = 0; i < COUNT; i++) flakes.push(newFlake(true));
-      window.addEventListener('resize', function() { resize(); }, { passive: true });
+      setSize();
+      for (var i = 0; i < COUNT; i++) flakes.push(newFlake(true));
+      window.addEventListener('resize', setSize, { passive: true });
 
       function tick() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < flakes.length; i++) {
+        for (var i = 0; i < flakes.length; i++) {
           var f = flakes[i];
-          f.wobble += f.wSpeed;
-          f.x += f.drift + Math.sin(f.wobble) * 0.5;
-          f.y += f.speed;
-          if (f.y > canvas.height + 8) flakes[i] = newFlake(false);
+          f.wobble += f.wFreq;
+          f.x += f.vx + Math.sin(f.wobble) * f.wAmp;
+          f.y += f.vy;
+          if (f.y > canvas.height + 10) {
+            flakes[i] = newFlake(false);
+            continue;
+          }
+          // Draw snowflake as circle with soft glow
+          ctx.save();
+          ctx.globalAlpha = f.alpha;
+          ctx.shadowColor = 'rgba(255,255,255,0.8)';
+          ctx.shadowBlur  = f.r * 2;
           ctx.beginPath();
           ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(255,255,255,' + f.opacity + ')';
+          ctx.fillStyle = '#ffffff';
           ctx.fill();
+          ctx.restore();
         }
         requestAnimationFrame(tick);
       }
       tick();
+      console.log('Snow started — flakes:', COUNT, 'canvas:', canvas.width, 'x', canvas.height);
     })();
 
     // ── Thermostat animation ──────────────────────────────
     (function initThermostat() {
       var tempEl  = document.getElementById('thermoTemp');
       var mercury = document.getElementById('mercury');
-      if (!tempEl || !mercury) return;
+      var bulb    = document.getElementById('thermoBulb');
+      if (!tempEl || !mercury) { console.warn('Thermostat elements not found'); return; }
 
-      var current = 78, target = 62;
-      var MIN = 62, MAX = 78;
+      var MIN = 62, MAX = 84;
+      var TUBE_TOP    = 10;
+      var TUBE_BOTTOM = 78;  // y where tube meets bulb
+      var TUBE_HEIGHT = TUBE_BOTTOM - TUBE_TOP; // 68px
 
-      function tempToMercury(t) {
+      var current   = MAX;
+      var direction = -1;    // -1 = cooling down, +1 = heating up
+      var SPEED     = 0.05;  // degrees per frame at 60fps ≈ full cycle ~14s
+
+      function getColor(t) {
+        // pct: 0 = cold (icy), 1 = warm (deeper blue)
         var pct = (t - MIN) / (MAX - MIN);
-        var maxH = 58, minH = 4;
+        var r = Math.round(80  + pct * 60);   // 80 → 140
+        var g = Math.round(190 + pct * 40);   // 190 → 230
+        var b = 252;
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      }
+
+      function draw(t) {
+        t = Math.max(MIN, Math.min(MAX, t));
+
+        // Update text
+        tempEl.textContent = Math.round(t) + '°F';
+
+        // Map temperature to mercury rect
+        var pct    = (t - MIN) / (MAX - MIN);
+        var minH   = 6,  maxH = 62;
         var h = minH + pct * (maxH - minH);
-        var y = 78 - h;
-        return { y: y, h: h };
+        var y = TUBE_BOTTOM - h;  // bottom of mercury always at tube bottom
+
+        mercury.setAttribute('y', y.toFixed(2));
+        mercury.setAttribute('height', h.toFixed(2));
+
+        var col = getColor(t);
+        mercury.setAttribute('fill', col);
+        if (bulb) bulb.setAttribute('fill', col);
       }
 
-      function updateDisplay(t) {
-        tempEl.textContent = Math.round(t) + '°';
-        var m = tempToMercury(t);
-        mercury.setAttribute('y', m.y);
-        mercury.setAttribute('height', m.h);
-        var pct = (t - MIN) / (MAX - MIN);
-        var r = Math.round(125 + pct * 50);
-        var g = Math.round(200 + pct * 20);
-        mercury.setAttribute('fill', 'rgb(' + r + ',' + g + ',252)');
+      function frame() {
+        current += direction * SPEED;
+        if (current <= MIN) { current = MIN; direction = 1;  }
+        if (current >= MAX) { current = MAX; direction = -1; }
+        draw(current);
+        requestAnimationFrame(frame);
       }
 
-      var frame = 0;
-      function animate() {
-        frame++;
-        if (frame % 3 === 0) {
-          var diff = target - current;
-          if (Math.abs(diff) < 0.15) {
-            current = target;
-            target = (target === MIN) ? MAX : MIN;
-          } else {
-            current += diff * 0.012;
-          }
-          updateDisplay(current);
-        }
-        requestAnimationFrame(animate);
-      }
-      updateDisplay(current);
-      animate();
+      draw(current);
+      requestAnimationFrame(frame);
     })();
 
   </script>

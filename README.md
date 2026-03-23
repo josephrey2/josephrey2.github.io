@@ -1345,7 +1345,7 @@
       <div class="container hero-inner">
         <div class="hero-grid">
           <div>
-            <div class="hero-tag">Miami &bull; Mechanical &amp; A/C Contractor</div>
+            <div class="hero-tag">Mechanical Contractor</div>
 
             <h1 class="hero-headline">
               Comfort systems,
@@ -1379,7 +1379,8 @@
               </div>
               <div>
                 <div class="glance-stat-label">Service Hours</div>
-                <div class="glance-stat-value">Mon–Sat 8am–7pm</div>
+                <div class="glance-stat-value">Mon–Fri 8am–7pm</div>
+                <div style="margin-top:.3rem;font-size:.65rem;color:#2563eb;background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:.2rem .45rem;display:inline-block;line-height:1.4;">⏱ After-hours & weekends available at premium rates</div>
               </div>
               <div>
                 <div class="glance-stat-label">Coverage Area</div>
@@ -1387,7 +1388,7 @@
               </div>
               <div>
                 <div class="glance-stat-label">Based In</div>
-                <div class="glance-stat-value">Hialeah Gardens, FL</div>
+                <div class="glance-stat-value">South Florida</div>
               </div>
             </div>
 
@@ -1429,60 +1430,16 @@
     <!-- ─── ABOUT ─────────────────────────────── -->
     <section id="about">
       <div class="container">
-        <div class="about-layout">
+        <div class="about-layout" style="grid-template-columns:1fr;max-width:780px;">
           <div class="about-left">
             <div class="eyebrow">About Us</div>
-            <h2 class="section-title">A family-led team<br />built on <em style="font-style:italic;color:var(--blue);">trust</em>.</h2>
+            <h2 class="section-title">A family-owned team<br />built on <em style="font-style:italic;color:var(--blue);">trust</em>.</h2>
 
             <div class="about-body">
-              <p><strong>Universe Services</strong> was founded on a simple belief: projects run smoother when the mechanical team thinks like a builder and acts like an owner.</p>
-              <p>Based in Hialeah Gardens, we serve Miami's core neighborhoods, surrounding suburbs, and Broward's south corridor. Our work ranges from service and repairs on occupied homes to full system replacements and maintenance programs for property managers and associations.</p>
-              <p>We bring structure to every job — clear communication, clean work, and support long after the last visit. The result is systems that perform the way they were designed, and clients who know exactly who to call.</p>
+              <p><strong>Universe Services</strong> is a family-owned HVAC company built on a simple idea: show up, do the job right, and treat every home like our own.</p>
+              <p>Based in South Florida, we serve Miami-Dade and Broward. We handle everything from repairs and service calls to full system replacements and maintenance plans for homeowners, property managers, and associations.</p>
+              <p>We keep things simple: clear communication, clean work, and support after the job is done. Our clients know exactly who to call and what to expect every time.</p>
             </div>
-
-            <div class="about-stat-row">
-              <div>
-                <div class="about-stat-number">2</div>
-                <div class="about-stat-label">Counties served<br />Miami-Dade &amp; Broward</div>
-              </div>
-              <div>
-                <div class="about-stat-number">1-day</div>
-                <div class="about-stat-label">Avg. response time<br />for service calls</div>
-              </div>
-              <div>
-                <div class="about-stat-number">All<br style="display:block"/></div>
-                <div class="about-stat-label">Major brands<br />serviced &amp; installed</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="leaders-wrap">
-            <article class="leader-card">
-              <div class="leader-avatar">C</div>
-              <div class="leader-info">
-                <div class="leader-name">Claudio Rey</div>
-                <div class="leader-role">Chief Executive Officer</div>
-                <p class="leader-text">Leads overall vision, client relationships, and project delivery — ensuring every job reflects Universe's standards in the field.</p>
-              </div>
-            </article>
-
-            <article class="leader-card">
-              <div class="leader-avatar">J</div>
-              <div class="leader-info">
-                <div class="leader-name">Joseph Rey</div>
-                <div class="leader-role">Chief Financial Officer</div>
-                <p class="leader-text">Oversees financial operations, budgets, and project controls so clients have full clarity from estimate through closeout.</p>
-              </div>
-            </article>
-
-            <article class="leader-card">
-              <div class="leader-avatar">J</div>
-              <div class="leader-info">
-                <div class="leader-name">Jordi Rey</div>
-                <div class="leader-role">Chief Operating Officer</div>
-                <p class="leader-text">Directs day-to-day operations, scheduling, and field coordination to keep every job on time and well-executed.</p>
-              </div>
-            </article>
           </div>
         </div>
       </div>
@@ -1523,28 +1480,6 @@
               <span class="service-tag">Financing available</span>
             </div>
             <a href="#contact" class="service-cta">Request a quote →</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">❄️</div>
-            <div class="service-name">Ductless &amp; Mini-Splits</div>
-            <p class="service-desc">Single and multi-zone ductless systems for additions, garages, home offices, and spaces that need targeted comfort without ductwork.</p>
-            <div class="service-tags">
-              <span class="service-tag">Single &amp; multi-zone</span>
-              <span class="service-tag">Inverter tech</span>
-            </div>
-            <a href="#contact" class="service-cta">Design my zones →</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🌬️</div>
-            <div class="service-name">Indoor Air Quality</div>
-            <p class="service-desc">Filtration upgrades, UV lights, dehumidification, and ventilation strategies tailored to coastal living, allergies, and South Florida humidity.</p>
-            <div class="service-tags">
-              <span class="service-tag">Humidity control</span>
-              <span class="service-tag">UV / filtration</span>
-            </div>
-            <a href="#contact" class="service-cta">IAQ consult →</a>
           </article>
 
           <article class="service-card">
@@ -1688,14 +1623,6 @@
                   <span class="contact-info-label">Email</span>
                   <span class="contact-info-value"><a href="/cdn-cgi/l/email-protection#325b5c545d72475c5b445740415753511c515d5f"><span class="__cf_email__" data-cfemail="8de4e3ebe2cdf8e3e4fbe8fffee8eceea3eee2e0">[email&#160;protected]</span></a></span>
                 </div>
-                <div class="contact-info-item">
-                  <span class="contact-info-label">Location</span>
-                  <span class="contact-info-value">Hialeah Gardens, FL</span>
-                </div>
-                <div class="contact-info-item">
-                  <span class="contact-info-label">Hours</span>
-                  <span class="contact-info-value">Mon–Sat &bull; 8:00am–7:00pm</span>
-                </div>
               </div>
             </div>
 
@@ -1703,20 +1630,6 @@
               <h4>No cool? Call now.</h4>
               <p>For emergency no-cool calls, don't wait — call our office directly for the fastest response.</p>
               <a href="tel:+13055550123">📞 (305) 555-0123</a>
-            </div>
-
-            <div class="contact-info-card">
-              <h4>Service Area</h4>
-              <div class="contact-info-row">
-                <div class="contact-info-item">
-                  <span class="contact-info-label">Primary Counties</span>
-                  <span class="contact-info-value">Miami-Dade &amp; Broward</span>
-                </div>
-                <div class="contact-info-item">
-                  <span class="contact-info-label">Key Areas</span>
-                  <span class="contact-info-value">Miami, Hialeah, Doral, Kendall, Coral Gables, North Miami, Hollywood, Pembroke Pines</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1867,8 +1780,7 @@
       var TUBE_HEIGHT = TUBE_BOTTOM - TUBE_TOP; // 68px
 
       var current   = MAX;
-      var direction = -1;    // -1 = cooling down, +1 = heating up
-      var SPEED     = 0.05;  // degrees per frame at 60fps ≈ full cycle ~14s
+      var SPEED     = 0.025;  // degrees per frame
 
       function getColor(t) {
         // pct: 0 = cold (icy), 1 = warm (deeper blue)
@@ -1900,9 +1812,8 @@
       }
 
       function frame() {
-        current += direction * SPEED;
-        if (current <= MIN) { current = MIN; direction = 1;  }
-        if (current >= MAX) { current = MAX; direction = -1; }
+        current -= SPEED;
+        if (current <= MIN) { current = MAX; } // instant jump back to top
         draw(current);
         requestAnimationFrame(frame);
       }

@@ -1247,10 +1247,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <img src="Universe Logo White.png" alt="Universe Services logo" class="logo-img" />
-        <div class="logo-wordmark">
-          <div class="logo-primary">Universe Services</div>
-        </div>
+        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:54px;" />
       </a>
 
       <nav class="nav-links">
@@ -1348,8 +1345,8 @@
             <div class="hero-tag">Mechanical Contractor</div>
 
             <h1 class="hero-headline">
-              Comfort systems,
-              <em>done right.</em>
+              Air Conditioning
+              <em>Done Right.</em>
             </h1>
 
             <p class="hero-sub">

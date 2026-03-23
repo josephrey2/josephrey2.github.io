@@ -169,7 +169,7 @@
     }
 
     .navbar-inner {
-      height: 90px;
+      height: 120px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1247,7 +1247,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:72px;" />
+        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:110px;" />
       </a>
 
       <nav class="nav-links">

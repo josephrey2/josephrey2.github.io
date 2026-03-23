@@ -29,7 +29,7 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 175px; }
 
     body {
       font-family: "DM Sans", system-ui, sans-serif;
@@ -452,8 +452,8 @@
     .hero-trust-item {
       display: flex;
       align-items: center;
-      gap: .45rem;
-      padding: .65rem 1.1rem;
+      gap: .35rem;
+      padding: .65rem .75rem;
       border-right: 1px solid rgba(255,255,255,.12);
     }
 
@@ -1410,7 +1410,7 @@
         <span class="marquee-item"><span class="marquee-dot"></span>Indoor Air Quality</span>
         <span class="marquee-item"><span class="marquee-dot"></span>Smart Thermostats</span>
         <span class="marquee-item"><span class="marquee-dot"></span>Maintenance Programs</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Miami-Dade Licensed</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Florida Licensed</span>
         <span class="marquee-item"><span class="marquee-dot"></span>Same &amp; Next-Day Service</span>
         <span class="marquee-item"><span class="marquee-dot"></span>A/C Repairs &amp; Diagnostics</span>
         <span class="marquee-item"><span class="marquee-dot"></span>System Replacements</span>
@@ -1418,7 +1418,7 @@
         <span class="marquee-item"><span class="marquee-dot"></span>Indoor Air Quality</span>
         <span class="marquee-item"><span class="marquee-dot"></span>Smart Thermostats</span>
         <span class="marquee-item"><span class="marquee-dot"></span>Maintenance Programs</span>
-        <span class="marquee-item"><span class="marquee-dot"></span>Miami-Dade Licensed</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Florida Licensed</span>
         <span class="marquee-item"><span class="marquee-dot"></span>Same &amp; Next-Day Service</span>
       </div>
     </div>
@@ -1770,12 +1770,21 @@
       var SPEED     = 0.025;  // degrees per frame
 
       function getColor(t) {
-        // pct: 0 = cold (icy), 1 = warm (deeper blue)
-        var pct = (t - MIN) / (MAX - MIN);
-        var r = Math.round(80  + pct * 60);   // 80 → 140
-        var g = Math.round(190 + pct * 40);   // 190 → 230
-        var b = 252;
-        return 'rgb(' + r + ',' + g + ',' + b + ')';
+        if (t >= 80) {
+          // 84→80: dark red to light red (fast, 4 degrees)
+          var p = (t - 80) / (84 - 80); // 1=dark red, 0=light red
+          var r = Math.round(220 - p * 30);   // 190→220
+          var g = Math.round(p * 40);          // 40→0
+          var b = Math.round(p * 40);          // 40→0
+          return 'rgb(' + r + ',' + g + ',' + b + ')';
+        } else {
+          // 80→62: dark blue to light blue (gradual, 18 degrees)
+          var p = (t - 62) / (80 - 62); // 1=dark blue, 0=light blue
+          var r = Math.round(30  + (1 - p) * 120); // 30→150
+          var g = Math.round(80  + (1 - p) * 130); // 80→210
+          var b = Math.round(180 + (1 - p) * 72);  // 180→252
+          return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
       }
 
       function draw(t) {

@@ -169,7 +169,7 @@
     }
 
     .navbar-inner {
-      height: 74px;
+      height: 90px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1247,7 +1247,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <div class="logo-primary">Universe Services</div>
+        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:72px;" />
       </a>
 
       <nav class="nav-links">
@@ -1344,9 +1344,10 @@
           <div>
             <div class="hero-tag">Mechanical Contractor</div>
 
-            <div class="hero-headline">
-              <img src="Universe Services Logo White.png" alt="Universe Services" style="height:110px;width:auto;display:block;filter:drop-shadow(0 4px 18px rgba(0,0,0,.25));" />
-            </div>
+            <h1 class="hero-headline">
+              Air Conditioning
+              <em>Done Right.</em>
+            </h1>
 
             <p class="hero-sub">
               Universe Services delivers expert A/C repairs, system replacements, and maintenance programs for homes and properties across Miami-Dade and Broward.
@@ -1358,9 +1359,9 @@
             </div>
 
             <div class="hero-trust">
-              <div class="hero-trust-item"><span class="hero-trust-icon">⚡</span><strong>Same/Next-Day</strong>&nbsp;Response</div>
-              <div class="hero-trust-item"><span class="hero-trust-icon">📍</span><strong>Miami-Dade</strong>&nbsp;&amp; Broward</div>
-              <div class="hero-trust-item"><span class="hero-trust-icon">✓</span>Licensed &amp;&nbsp;<strong>Insured</strong></div>
+              <div class="hero-trust-item"><span class="hero-trust-icon">⚡</span><strong>Same/Next-Day</strong> Response</div>
+              <div class="hero-trust-item"><span class="hero-trust-icon">📍</span><strong>Miami-Dade</strong> &amp; Broward</div>
+              <div class="hero-trust-item"><span class="hero-trust-icon">✓</span>Licensed &amp; <strong>Insured</strong></div>
             </div>
           </div>
 

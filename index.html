@@ -1247,7 +1247,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:54px;" />
+        <div class="logo-primary">Universe Services</div>
       </a>
 
       <nav class="nav-links">
@@ -1344,10 +1344,9 @@
           <div>
             <div class="hero-tag">Mechanical Contractor</div>
 
-            <h1 class="hero-headline">
-              Air Conditioning
-              <em>Done Right.</em>
-            </h1>
+            <div class="hero-headline">
+              <img src="Universe Services Logo White.png" alt="Universe Services" style="height:110px;width:auto;display:block;filter:drop-shadow(0 4px 18px rgba(0,0,0,.25));" />
+            </div>
 
             <p class="hero-sub">
               Universe Services delivers expert A/C repairs, system replacements, and maintenance programs for homes and properties across Miami-Dade and Broward.

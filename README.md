@@ -169,7 +169,7 @@
     }
 
     .navbar-inner {
-      height: 120px;
+      height: 160px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -762,7 +762,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.2rem;
     }
 
@@ -1247,7 +1247,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:110px;" />
+        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:150px;" />
       </a>
 
       <nav class="nav-links">
@@ -1650,13 +1650,6 @@
   </footer>
 
   <!-- ─── FLOATING CALL ─────────────────────── -->
-  <div class="floating-call">
-    <a href="tel:+13055550123">
-      <span>📞</span>
-      Call Universe Services
-    </a>
-  </div>
-
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Navbar scroll state
     const navbar = document.getElementById("navbar");

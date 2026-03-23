@@ -621,7 +621,7 @@
     /* ─── ABOUT ───────────────────────────────── */
 
     #about {
-      padding: 100px 0;
+      padding: 110px 0;
       background: var(--white);
     }
 
@@ -910,15 +910,15 @@
 
     .process-step-title {
       font-weight: 600;
-      font-size: .88rem;
+      font-size: .95rem;
       color: var(--ink);
-      margin-bottom: .35rem;
+      margin-bottom: .4rem;
     }
 
     .process-step-text {
-      font-size: .78rem;
+      font-size: .84rem;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* ─── CONTACT ─────────────────────────────── */
@@ -999,9 +999,8 @@
 
     .form-footer {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
+      flex-direction: column;
+      gap: 0;
       margin-top: .4rem;
     }
 
@@ -1578,11 +1577,9 @@
                   <select id="serviceType">
                     <option>Service / repair</option>
                     <option>System replacement</option>
-                    <option>Ductless / mini-split</option>
-                    <option>Indoor air quality</option>
                     <option>Controls / smart thermostat</option>
                     <option>Maintenance program</option>
-                    <option>Other A/C or mechanical need</option>
+                    <option>Other A/C need</option>
                   </select>
                 </div>
                 <div class="field">
@@ -1602,8 +1599,8 @@
               </div>
 
               <div class="form-footer">
-                <p class="form-disclaimer">By submitting, you agree we may contact you by phone, text, or email about your request.</p>
-                <button type="button" class="btn btn-primary">Submit Request</button>
+                <button type="button" class="btn btn-primary" style="width:100%;justify-content:center;padding:.75rem 1.5rem;font-size:.88rem;">Submit Request</button>
+                <p class="form-disclaimer" style="text-align:center;margin-top:.6rem;">By submitting, you agree we may contact you by phone, text, or email about your request.</p>
               </div>
             </form>
           </div>
@@ -1625,7 +1622,7 @@
 
             <div class="contact-cta-card">
               <h4>No cool? Call now.</h4>
-              <p>For emergency no-cool calls, don't wait — call our office directly for the fastest response.</p>
+              <p>For emergency no-cool calls, don't wait. Call our office directly for the fastest response.</p>
               <a href="tel:+13055550123">📞 (305) 555-0123</a>
             </div>
           </div>
@@ -1639,7 +1636,7 @@
   <footer>
     <div class="container footer-inner">
       <div class="footer-logo">Universe Services</div>
-      <div>© <span id="year"></span> All rights reserved. Hialeah Gardens, FL</div>
+      <div>© <span id="year"></span> All rights reserved. South Florida</div>
       <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>

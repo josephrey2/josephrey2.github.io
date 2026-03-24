@@ -169,7 +169,7 @@
     }
 
     .navbar-inner {
-      height: 120px;
+      height: 140px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -314,7 +314,7 @@
     }
 
     .nav-mobile-inner {
-      padding: 0.5rem 1.5rem 1.5rem;
+      padding: 0.25rem 1.5rem 1rem;
       display: flex;
       flex-direction: column;
       font-size: 1.05rem;
@@ -322,7 +322,7 @@
 
     .nav-mobile-inner a {
       color: rgba(255,255,255,.85);
-      padding: 1rem 0;
+      padding: .65rem 0;
       border-bottom: 1px solid rgba(255,255,255,.08);
       font-weight: 500;
       display: block;
@@ -373,7 +373,7 @@
     .hero-inner {
       position: relative;
       z-index: 5;
-      padding-top: 150px;
+      padding-top: 170px;
       padding-bottom: 90px;
       width: 100%;
     }
@@ -1243,7 +1243,7 @@
       .nav-links, .nav-right { display: none; }
       .nav-toggle { display: inline-flex; }
       .navbar-inner { height: 50px; }
-      .logo-img { height: 36px !important; }
+      .logo-img { height: 44px !important; }
 
       /* Scroll anchor offset matches new navbar height */
       html { scroll-padding-top: 65px; }
@@ -1311,7 +1311,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="nav-logo">
-        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:110px;" />
+        <img src="Universe Services Logo White.png" alt="Universe Services logo" class="logo-img" style="height:130px;" />
       </a>
 
       <nav class="nav-links">

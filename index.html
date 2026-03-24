@@ -169,7 +169,7 @@
     }
 
     .navbar-inner {
-      height: 155px;
+      height: 160px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -304,7 +304,7 @@
     .nav-mobile {
       display: none;
       position: fixed;
-      top: 62px;
+      top: 80px;
       left: 0;
       right: 0;
       z-index: 49;
@@ -1242,15 +1242,15 @@
       /* ── Navbar ── */
       .nav-links, .nav-right { display: none; }
       .nav-toggle { display: inline-flex; }
-      .navbar-inner { height: 62px; }
+      .navbar-inner { height: 80px; }
       .logo-img { height: 52px !important; }
 
       /* Scroll anchor offset matches new navbar height */
-      html { scroll-padding-top: 78px; }
+      html { scroll-padding-top: 95px; }
 
-      /* Hero: 62px navbar + 70px breathing room */
+      /* Hero: 80px navbar + 70px breathing room */
       .hero-inner {
-        padding-top: 132px;
+        padding-top: 150px;
         padding-bottom: 60px;
       }
       .hero-headline { font-size: 2.2rem; }

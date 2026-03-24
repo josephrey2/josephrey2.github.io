@@ -353,7 +353,7 @@
     .hero-inner {
       position: relative;
       z-index: 5;
-      padding-top: 130px;
+      padding-top: 185px;
       padding-bottom: 90px;
       width: 100%;
     }
@@ -1219,24 +1219,65 @@
     }
 
     @media (max-width: 768px) {
+      /* Navbar */
       .nav-links, .nav-right { display: none; }
       .nav-toggle { display: inline-flex; }
+      .navbar-inner { height: 80px; }
+      .logo-img { height: 64px !important; }
 
-      .hero-headline { font-size: 2.5rem; }
-      .hero-inner { padding-top: 100px; }
+      /* Scroll offset for smaller mobile navbar */
+      html { scroll-padding-top: 95px; }
 
-      .services-grid, .about-layout {
-        grid-template-columns: 1fr;
+      /* Hero */
+      .hero-inner {
+        padding-top: 100px;
+        padding-bottom: 60px;
+      }
+      .hero-headline { font-size: 2.2rem; }
+      .hero-grid { gap: 2rem; }
+
+      /* Hide thermostat on mobile — it overlaps content */
+      #thermostat { display: none !important; }
+
+      /* Glance panel — full width, reasonable padding */
+      .glance-panel { max-width: 100%; padding: 1.4rem 1.2rem; }
+      .glance-stats > div { padding: .65rem .75rem; }
+
+      /* Trust bar — wrap gracefully */
+      .hero-trust {
+        width: 100%;
+        border-radius: 12px;
+      }
+      .hero-trust-item {
+        flex: 1;
+        justify-content: center;
+        padding: .55rem .5rem;
+        font-size: .72rem;
       }
 
+      /* Services */
+      .services-grid { grid-template-columns: 1fr; }
+
+      /* Process */
+      .process-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+
+      /* About */
+      .about-layout { grid-template-columns: 1fr; }
+
+      /* Contact */
       .field-row { flex-direction: column; }
+      .contact-layout { grid-template-columns: 1fr; }
 
-      .process-grid { grid-template-columns: 1fr 1fr; }
+      /* General spacing */
+      section, #about, #services, #contact { padding: 60px 0; }
+      .process-strip { padding: 60px 0; }
+      .container { padding: 0 1.2rem; }
+    }
 
-      .about-stat-row { gap: 1.5rem; }
-
-      .floating-call a { font-size: 0; padding: .85rem; }
-      .floating-call a span { font-size: 1.2rem; }
+    @media (max-width: 480px) {
+      .hero-headline { font-size: 1.9rem; }
+      .hero-trust-item { font-size: .68rem; gap: .25rem; }
+      .glance-stats { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>

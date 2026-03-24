@@ -1430,9 +1430,9 @@
 
           <aside class="glance-panel">
             <div class="glance-title">Universe at a Glance</div>
-            <p class="glance-sub">Florida licensed and insured, built for coastal environments, flat roofs, and high humidity.</p>
+            <p class="glance-sub">Florida licensed and insured, built for coastal environments, high humidity, and South Florida's demanding cooling season.</p>
 
-            <div class="glance-stats" style="grid-template-columns:repeat(3,1fr);">
+            <div class="glance-stats" style="grid-template-columns:repeat(2,1fr);">
               <div>
                 <div class="glance-stat-label">Service Response</div>
                 <div class="glance-stat-value">Same / Next Day</div>
@@ -1445,6 +1445,10 @@
               <div>
                 <div class="glance-stat-label">Coverage Area</div>
                 <div class="glance-stat-value">Miami-Dade &amp; Broward</div>
+              </div>
+              <div>
+                <div class="glance-stat-label">Equipment</div>
+                <div class="glance-stat-value">All Major Brands</div>
               </div>
             </div>
 

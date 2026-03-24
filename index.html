@@ -420,8 +420,9 @@
     }
 
     .hero-tag::before {
-      content: "📍";
-      font-size: .8rem;
+      content: "—";
+      font-size: .9rem;
+      opacity: .7;
     }
 
     .hero-headline {
@@ -482,8 +483,10 @@
     .hero-trust-item strong { color: #fff; font-weight: 600; }
 
     .hero-trust-icon {
-      font-size: 1rem;
+      font-size: 1.4rem;
       line-height: 1;
+      color: rgba(255,255,255,.5);
+      margin-top: -2px;
     }
 
     /* Glance panel */
@@ -1414,7 +1417,7 @@
             </h1>
 
             <p class="hero-sub">
-              Universe Services delivers expert A/C repairs, system replacements, and maintenance programs for homes and properties across Miami-Dade and Broward.
+              South Florida's family-owned HVAC company. We show up, communicate clearly, and get the job done right.
             </p>
 
             <div class="hero-actions">
@@ -1422,18 +1425,14 @@
               <a href="tel:+13055550123" class="btn btn-ghost">📞 Call Us Now</a>
             </div>
 
-            <div class="hero-trust">
-              <div class="hero-trust-item"><span class="hero-trust-icon">⚡</span><strong>Same/Next-Day</strong> Response</div>
-              <div class="hero-trust-item"><span class="hero-trust-icon">📍</span><strong>Miami-Dade</strong> &amp; Broward</div>
-              <div class="hero-trust-item"><span class="hero-trust-icon">✓</span>Licensed &amp; <strong>Insured</strong></div>
-            </div>
+
           </div>
 
           <aside class="glance-panel">
             <div class="glance-title">Universe at a Glance</div>
-            <p class="glance-sub">A focused mechanical partner for homeowners, property managers, and associations across South Florida.</p>
+            <p class="glance-sub">Florida licensed and insured, built for coastal environments, flat roofs, and high humidity.</p>
 
-            <div class="glance-stats">
+            <div class="glance-stats" style="grid-template-columns:repeat(3,1fr);">
               <div>
                 <div class="glance-stat-label">Service Response</div>
                 <div class="glance-stat-value">Same / Next Day</div>
@@ -1441,23 +1440,15 @@
               <div>
                 <div class="glance-stat-label">Service Hours</div>
                 <div class="glance-stat-value">Mon–Fri 8am–7pm</div>
-                <div style="margin-top:.3rem;font-size:.65rem;color:#2563eb;background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:.2rem .45rem;display:inline-block;line-height:1.4;">⏱ After-hours & weekends available at premium rates</div>
+                <div style="margin-top:.3rem;font-size:.65rem;color:#2563eb;background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:.2rem .45rem;display:inline-block;line-height:1.4;">⏱ After-hours &amp; weekends at premium rates</div>
               </div>
               <div>
                 <div class="glance-stat-label">Coverage Area</div>
                 <div class="glance-stat-value">Miami-Dade &amp; Broward</div>
               </div>
-              <div>
-                <div class="glance-stat-label">Based In</div>
-                <div class="glance-stat-value">South Florida</div>
-              </div>
             </div>
 
             <div class="glance-divider"></div>
-
-            <p class="glance-footer">
-              Licensed and insured mechanical contractor specializing in Florida's coastal environment — flat roofs, high humidity, and the long South Florida cooling season.
-            </p>
 
             <div class="glance-chip">Accepting new service clients</div>
           </aside>
@@ -1515,7 +1506,7 @@
             <h2 class="section-title">Everything your A/C needs,<br />handled in one call.</h2>
             <p class="section-sub">Responsive teams focused on diagnosing root causes, communicating clearly, and protecting your property while we work.</p>
           </div>
-          <div class="services-note">Trusted by homeowners, property managers, and associations throughout South Florida.</div>
+          <div class="services-note">Available for homes, rentals, and commercial spaces.</div>
         </div>
 
         <div class="services-grid">
@@ -1580,7 +1571,7 @@
           <div class="process-step">
             <div class="process-num">1</div>
             <div class="process-step-title">Reach Out</div>
-            <p class="process-step-text">Call us directly or submit a request online. We'll confirm same or next-day availability.</p>
+            <p class="process-step-text">Call us or submit a request online and we'll get back to you fast.</p>
           </div>
           <div class="process-step">
             <div class="process-num">2</div>
@@ -1595,7 +1586,7 @@
           <div class="process-step">
             <div class="process-num">4</div>
             <div class="process-step-title">Stay Supported</div>
-            <p class="process-step-text">Follow-up support and maintenance programs keep your system running long after we leave.</p>
+            <p class="process-step-text">We're available after the job is done. Call us anytime if something comes up.</p>
           </div>
         </div>
       </div>
@@ -1606,7 +1597,7 @@
       <div class="container">
         <div class="eyebrow">Contact</div>
         <h2 class="section-title" style="margin-bottom:.5rem;">Tell us what you need.</h2>
-        <p class="section-sub" style="margin-bottom:2.5rem;">Share a few details and our team will follow up to review scope, timing, and next steps.</p>
+        <p class="section-sub" style="margin-bottom:2.5rem;">Fill out the form and someone from our team will follow up shortly.</p>
 
         <div class="contact-layout">
           <div class="contact-form-card">

@@ -304,7 +304,7 @@
     .nav-mobile {
       display: none;
       position: fixed;
-      top: 80px;
+      top: 60px;
       left: 0;
       right: 0;
       z-index: 49;
@@ -1242,15 +1242,15 @@
       /* ── Navbar ── */
       .nav-links, .nav-right { display: none; }
       .nav-toggle { display: inline-flex; }
-      .navbar-inner { height: 80px; }
-      .logo-img { height: 58px !important; }
+      .navbar-inner { height: 60px; }
+      .logo-img { height: 44px !important; }
 
-      /* Scroll anchor offset matches navbar height */
-      html { scroll-padding-top: 100px; }
+      /* Scroll anchor offset matches new navbar height */
+      html { scroll-padding-top: 80px; }
 
-      /* ── Hero: give generous clearance above the 80px fixed navbar ── */
+      /* Hero: 60px navbar + 50px breathing room = 110px */
       .hero-inner {
-        padding-top: 140px;
+        padding-top: 115px;
         padding-bottom: 60px;
       }
       .hero-headline { font-size: 2.2rem; }

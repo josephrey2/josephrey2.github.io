@@ -265,51 +265,69 @@
 
     .nav-toggle {
       display: none;
-      width: 42px; height: 42px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(255,255,255,.5);
-      background: rgba(255,255,255,.1);
+      width: 44px; height: 44px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255,255,255,.15);
       align-items: center; justify-content: center;
       cursor: pointer;
-      transition: background .2s, border-color .2s;
+      transition: background .2s;
     }
 
     .navbar.scrolled .nav-toggle {
-      border-color: rgba(255,255,255,.4);
-      background: rgba(255,255,255,.1);
+      background: rgba(255,255,255,.15);
+    }
+
+    .nav-toggle:hover { background: rgba(255,255,255,.25); }
+
+    .hamburger {
+      width: 22px; height: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .hamburger span {
       display: block;
-      height: 1.5px;
+      height: 2.5px;
       border-radius: 99px;
       background: #fff;
-      transition: transform .2s, opacity .2s, top .2s;
+      transition: transform .2s, opacity .2s;
     }
 
     .navbar.scrolled .hamburger span { background: #fff; }
 
-    .nav-toggle.active .hamburger span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+    .nav-toggle.active .hamburger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-toggle.active .hamburger span:nth-child(2) { opacity: 0; }
-    .nav-toggle.active .hamburger span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+    .nav-toggle.active .hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
     .nav-mobile {
       display: none;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 12px 30px rgba(0,26,64,.1);
+      background: #001f45;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      box-shadow: 0 12px 30px rgba(0,26,64,.2);
     }
 
     .nav-mobile-inner {
-      padding: 1rem 2rem 1.4rem;
+      padding: 1.2rem 1.5rem 1.8rem;
       display: flex;
       flex-direction: column;
-      gap: .85rem;
-      font-size: .9rem;
+      gap: 0;
+      font-size: 1rem;
     }
 
-    .nav-mobile-inner a { color: var(--muted); }
-    .nav-mobile-inner a:hover { color: var(--blue); }
+    .nav-mobile-inner a {
+      color: rgba(255,255,255,.8);
+      padding: .9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .nav-mobile-inner a:last-child { border-bottom: none; padding-bottom: 0; }
+    .nav-mobile-inner a:hover { color: #fff; }
 
     /* ─── HERO ────────────────────────────────── */
 
@@ -1223,37 +1241,43 @@
       .nav-links, .nav-right { display: none; }
       .nav-toggle { display: inline-flex; }
       .navbar-inner { height: 80px; }
-      .logo-img { height: 64px !important; }
+      .logo-img { height: 60px !important; }
 
       /* Scroll offset for smaller mobile navbar */
       html { scroll-padding-top: 95px; }
 
-      /* Hero */
+      /* Hero — push content well below the 80px navbar */
       .hero-inner {
-        padding-top: 100px;
+        padding-top: 110px;
         padding-bottom: 60px;
       }
       .hero-headline { font-size: 2.2rem; }
       .hero-grid { gap: 2rem; }
 
-      /* Hide thermostat on mobile — it overlaps content */
+      /* Hide thermostat on mobile */
       #thermostat { display: none !important; }
 
-      /* Glance panel — full width, reasonable padding */
+      /* Glance panel */
       .glance-panel { max-width: 100%; padding: 1.4rem 1.2rem; }
       .glance-stats > div { padding: .65rem .75rem; }
 
-      /* Trust bar — wrap gracefully */
+      /* Trust bar — stack vertically on mobile for clean layout */
       .hero-trust {
         width: 100%;
         border-radius: 12px;
+        flex-direction: column;
+        gap: 0;
       }
       .hero-trust-item {
-        flex: 1;
-        justify-content: center;
-        padding: .55rem .5rem;
-        font-size: .72rem;
+        flex: none;
+        justify-content: flex-start;
+        padding: .65rem 1rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+        font-size: .84rem;
+        gap: .5rem;
       }
+      .hero-trust-item:last-child { border-bottom: none; }
 
       /* Services */
       .services-grid { grid-template-columns: 1fr; }
@@ -1276,7 +1300,6 @@
 
     @media (max-width: 480px) {
       .hero-headline { font-size: 1.9rem; }
-      .hero-trust-item { font-size: .68rem; gap: .25rem; }
       .glance-stats { grid-template-columns: 1fr 1fr; }
     }
   </style>

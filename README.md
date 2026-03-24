@@ -303,30 +303,32 @@
 
     .nav-mobile {
       display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      z-index: 49;
       background: #001f45;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-      box-shadow: 0 12px 30px rgba(0,26,64,.2);
+      border-bottom: 2px solid rgba(255,255,255,.12);
+      box-shadow: 0 16px 40px rgba(0,10,40,.4);
     }
 
     .nav-mobile-inner {
-      padding: 1.2rem 1.5rem 1.8rem;
+      padding: 0.5rem 1.5rem 1.5rem;
       display: flex;
       flex-direction: column;
-      gap: 0;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     .nav-mobile-inner a {
-      color: rgba(255,255,255,.8);
-      padding: .9rem 0;
+      color: rgba(255,255,255,.85);
+      padding: 1rem 0;
       border-bottom: 1px solid rgba(255,255,255,.08);
       font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: .5rem;
+      display: block;
     }
 
-    .nav-mobile-inner a:last-child { border-bottom: none; padding-bottom: 0; }
+    .nav-mobile-inner a:last-child { border-bottom: none; }
     .nav-mobile-inner a:hover { color: #fff; }
 
     /* ─── HERO ────────────────────────────────── */
@@ -1237,18 +1239,18 @@
     }
 
     @media (max-width: 768px) {
-      /* Navbar */
+      /* ── Navbar ── */
       .nav-links, .nav-right { display: none; }
       .nav-toggle { display: inline-flex; }
       .navbar-inner { height: 80px; }
-      .logo-img { height: 60px !important; }
+      .logo-img { height: 58px !important; }
 
-      /* Scroll offset for smaller mobile navbar */
-      html { scroll-padding-top: 95px; }
+      /* Scroll anchor offset matches navbar height */
+      html { scroll-padding-top: 100px; }
 
-      /* Hero — push content well below the 80px navbar */
+      /* ── Hero: give generous clearance above the 80px fixed navbar ── */
       .hero-inner {
-        padding-top: 110px;
+        padding-top: 140px;
         padding-bottom: 60px;
       }
       .hero-headline { font-size: 2.2rem; }
@@ -1261,17 +1263,16 @@
       .glance-panel { max-width: 100%; padding: 1.4rem 1.2rem; }
       .glance-stats > div { padding: .65rem .75rem; }
 
-      /* Trust bar — stack vertically on mobile for clean layout */
+      /* Trust bar — vertical stack, clean and readable */
       .hero-trust {
         width: 100%;
         border-radius: 12px;
         flex-direction: column;
-        gap: 0;
       }
       .hero-trust-item {
         flex: none;
         justify-content: flex-start;
-        padding: .65rem 1rem;
+        padding: .7rem 1rem;
         border-right: none;
         border-bottom: 1px solid rgba(255,255,255,.12);
         font-size: .84rem;
@@ -1299,7 +1300,7 @@
     }
 
     @media (max-width: 480px) {
-      .hero-headline { font-size: 1.9rem; }
+      .hero-headline { font-size: 1.85rem; }
       .glance-stats { grid-template-columns: 1fr 1fr; }
     }
   </style>
@@ -1333,17 +1334,18 @@
         </div>
       </button>
     </div>
-
-    <div class="nav-mobile" id="navMobile">
-      <div class="nav-mobile-inner container">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:+13055550123" style="color:var(--blue);font-weight:600;">📞 (305) 555-0123</a>
-      </div>
-    </div>
   </header>
+
+  <!-- Mobile nav dropdown — sits outside header to avoid any clipping -->
+  <div class="nav-mobile" id="navMobile">
+    <div class="nav-mobile-inner container">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+13055550123" style="color:#7dd3fc;font-weight:600;">📞 (305) 555-0123</a>
+    </div>
+  </div>
 
   <main id="home">
 
@@ -1722,17 +1724,25 @@
     const navToggle = document.getElementById("navToggle");
     const navMobile = document.getElementById("navMobile");
 
+    function openMenu() {
+      // Position dropdown flush below the navbar regardless of its current height
+      const navbarHeight = document.getElementById("navbar").getBoundingClientRect().height;
+      navMobile.style.top = navbarHeight + "px";
+      navMobile.style.display = "block";
+      navToggle.classList.add("active");
+    }
+
+    function closeMenu() {
+      navMobile.style.display = "none";
+      navToggle.classList.remove("active");
+    }
+
     navToggle.addEventListener("click", () => {
-      const isOpen = navMobile.style.display === "block";
-      navMobile.style.display = isOpen ? "none" : "block";
-      navToggle.classList.toggle("active", !isOpen);
+      navMobile.style.display === "block" ? closeMenu() : openMenu();
     });
 
     navMobile.addEventListener("click", (e) => {
-      if (e.target.tagName.toLowerCase() === "a") {
-        navMobile.style.display = "none";
-        navToggle.classList.remove("active");
-      }
+      if (e.target.tagName.toLowerCase() === "a") closeMenu();
     });
 
     // Footer year

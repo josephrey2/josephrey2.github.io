@@ -1248,9 +1248,9 @@
       /* Scroll anchor offset matches new navbar height */
       html { scroll-padding-top: 95px; }
 
-      /* Hero: 80px navbar + 70px breathing room */
+      /* Hero: 80px navbar + 90px breathing room */
       .hero-inner {
-        padding-top: 150px;
+        padding-top: 170px;
         padding-bottom: 60px;
       }
       .hero-headline { font-size: 2.2rem; }

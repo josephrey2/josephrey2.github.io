@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -1325,7 +1325,7 @@
 
       <div class="nav-right">
         <div class="nav-phone">
-          Main Office &bull; <strong>(305) 555-0123</strong>
+          Main Office &bull; <strong>(786) 361-9783</strong>
         </div>
         <a href="#contact" class="btn btn-primary" style="font-size:.78rem;padding:.5rem 1.15rem;">Request Service</a>
       </div>
@@ -1345,7 +1345,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
-      <a href="tel:+13055550123" style="color:#7dd3fc;font-weight:600;">📞 (305) 555-0123</a>
+      <a href="tel:+17863619783" style="color:#7dd3fc;font-weight:600;">📞 (786) 361-9783</a>
     </div>
   </div>
 
@@ -1422,7 +1422,7 @@
 
             <div class="hero-actions">
               <a href="#contact" class="btn btn-primary">Request Service</a>
-              <a href="tel:+13055550123" class="btn btn-ghost">📞 Call Us Now</a>
+              <a href="tel:+17863619783" class="btn btn-ghost">📞 Call Us Now</a>
             </div>
 
 
@@ -1606,35 +1606,43 @@
         <div class="contact-layout">
           <div class="contact-form-card">
             <div class="form-title">Request Service</div>
-            <p class="form-sub">For urgent no-cool calls, please call <strong>(305) 555-0123</strong> directly.</p>
+            <p class="form-sub">For urgent no-cool calls, please call <strong>(786) 361-9783</strong> directly.</p>
 
-            <form>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Web3Forms config -->
+              <input type="hidden" name="access_key" value="d9944263-43dc-4527-8e8b-6d8816894ddb" />
+              <input type="hidden" name="subject" value="New Service Request — Universe Services" />
+              <input type="hidden" name="from_name" value="Universe Services Website" />
+              <input type="hidden" name="replyto" id="replyto" value="" />
+              <input type="hidden" name="redirect" value="" />
+              <input type="checkbox" name="botcheck" style="display:none;" />
+
               <div class="field-row">
                 <div class="field">
                   <label for="name">Full Name</label>
-                  <input id="name" type="text" placeholder="Your name" />
+                  <input id="name" name="name" type="text" placeholder="Your name" required />
                 </div>
                 <div class="field">
                   <label for="phone">Mobile Phone</label>
-                  <input id="phone" type="tel" placeholder="(305) 555-0123" />
+                  <input id="phone" name="phone" type="tel" placeholder="(786) 361-9783" />
                 </div>
               </div>
 
               <div class="field-row">
                 <div class="field">
                   <label for="email">Email</label>
-                  <input id="email" type="email" placeholder="you@example.com" />
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
                 </div>
                 <div class="field">
                   <label for="city">City / Neighborhood</label>
-                  <input id="city" type="text" placeholder="Miami, Doral, Kendall…" />
+                  <input id="city" name="city" type="text" placeholder="Miami, Doral, Kendall…" />
                 </div>
               </div>
 
               <div class="field-row">
                 <div class="field">
                   <label for="serviceType">I'm Reaching Out About</label>
-                  <select id="serviceType">
+                  <select id="serviceType" name="service_type">
                     <option>Service / repair</option>
                     <option>System replacement</option>
                     <option>Controls / smart thermostat</option>
@@ -1644,7 +1652,7 @@
                 </div>
                 <div class="field">
                   <label for="timeframe">Ideal Timeframe</label>
-                  <select id="timeframe">
+                  <select id="timeframe" name="timeframe">
                     <option>ASAP / emergency</option>
                     <option>This week</option>
                     <option>Within 30 days</option>
@@ -1655,12 +1663,13 @@
 
               <div class="field">
                 <label for="message">Describe the Issue or Request</label>
-                <textarea id="message" placeholder="E.g. 2nd floor not cooling, system is 15 years old, looking for a maintenance plan, etc."></textarea>
+                <textarea id="message" name="message" placeholder="E.g. 2nd floor not cooling, system is 15 years old, looking for a maintenance plan, etc."></textarea>
               </div>
 
               <div class="form-footer">
-                <button type="button" class="btn btn-primary" style="width:100%;justify-content:center;padding:.75rem 1.5rem;font-size:.88rem;">Submit Request</button>
+                <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:.75rem 1.5rem;font-size:.88rem;">Submit Request</button>
                 <p class="form-disclaimer" style="text-align:center;margin-top:.6rem;">By submitting, you agree we may contact you by phone, text, or email about your request.</p>
+                <div id="formMsg" style="display:none;text-align:center;margin-top:.8rem;padding:.7rem 1rem;border-radius:10px;font-size:.84rem;font-weight:500;"></div>
               </div>
             </form>
           </div>
@@ -1671,11 +1680,11 @@
               <div class="contact-info-row">
                 <div class="contact-info-item">
                   <span class="contact-info-label">Main Office</span>
-                  <span class="contact-info-value"><a href="tel:+13055550123">(305) 555-0123</a></span>
+                  <span class="contact-info-value"><a href="tel:+17863619783">(786) 361-9783</a></span>
                 </div>
                 <div class="contact-info-item">
                   <span class="contact-info-label">Email</span>
-                  <span class="contact-info-value"><a href="/cdn-cgi/l/email-protection#325b5c545d72475c5b445740415753511c515d5f"><span class="__cf_email__" data-cfemail="8de4e3ebe2cdf8e3e4fbe8fffee8eceea3eee2e0">[email&#160;protected]</span></a></span>
+                  <span class="contact-info-value"><a href="mailto:info@universeservicesac.com">info@universeservicesac.com</a></span>
                 </div>
               </div>
             </div>
@@ -1683,7 +1692,7 @@
             <div class="contact-cta-card">
               <h4>No cool? Call now.</h4>
               <p>For emergency no-cool calls, don't wait. Call our office directly for the fastest response.</p>
-              <a href="tel:+13055550123">📞 (305) 555-0123</a>
+              <a href="tel:+17863619783">📞 (786) 361-9783</a>
             </div>
           </div>
         </div>
@@ -1759,7 +1768,74 @@
       observer.observe(el);
     });
 
-    // ── Snow effect ──────────────────────────────────────
+    // ── Contact form submission ───────────────────
+    (function() {
+      var form = document.getElementById('contactForm');
+      if (!form) return;
+
+      // Keep replyto hidden field in sync with email input
+      var emailInput = document.getElementById('email');
+      var replyto    = document.getElementById('replyto');
+      if (emailInput && replyto) {
+        emailInput.addEventListener('input', function() {
+          replyto.value = emailInput.value;
+        });
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var btn    = document.getElementById('submitBtn');
+        var msgDiv = document.getElementById('formMsg');
+
+        // Basic validation
+        var name  = document.getElementById('name').value.trim();
+        var email = emailInput ? emailInput.value.trim() : '';
+        if (!name || !email) {
+          msgDiv.style.display = 'block';
+          msgDiv.style.background = '#fef2f2';
+          msgDiv.style.color = '#991b1b';
+          msgDiv.style.border = '1px solid #fecaca';
+          msgDiv.textContent = 'Please fill in your name and email before submitting.';
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        var data = new FormData(form);
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: data
+        })
+        .then(function(res) { return res.json(); })
+        .then(function(json) {
+          if (json.success) {
+            msgDiv.style.display = 'block';
+            msgDiv.style.background = '#f0fdf4';
+            msgDiv.style.color = '#15803d';
+            msgDiv.style.border = '1px solid #bbf7d0';
+            msgDiv.textContent = 'Request sent! We\'ll be in touch shortly.';
+            form.reset();
+            btn.textContent = 'Request Sent ✓';
+          } else {
+            throw new Error('Submission failed');
+          }
+        })
+        .catch(function() {
+          msgDiv.style.display = 'block';
+          msgDiv.style.background = '#fef2f2';
+          msgDiv.style.color = '#991b1b';
+          msgDiv.style.border = '1px solid #fecaca';
+          msgDiv.textContent = 'Something went wrong. Please call us directly at (786) 361-9783.';
+          btn.disabled = false;
+          btn.textContent = 'Submit Request';
+        });
+      });
+    })();
+
+
     (function initSnow() {
       var canvas = document.getElementById('snowCanvas');
       if (!canvas) { console.warn('No snow canvas'); return; }
@@ -1888,5 +1964,4 @@
 
   </script>
 </body>
-</html>
-![Uploading image.png…]()
+</html> 

@@ -1635,7 +1635,7 @@
                 </div>
                 <div class="field">
                   <label for="city">Address</label>
-                  <input id="city" name="city" type="text" placeholder="Street address or area…" />
+                  <input id="city" name="city" type="text" placeholder="Street address" />
                 </div>
               </div>
 

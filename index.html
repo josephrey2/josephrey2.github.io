@@ -1684,7 +1684,7 @@
                 </div>
                 <div class="contact-info-item">
                   <span class="contact-info-label">Email</span>
-                  <span class="contact-info-value"><a href="/cdn-cgi/l/email-protection#8ee7e0e8e1cefbe0e7f8ebfcfdebfdebfcf8e7edebfdefeda0ede1e3"><span class="__cf_email__" data-cfemail="533a3d353c13263d3a2536212036203621253a30362032307d303c3e">[email&#160;protected]</span></a></span>
+                  <span class="contact-info-value"><a href="mailto:info@universeservicesac.com">info@universeservicesac.com</a></span>
                 </div>
               </div>
             </div>
@@ -1716,7 +1716,7 @@
   </footer>
 
   <!-- ─── FLOATING CALL ─────────────────────── -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Navbar scroll state
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {

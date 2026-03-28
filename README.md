@@ -1684,7 +1684,7 @@
                 </div>
                 <div class="contact-info-item">
                   <span class="contact-info-label">Email</span>
-                  <span class="contact-info-value"><a href="mailto:info@universeservicesac.com">info@universeservicesac.com</a></span>
+                  <span class="contact-info-value"><a href="/cdn-cgi/l/email-protection#e980878f86a99c87809f8c9b9a8c9a8c9b9f808a8c9a888ac78a8684"><span class="__cf_email__" data-cfemail="86efe8e0e9c6f3e8eff0e3f4f5e3f5e3f4f0efe5e3f5e7e5a8e5e9eb">[email&#160;protected]</span></a></span>
                 </div>
               </div>
             </div>
@@ -1716,7 +1716,7 @@
   </footer>
 
   <!-- ─── FLOATING CALL ─────────────────────── -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Navbar scroll state
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
@@ -1898,57 +1898,60 @@
       console.log('Snow started — flakes:', COUNT, 'canvas:', canvas.width, 'x', canvas.height);
     })();
 
+ 
     // ── Thermostat animation ──────────────────────────────
     (function initThermostat() {
       var tempEl  = document.getElementById('thermoTemp');
       var mercury = document.getElementById('mercury');
       var bulb    = document.getElementById('thermoBulb');
-      if (!tempEl || !mercury) { console.warn('Thermostat elements not found'); return; }
+      if (!tempEl || !mercury) { return; }
 
       var MIN = 62, MAX = 84;
-      var TUBE_TOP    = 10;
-      var TUBE_BOTTOM = 78;  // y where tube meets bulb
-      var TUBE_HEIGHT = TUBE_BOTTOM - TUBE_TOP; // 68px
-
-      var current   = MAX;
-      var SPEED     = 0.025;  // degrees per frame
+      var TUBE_BOTTOM = 78;
+      var current = MAX;
+      var SPEED = 0.025;
 
       function getColor(t) {
         if (t >= 80) {
-          // 84→80: dark red to light red (fast, 4 degrees)
-          var p = (t - 80) / (84 - 80); // 1=dark red, 0=light red
-          var r = Math.round(220 - p * 30);   // 190→220
-          var g = Math.round(p * 40);          // 40→0
-          var b = Math.round(p * 40);          // 40→0
+          var p = (t - 80) / (84 - 80);
+          var r = Math.round(190 + p * 30);
+          var g = Math.round(40 - p * 40);
+          var b = Math.round(40 - p * 40);
           return 'rgb(' + r + ',' + g + ',' + b + ')';
         } else {
-          // 80→62: dark blue to light blue (gradual, 18 degrees)
-          var p = (t - 62) / (80 - 62); // 1=dark blue, 0=light blue
-          var r = Math.round(30  + (1 - p) * 120); // 30→150
-          var g = Math.round(80  + (1 - p) * 130); // 80→210
-          var b = Math.round(180 + (1 - p) * 72);  // 180→252
+          var p = (t - 62) / (80 - 62);
+          var r = Math.round(30  + (1 - p) * 120);
+          var g = Math.round(80  + (1 - p) * 130);
+          var b = Math.round(180 + (1 - p) * 72);
           return 'rgb(' + r + ',' + g + ',' + b + ')';
         }
       }
 
       function draw(t) {
         t = Math.max(MIN, Math.min(MAX, t));
-
-        // Update text
         tempEl.textContent = Math.round(t) + '°F';
-
-        // Map temperature to mercury rect
-        var pct    = (t - MIN) / (MAX - MIN);
-        var minH   = 6,  maxH = 62;
+        var pct = (t - MIN) / (MAX - MIN);
+        var minH = 6, maxH = 62;
         var h = minH + pct * (maxH - minH);
-        var y = TUBE_BOTTOM - h;  // bottom of mercury always at tube bottom
-
+        var y = TUBE_BOTTOM - h;
         mercury.setAttribute('y', y.toFixed(2));
         mercury.setAttribute('height', h.toFixed(2));
-
         var col = getColor(t);
         mercury.setAttribute('fill', col);
         if (bulb) bulb.setAttribute('fill', col);
       }
 
       function frame() {
+        current -= SPEED;
+        if (current <= MIN) { current = MAX; }
+        draw(current);
+        requestAnimationFrame(frame);
+      }
+
+      draw(current);
+      requestAnimationFrame(frame);
+    })();
+
+  </script>
+</body>
+</html>

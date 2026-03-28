@@ -5,7 +5,7 @@
   <title>Universe Services | Miami A/C & Mechanical</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Universe Services — Miami's trusted mechanical and A/C contractor for service, retrofits, and replacements." />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -29,7 +29,7 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 175px; }
+    html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 175px; -webkit-text-size-adjust: 100%; }
 
     body {
       font-family: "DM Sans", system-ui, sans-serif;
@@ -37,6 +37,8 @@
       background: #fff;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     img { max-width: 100%; display: block; }
@@ -131,6 +133,7 @@
       background: rgba(255,255,255,.1);
       color: #fff;
       border-color: rgba(255,255,255,.55);
+      -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
     }
 
@@ -154,7 +157,7 @@
 
     .navbar {
       position: fixed;
-      inset: 0 0 auto 0;
+      top: 0; left: 0; right: 0; bottom: auto;
       z-index: 50;
       background: #001f45;
       border-bottom: 1px solid rgba(255,255,255,.08);
@@ -336,6 +339,7 @@
     .hero {
       position: relative;
       min-height: 100vh;
+      min-height: -webkit-fill-available;
       display: flex;
       align-items: center;
       color: #fff;
@@ -344,7 +348,7 @@
 
     .hero-overlay {
       position: absolute;
-      inset: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       z-index: 1;
       background: linear-gradient(135deg, #0a3d7a 0%, #1565c0 45%, #1e88e5 75%, #29b6f6 100%);
     }
@@ -400,6 +404,7 @@
       border-radius: 99px;
       border: 1px solid rgba(255,255,255,.35);
       background: rgba(255,255,255,.08);
+      -webkit-backdrop-filter: blur(6px);
       backdrop-filter: blur(6px);
     }
 
@@ -416,6 +421,7 @@
       border: 1px solid rgba(255,255,255,.25);
       padding: .3rem .9rem .3rem .7rem;
       border-radius: 99px;
+      -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
     }
 
@@ -466,6 +472,7 @@
       border: 1px solid rgba(255,255,255,.15);
       border-radius: 14px;
       overflow: hidden;
+      -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       width: fit-content;
     }
@@ -1124,6 +1131,7 @@
       font-size: .8rem;
       font-weight: 600;
       color: #fff;
+      -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       transition: background .18s, border-color .18s;
     }
@@ -1354,7 +1362,7 @@
     <!-- ─── HERO ─────────────────────────────── -->
     <section class="hero">
       <div class="hero-overlay"></div>
-      <canvas id="snowCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none;display:block;"></canvas>
+      <canvas id="snowCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none;display:block;" width="1" height="1"></canvas>
       <!-- Thermostat widget -->
       <div id="thermostat" style="
         position:absolute;
@@ -1366,6 +1374,7 @@
         border:1px solid rgba(255,255,255,.22);
         border-radius:20px;
         padding:1rem .85rem 1.1rem;
+        -webkit-backdrop-filter:blur(16px);
         backdrop-filter:blur(16px);
         -webkit-backdrop-filter:blur(16px);
         text-align:center;
@@ -1684,7 +1693,7 @@
                 </div>
                 <div class="contact-info-item">
                   <span class="contact-info-label">Email</span>
-                  <span class="contact-info-value"><a href="/cdn-cgi/l/email-protection#e980878f86a99c87809f8c9b9a8c9a8c9b9f808a8c9a888ac78a8684"><span class="__cf_email__" data-cfemail="86efe8e0e9c6f3e8eff0e3f4f5e3f5e3f4f0efe5e3f5e7e5a8e5e9eb">[email&#160;protected]</span></a></span>
+                  <span class="contact-info-value"><a href="mailto:info@universeservicesac.com">info@universeservicesac.com</a></span>
                 </div>
               </div>
             </div>
@@ -1716,7 +1725,7 @@
   </footer>
 
   <!-- ─── FLOATING CALL ─────────────────────── -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Navbar scroll state
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {

@@ -2106,7 +2106,7 @@
       var snowIcon  = document.getElementById('snowflakeIcon');
       if (!tempText || !tickGroup) return;
 
-      var NUM_TICKS=30, CX=70, CY=70;
+      var NUM_TICKS=23, CX=70, CY=70; /* 23 ticks = 23 values (62–84°F), one tick per degree */
       var R_BASE=56, R_SHORT=62, R_LONG=66;
       var tickEls=[];
 
@@ -2125,18 +2125,20 @@
         tickEls.push(line);
       }
 
-      var MIN=62, MAX=84, current=MAX, SPEED=0.016;
+      /* Discrete tick driver — every tick waits exactly FRAMES_PER_TICK frames,
+         so the gap between each click is always identical.
+         NUM_TICKS=23 covers 62–84°F (one tick per degree). */
+      var MIN=62, FRAMES_PER_TICK=62;
+      var needle=NUM_TICKS-1; /* start at top (84°F) */
+      var frameCount=0;
 
-      function draw(t) {
-        t=Math.max(MIN,Math.min(MAX,t));
-        var pct=(t-MIN)/(MAX-MIN);
-        var needle=Math.round(pct*(NUM_TICKS-1));
-        /* Derive display temp from needle position so text + tick change at identical moment */
-        var displayTemp=Math.round(MIN+(needle/(NUM_TICKS-1))*(MAX-MIN));
+      function draw(n) {
+        var displayTemp=MIN+n; /* n=0→62°F … n=22→84°F */
         tempText.textContent=displayTemp+'\u00B0F';
+        var pct=n/(NUM_TICKS-1);
         if (snowIcon) snowIcon.setAttribute('opacity',(0.5+(1-pct)*.45).toFixed(2));
         for (var i=0;i<NUM_TICKS;i++) {
-          var dist=Math.abs(i-needle);
+          var dist=Math.abs(i-n);
           var isLong=(i%5===0);
           var w=isLong?2.2:1.5;
           if (dist===0) {
@@ -2151,7 +2153,7 @@
             tickEls[i].setAttribute('stroke','rgba(125,211,252,.28)');
             tickEls[i].setAttribute('stroke-width',w.toString());
             tickEls[i].setAttribute('opacity','0.9');
-          } else if (i<needle) {
+          } else if (i<n) {
             tickEls[i].setAttribute('stroke','rgba(100,180,240,.14)');
             tickEls[i].setAttribute('stroke-width',w.toString());
             tickEls[i].setAttribute('opacity','0.8');
@@ -2164,12 +2166,16 @@
       }
 
       function frame() {
-        current-=SPEED;
-        if (current<=MIN) current=MAX;
-        draw(current);
+        frameCount++;
+        if (frameCount>=FRAMES_PER_TICK) {
+          frameCount=0;
+          needle--;
+          if (needle<0) needle=NUM_TICKS-1; /* wrap back to 84°F */
+        }
+        draw(needle);
         requestAnimationFrame(frame);
       }
-      draw(current);
+      draw(needle);
       requestAnimationFrame(frame);
     })();
   </script>

@@ -347,16 +347,6 @@
         linear-gradient(170deg, #04101f 0%, #071628 55%, #0c1e3d 100%);
     }
 
-    /* Dot grid texture */
-    .hero-dots {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background-image: radial-gradient(rgba(255,255,255,.09) 1px, transparent 1px);
-      background-size: 30px 30px;
-      pointer-events: none;
-    }
-
     /* Ambient glow orb upper right */
     .hero-orb {
       position: absolute;
@@ -424,6 +414,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      padding-bottom: 0.14em; /* prevent descender clip on "g" */
     }
     .hero-headline em {
       display: block;
@@ -1413,7 +1404,6 @@
     <!-- ─── HERO ─────────────────────────────── -->
     <section class="hero">
       <div class="hero-bg"></div>
-      <div class="hero-dots" aria-hidden="true"></div>
       <div class="hero-orb" aria-hidden="true"></div>
 
       <canvas id="snowCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none;" width="1" height="1" aria-hidden="true"></canvas>
@@ -1487,32 +1477,6 @@
               <a href="tel:+17863619783" class="btn btn-ghost">Call Us Now</a>
             </div>
 
-            <div class="hero-trust">
-              <div class="trust-chip">
-                <span class="trust-chip-icon">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                </span>
-                Florida Licensed
-              </div>
-              <div class="trust-chip">
-                <span class="trust-chip-icon">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </span>
-                Same &amp; Next-Day
-              </div>
-              <div class="trust-chip">
-                <span class="trust-chip-icon">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                </span>
-                All Major Brands
-              </div>
-              <div class="trust-chip">
-                <span class="trust-chip-icon">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </span>
-                Miami-Dade &amp; Broward
-              </div>
-            </div>
           </div>
 
           <aside>
@@ -1528,7 +1492,7 @@
                 <div class="glance-stat">
                   <div class="glance-stat-label">Service Hours</div>
                   <div class="glance-stat-value">Mon–Fri 8am–7pm</div>
-                  <div class="glance-badge">After-hours at premium rates</div>
+                  <div class="glance-badge">After-hours and weekends at premium rates</div>
                 </div>
                 <div class="glance-stat">
                   <div class="glance-stat-label">Coverage Area</div>
@@ -1575,8 +1539,8 @@
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item">
-            <div><span class="stat-number">10</span><span class="stat-plus">+</span></div>
-            <div class="stat-label">Years Serving<br>South Florida</div>
+            <div><span class="stat-number">25</span><span class="stat-plus">+</span></div>
+            <div class="stat-label">Years of<br>Experience</div>
           </div>
           <div class="stat-item">
             <div><span class="stat-number">500</span><span class="stat-plus">+</span></div>
@@ -1608,20 +1572,6 @@
               <p>We keep things simple: clear communication, clean work, and real support after the job is done. Our clients always know who to call and what to expect.</p>
             </div>
 
-            <div class="about-stat-row">
-              <div>
-                <div class="about-stat-number">10+</div>
-                <div class="about-stat-label">Years in<br>South Florida</div>
-              </div>
-              <div>
-                <div class="about-stat-number">500+</div>
-                <div class="about-stat-label">Units installed<br>&amp; serviced</div>
-              </div>
-              <div>
-                <div class="about-stat-number">2</div>
-                <div class="about-stat-label">County<br>coverage</div>
-              </div>
-            </div>
           </div>
 
           <div class="value-cards">
@@ -2181,7 +2131,9 @@
         t=Math.max(MIN,Math.min(MAX,t));
         var pct=(t-MIN)/(MAX-MIN);
         var needle=Math.round(pct*(NUM_TICKS-1));
-        tempText.textContent=Math.round(t)+'\u00B0F';
+        /* Derive display temp from needle position so text + tick change at identical moment */
+        var displayTemp=Math.round(MIN+(needle/(NUM_TICKS-1))*(MAX-MIN));
+        tempText.textContent=displayTemp+'\u00B0F';
         if (snowIcon) snowIcon.setAttribute('opacity',(0.5+(1-pct)*.45).toFixed(2));
         for (var i=0;i<NUM_TICKS;i++) {
           var dist=Math.abs(i-needle);

@@ -1490,8 +1490,8 @@
                   <div class="glance-stat-value">Same / Next Day</div>
                 </div>
                 <div class="glance-stat">
-                  <div class="glance-stat-label">Service Hours</div>
-                  <div class="glance-stat-value">Mon–Fri 8am–7pm</div>
+                  <div class="glance-stat-label">Standard Service Hours</div>
+                  <div class="glance-stat-value">Mon–Fri 8am–6pm</div>
                   <div class="glance-badge">After-hours and weekends at premium rates</div>
                 </div>
                 <div class="glance-stat">

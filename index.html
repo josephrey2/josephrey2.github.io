@@ -136,6 +136,401 @@
   }
   </script>
 
+  <!-- ═══════════════════════════════════════════
+       INDIVIDUAL SERVICE SCHEMAS
+       One per service — each targets specific cities
+       and includes both "AC" and "Air Conditioning"
+       keyword variants for near-me searches
+  ═══════════════════════════════════════════ -->
+
+  <!-- 1. Air Conditioning Repair / AC Repair -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Air Conditioning Repair",
+    "name": "AC Repair & Air Conditioning Repair",
+    "alternateName": ["AC Repair Near Me", "Air Conditioning Repair Near Me", "Air Conditioner Repair"],
+    "description": "Same and next-day AC repair and air conditioning repair across Miami-Dade and Broward County. We fix no-cool calls, refrigerant leaks, electrical issues, compressor problems, and all air conditioning failures on all major brands. Serving Miami, Hialeah, Hialeah Gardens, Doral, Kendall, West Kendall, Coral Gables, Miami Lakes, Sweetwater, Miami Gardens, Westchester, Fontainebleau, Tamiami, Pinecrest, Palmetto Bay, Cutler Bay, South Miami, Coconut Grove, Homestead, Pembroke Pines, Miramar, Weston, Cooper City, Davie, Plantation, Sunrise, Coral Springs, Parkland, Coconut Creek, and Tamarac.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Hialeah Gardens" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "West Kendall" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Sweetwater" },
+      { "@type": "City", "name": "Miami Gardens" },
+      { "@type": "City", "name": "Westchester" },
+      { "@type": "City", "name": "Fontainebleau" },
+      { "@type": "City", "name": "Tamiami" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Cutler Bay" },
+      { "@type": "City", "name": "South Miami" },
+      { "@type": "City", "name": "Coconut Grove" },
+      { "@type": "City", "name": "Homestead" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Cooper City" },
+      { "@type": "City", "name": "Davie" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Sunrise" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Parkland" },
+      { "@type": "City", "name": "Coconut Creek" },
+      { "@type": "City", "name": "Tamarac" }
+    ],
+    "url": "https://universeservicesac.com/",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "servicePhone": "+17863619783",
+      "availableLanguage": ["English", "Spanish"]
+    }
+  }
+  </script>
+
+  <!-- 2. Air Conditioning Diagnostics / AC Diagnostics -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Air Conditioning Diagnostics",
+    "name": "AC Diagnostics & Air Conditioning Diagnostics",
+    "alternateName": ["AC Diagnostic Near Me", "Air Conditioner Diagnostic", "AC Troubleshooting"],
+    "description": "Professional AC diagnostics and air conditioning troubleshooting for homes and businesses across South Florida. Our technicians identify the root cause of no-cool calls, unusual noises, high energy bills, water leaks, and comfort issues — with upfront pricing before any work begins. Serving Miami, Hialeah, Doral, Kendall, Coral Gables, Pinecrest, Palmetto Bay, Weston, Coral Springs, Plantation, and surrounding areas.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "West Kendall" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "South Miami" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Sweetwater" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Davie" },
+      { "@type": "City", "name": "Cooper City" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 3. Air Conditioning Replacement / AC Replacement -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Air Conditioning Replacement",
+    "name": "AC Replacement & Air Conditioning System Replacement",
+    "alternateName": ["AC Installation", "Air Conditioning Installation", "New AC System", "Air Conditioner Replacement Near Me"],
+    "description": "Full air conditioning system replacements and new AC installations across Miami-Dade and Broward County. Includes duct review, proper line-set practices, permitting, high-efficiency unit options, heat pumps, and complete homeowner orientation. Serving Coral Gables, Pinecrest, Palmetto Bay, Weston, Parkland, Coral Springs, Plantation, Coconut Grove, South Miami, Kendall, Doral, Miami Lakes, and all surrounding suburban communities.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Coconut Grove" },
+      { "@type": "City", "name": "South Miami" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "West Kendall" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Hialeah Gardens" },
+      { "@type": "City", "name": "Cutler Bay" },
+      { "@type": "City", "name": "Homestead" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Parkland" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Davie" },
+      { "@type": "City", "name": "Cooper City" },
+      { "@type": "City", "name": "Sunrise" },
+      { "@type": "City", "name": "Tamarac" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 4. Air Conditioning Maintenance / AC Tune-Up -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Air Conditioning Maintenance",
+    "name": "AC Maintenance & Air Conditioning Tune-Up",
+    "alternateName": ["AC Tune-Up", "Air Conditioning Tune-Up", "HVAC Maintenance", "AC Maintenance Near Me", "Air Conditioning Service Near Me"],
+    "description": "Planned air conditioning maintenance, AC tune-ups, and HVAC maintenance programs designed for South Florida's long and demanding cooling seasons. Includes coil cleaning, refrigerant check, electrical inspection, drain line flush, and filter replacement. Priority response for maintenance program members. Serving all suburban communities in Miami-Dade and Broward including Weston, Coral Springs, Parkland, Plantation, Kendall, Pinecrest, Palmetto Bay, Coral Gables, Doral, Miami Lakes, and more.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "West Kendall" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Cutler Bay" },
+      { "@type": "City", "name": "South Miami" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Miami Gardens" },
+      { "@type": "City", "name": "Homestead" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Cooper City" },
+      { "@type": "City", "name": "Davie" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Sunrise" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Parkland" },
+      { "@type": "City", "name": "Coconut Creek" },
+      { "@type": "City", "name": "Tamarac" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 5. Emergency AC Repair / Emergency Air Conditioning Repair -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Emergency Air Conditioning Repair",
+    "name": "Emergency AC Repair & Emergency Air Conditioning Repair",
+    "alternateName": ["Emergency AC Service", "24 Hour AC Repair", "After Hours AC Repair", "Emergency Air Conditioner Repair Near Me"],
+    "description": "After-hours and weekend emergency AC repair and emergency air conditioning service across Miami-Dade and Broward County. When your air conditioner stops working in South Florida's heat, we respond fast. Available outside standard business hours at premium rates. Call (786) 361-9783 for emergency AC service in Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines, Miramar, Weston, Coral Springs, and all surrounding areas.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Hialeah Gardens" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Sweetwater" },
+      { "@type": "City", "name": "Miami Gardens" },
+      { "@type": "City", "name": "Homestead" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Cooper City" },
+      { "@type": "City", "name": "Davie" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Parkland" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 6. Ductless Mini-Split AC Installation & Repair -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Ductless Mini-Split Installation and Repair",
+    "name": "Ductless Mini-Split AC Installation & Repair",
+    "alternateName": ["Mini Split Installation", "Mini Split Repair", "Ductless AC Installation", "Ductless Air Conditioning Installation Near Me"],
+    "description": "Ductless mini-split air conditioning installation and repair for homes, condos, additions, garages, and small commercial spaces across South Florida. Energy-efficient single-zone and multi-zone systems on all major brands. Serving Miami, Hialeah, Doral, Coral Gables, Kendall, Pinecrest, Palmetto Bay, Weston, Plantation, Coral Springs, Coconut Grove, South Miami, and surrounding communities in Miami-Dade and Broward County.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Coconut Grove" },
+      { "@type": "City", "name": "South Miami" },
+      { "@type": "City", "name": "Cutler Bay" },
+      { "@type": "City", "name": "Sweetwater" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Davie" },
+      { "@type": "City", "name": "Cooper City" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Sunrise" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 7. Smart Thermostat Installation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Smart Thermostat Installation",
+    "name": "Smart Thermostat & Zoning System Installation",
+    "alternateName": ["Nest Thermostat Installation", "Ecobee Installation", "AC Thermostat Replacement", "Smart Thermostat Installation Near Me"],
+    "description": "Professional smart thermostat installation and zoning system upgrades for homes and businesses across South Florida. Nest, Ecobee, Honeywell, and multi-zone systems installed and configured. Control your air conditioning from anywhere and reduce energy bills. Serving Miami, Coral Gables, Pinecrest, Palmetto Bay, Kendall, Doral, Weston, Parkland, Coral Springs, Plantation, and all surrounding areas in Miami-Dade and Broward County.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Coconut Grove" },
+      { "@type": "City", "name": "South Miami" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Parkland" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Davie" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 8. Indoor Air Quality -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Indoor Air Quality",
+    "name": "Indoor Air Quality Solutions & Air Purification",
+    "alternateName": ["Air Quality Testing", "UV Light Installation", "Air Purifier Installation", "Indoor Air Quality Near Me"],
+    "description": "Indoor air quality testing, UV light systems, air purification, and filtration solutions for homes and businesses across South Florida. Improve your home's air quality and reduce allergens, mold spores, and bacteria in Miami-Dade and Broward County. Serving Coral Gables, Pinecrest, Palmetto Bay, Weston, Parkland, Coral Springs, Plantation, Kendall, Doral, and all surrounding communities.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Coconut Grove" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Parkland" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Pembroke Pines" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 9. Air Conditioning Services (umbrella / near-me catch-all) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Air Conditioning Services",
+    "name": "Air Conditioning Services Near Me — South Florida",
+    "alternateName": ["AC Services Near Me", "HVAC Services Near Me", "AC Company Near Me", "Air Conditioning Company Near Me"],
+    "description": "Universe Services is a family-owned air conditioning company providing AC repair, air conditioning repair, AC replacement, air conditioning installation, AC maintenance, air conditioning tune-ups, ductless mini-split installation, and smart thermostat services across Miami-Dade and Broward County. We serve Miami, Hialeah, Hialeah Gardens, Doral, Kendall, West Kendall, Coral Gables, Pinecrest, Palmetto Bay, Cutler Bay, South Miami, Coconut Grove, Westchester, Fontainebleau, Tamiami, Miami Lakes, Miami Gardens, Sweetwater, Homestead, Pembroke Pines, Miramar, Weston, Cooper City, Davie, Plantation, Sunrise, Coral Springs, Parkland, Coconut Creek, and Tamarac.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Hialeah Gardens" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "West Kendall" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Cutler Bay" },
+      { "@type": "City", "name": "South Miami" },
+      { "@type": "City", "name": "Coconut Grove" },
+      { "@type": "City", "name": "Westchester" },
+      { "@type": "City", "name": "Fontainebleau" },
+      { "@type": "City", "name": "Tamiami" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Miami Gardens" },
+      { "@type": "City", "name": "Sweetwater" },
+      { "@type": "City", "name": "Homestead" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Cooper City" },
+      { "@type": "City", "name": "Davie" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Sunrise" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Parkland" },
+      { "@type": "City", "name": "Coconut Creek" },
+      { "@type": "City", "name": "Tamarac" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
   <style>
     /* ═══════════════════════════════════════════
        DESIGN TOKENS

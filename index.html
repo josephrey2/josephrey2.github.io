@@ -122,6 +122,46 @@
     "sameAs": [
       "https://maps.app.goo.gl/s9pDUX8BNAS5eWNG6"
     ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "5",
+      "reviewCount": "5"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Savanna" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Great job! Universe Services made sure I was taken care of. Price was reasonable and tech was knowledgeable!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Javier Lacaba" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Had trouble finding someone that would come quick to repair my AC at my home for a reasonable price. Thankfully I found Universe Services."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Jonathan Reyes" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Se me daño el aire y no enfriaba. Vinieron rapido y lo arreglaron el mismo dia. Buen servicio."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Natividad Suarez" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Estoy muy sorprendida por el buen trabajo de esta compañía. Son muy puntuales y rápidos en realizar su trabajo."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Carlos Nieves" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "5-star rating."
+      }
+    ],
     "knowsAbout": [
       "Air Conditioning Repair",
       "HVAC Service",
@@ -244,9 +284,9 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Air Conditioning Replacement",
-    "name": "AC Replacement & Air Conditioning System Replacement",
-    "alternateName": ["AC Installation", "Air Conditioning Installation", "New AC System", "Air Conditioner Replacement Near Me"],
-    "description": "Full air conditioning system replacements and new AC installations across Miami-Dade and Broward County. Includes duct review, proper line-set practices, permitting, high-efficiency unit options, heat pumps, and complete homeowner orientation. Serving Coral Gables, Pinecrest, Palmetto Bay, Weston, Parkland, Coral Springs, Plantation, Coconut Grove, South Miami, Kendall, Doral, Miami Lakes, and all surrounding suburban communities.",
+    "name": "AC Replacement, Air Conditioning System Replacement & AC System Removal",
+    "alternateName": ["AC Installation", "Air Conditioning Installation", "New AC System", "Air Conditioner Replacement Near Me", "AC System Dismantlement", "Air Conditioning System Removal", "Old AC Removal"],
+    "description": "Full air conditioning system replacements, new AC installations, and old AC system dismantlement and removal across Miami-Dade and Broward County. Includes duct review, proper line-set practices, permitting, high-efficiency unit options, heat pumps, complete system removal of old units, and homeowner orientation. Serving Coral Gables, Pinecrest, Palmetto Bay, Weston, Parkland, Coral Springs, Plantation, Coconut Grove, South Miami, Kendall, Doral, Miami Lakes, and all surrounding suburban communities.",
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -289,9 +329,9 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Air Conditioning Maintenance",
-    "name": "AC Maintenance & Air Conditioning Tune-Up",
-    "alternateName": ["AC Tune-Up", "Air Conditioning Tune-Up", "HVAC Maintenance", "AC Maintenance Near Me", "Air Conditioning Service Near Me"],
-    "description": "Planned air conditioning maintenance, AC tune-ups, and HVAC maintenance programs designed for South Florida's long and demanding cooling seasons. Includes coil cleaning, refrigerant check, electrical inspection, drain line flush, and filter replacement. Priority response for maintenance program members. Serving all suburban communities in Miami-Dade and Broward including Weston, Coral Springs, Parkland, Plantation, Kendall, Pinecrest, Palmetto Bay, Coral Gables, Doral, Miami Lakes, and more.",
+    "name": "AC Maintenance, Air Conditioning Tune-Up & AC Cleaning",
+    "alternateName": ["AC Tune-Up", "Air Conditioning Tune-Up", "HVAC Maintenance", "AC Maintenance Near Me", "Air Conditioning Service Near Me", "AC Cleaning", "Air Conditioner Cleaning", "AC Coil Cleaning", "Air Conditioning Cleaning Near Me", "A/C Preventive Maintenance"],
+    "description": "Planned air conditioning maintenance, AC tune-ups, AC cleaning, and HVAC maintenance programs designed for South Florida's long and demanding cooling seasons. Includes evaporator and condenser coil cleaning, air conditioner cleaning, refrigerant check, electrical inspection, drain line flush, and filter replacement. Priority response for maintenance program members. Serving all suburban communities in Miami-Dade and Broward including Weston, Coral Springs, Parkland, Plantation, Kendall, Pinecrest, Palmetto Bay, Coral Gables, Doral, Miami Lakes, and more.",
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -375,9 +415,9 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Ductless Mini-Split Installation and Repair",
-    "name": "Ductless Mini-Split AC Installation & Repair",
-    "alternateName": ["Mini Split Installation", "Mini Split Repair", "Ductless AC Installation", "Ductless Air Conditioning Installation Near Me"],
-    "description": "Ductless mini-split air conditioning installation and repair for homes, condos, additions, garages, and small commercial spaces across South Florida. Energy-efficient single-zone and multi-zone systems on all major brands. Serving Miami, Hialeah, Doral, Coral Gables, Kendall, Pinecrest, Palmetto Bay, Weston, Plantation, Coral Springs, Coconut Grove, South Miami, and surrounding communities in Miami-Dade and Broward County.",
+    "name": "Ductless Mini-Split AC & Heating Installation and Repair",
+    "alternateName": ["Mini Split Installation", "Mini Split Repair", "Ductless AC Installation", "Ductless Air Conditioning Installation Near Me", "Ductless Heating and Cooling", "Ductless Heating & AC Services", "Mini Split Heating", "Ductless HVAC Installation"],
+    "description": "Ductless mini-split air conditioning and heating installation and repair for homes, condos, additions, garages, and small commercial spaces across South Florida. Energy-efficient single-zone and multi-zone ductless heating and cooling systems on all major brands including Mitsubishi, Daikin, LG, and Samsung. Serving Miami, Hialeah, Doral, Coral Gables, Kendall, Pinecrest, Palmetto Bay, Weston, Plantation, Coral Springs, Coconut Grove, South Miami, and surrounding communities in Miami-Dade and Broward County.",
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -416,9 +456,9 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Smart Thermostat Installation",
-    "name": "Smart Thermostat & Zoning System Installation",
-    "alternateName": ["Nest Thermostat Installation", "Ecobee Installation", "AC Thermostat Replacement", "Smart Thermostat Installation Near Me"],
-    "description": "Professional smart thermostat installation and zoning system upgrades for homes and businesses across South Florida. Nest, Ecobee, Honeywell, and multi-zone systems installed and configured. Control your air conditioning from anywhere and reduce energy bills. Serving Miami, Coral Gables, Pinecrest, Palmetto Bay, Kendall, Doral, Weston, Parkland, Coral Springs, Plantation, and all surrounding areas in Miami-Dade and Broward County.",
+    "name": "Smart Thermostat Installation, Repair & Zoning Systems",
+    "alternateName": ["Nest Thermostat Installation", "Ecobee Installation", "AC Thermostat Replacement", "Smart Thermostat Installation Near Me", "Thermostat Repair", "Thermostat Repair Near Me", "AC Thermostat Repair", "Install Thermostat", "Thermostat Not Working"],
+    "description": "Professional smart thermostat installation, thermostat repair, and zoning system upgrades for homes and businesses across South Florida. We install and repair Nest, Ecobee, Honeywell, and all major thermostat brands. Multi-zone systems installed and configured. If your thermostat is not working, not responding, or showing wrong temperatures, we diagnose and repair it same or next day. Serving Miami, Coral Gables, Pinecrest, Palmetto Bay, Kendall, Doral, Weston, Parkland, Coral Springs, Plantation, and all surrounding areas in Miami-Dade and Broward County.",
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -526,6 +566,74 @@
       { "@type": "City", "name": "Parkland" },
       { "@type": "City", "name": "Coconut Creek" },
       { "@type": "City", "name": "Tamarac" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 10. Portable A/C Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Portable Air Conditioning Services",
+    "name": "Portable A/C Services & Portable Air Conditioner Repair",
+    "alternateName": ["Portable AC Repair", "Portable Air Conditioner Service", "Portable AC Installation", "Portable Air Conditioning Near Me"],
+    "description": "Portable air conditioning services including portable AC unit setup, repair, and maintenance across Miami-Dade and Broward County. Whether you need a portable A/C unit serviced, repaired, or need help with installation, Universe Services handles all portable air conditioning needs. Serving Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines, Miramar, Weston, and surrounding South Florida communities.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Sweetwater" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Coral Springs" }
+    ],
+    "url": "https://universeservicesac.com/"
+  }
+  </script>
+
+  <!-- 11. AC System Dismantlement / Removal -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AC System Dismantlement and Removal",
+    "name": "AC System Dismantlement & Air Conditioning System Removal",
+    "alternateName": ["Old AC Removal", "AC Removal Near Me", "Air Conditioner Removal", "HVAC System Removal", "AC Disposal"],
+    "description": "Professional AC system dismantlement and old air conditioning system removal across Miami-Dade and Broward County. Full removal of old AC units, air handlers, condenser units, and associated equipment. Ideal for system replacements, property renovations, and commercial buildouts. Proper disposal and recycling of old refrigerant-containing equipment. Serving Miami, Hialeah, Doral, Kendall, Coral Gables, Pinecrest, Pembroke Pines, Miramar, Weston, Coral Springs, and surrounding South Florida communities.",
+    "provider": {
+      "@type": "HVACBusiness",
+      "name": "Universe Services",
+      "telephone": "+17863619783",
+      "url": "https://universeservicesac.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami" },
+      { "@type": "City", "name": "Hialeah" },
+      { "@type": "City", "name": "Doral" },
+      { "@type": "City", "name": "Kendall" },
+      { "@type": "City", "name": "Coral Gables" },
+      { "@type": "City", "name": "Pinecrest" },
+      { "@type": "City", "name": "Palmetto Bay" },
+      { "@type": "City", "name": "Miami Lakes" },
+      { "@type": "City", "name": "Pembroke Pines" },
+      { "@type": "City", "name": "Miramar" },
+      { "@type": "City", "name": "Weston" },
+      { "@type": "City", "name": "Coral Springs" },
+      { "@type": "City", "name": "Plantation" },
+      { "@type": "City", "name": "Davie" }
     ],
     "url": "https://universeservicesac.com/"
   }
@@ -1475,6 +1583,192 @@
       color: var(--blue-mid);
     }
 
+    /* ─── TESTIMONIALS ───────────────────────── */
+
+    .reviews-section {
+      padding: 110px 0;
+      background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy-deep) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .reviews-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(14,165,233,.05) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .reviews-header .section-title { color: #fff; }
+    .reviews-header .section-sub   { color: rgba(255,255,255,.5); margin: 0 auto .75rem; }
+
+    .reviews-rating-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 99px;
+      padding: .5rem 1.25rem;
+      margin-top: 1rem;
+    }
+    .reviews-stars {
+      display: flex;
+      gap: 2px;
+      color: #f59e0b;
+    }
+    .reviews-rating-text {
+      font-size: .82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.85);
+    }
+    .reviews-rating-source {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .75rem;
+      color: rgba(255,255,255,.45);
+      padding-left: .75rem;
+      border-left: 1px solid rgba(255,255,255,.12);
+    }
+    /* Google G icon */
+    .google-g {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: conic-gradient(
+        #4285F4 0deg 90deg,
+        #EA4335 90deg 180deg,
+        #FBBC05 180deg 270deg,
+        #34A853 270deg 360deg
+      );
+      flex-shrink: 0;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .reviews-grid-bottom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: var(--r-lg);
+      padding: 1.6rem 1.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
+      transition: background .2s, border-color .2s, transform .2s var(--ease2);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      position: relative;
+    }
+    .review-card:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.16);
+      transform: translateY(-4px);
+    }
+    .review-card-stars {
+      display: flex;
+      gap: 2px;
+      color: #f59e0b;
+    }
+    .review-quote {
+      font-size: .88rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,.78);
+      flex: 1;
+    }
+    .review-quote::before {
+      content: "\201C";
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 2.2rem;
+      line-height: 0;
+      vertical-align: -0.6rem;
+      color: var(--cyan);
+      margin-right: .15rem;
+      opacity: .7;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding-top: .85rem;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .review-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 1rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .review-name {
+      font-weight: 600;
+      font-size: .85rem;
+      color: rgba(255,255,255,.9);
+      line-height: 1.2;
+    }
+    .review-meta {
+      font-size: .72rem;
+      color: rgba(255,255,255,.38);
+      margin-top: .1rem;
+    }
+    .review-google-badge {
+      position: absolute;
+      top: 1.2rem; right: 1.3rem;
+      display: flex; align-items: center; gap: .3rem;
+      font-size: .62rem;
+      color: rgba(255,255,255,.3);
+      font-weight: 500;
+    }
+
+    .reviews-cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .reviews-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.6);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 99px;
+      padding: .55rem 1.3rem;
+      transition: color .18s, border-color .18s, background .18s;
+    }
+    .reviews-cta a:hover {
+      color: #fff;
+      border-color: rgba(255,255,255,.4);
+      background: rgba(255,255,255,.06);
+    }
+
+    @media (max-width: 1024px) {
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid-bottom { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+    }
+    @media (max-width: 640px) {
+      .reviews-grid, .reviews-grid-bottom { grid-template-columns: 1fr; }
+    }
+
     /* ─── PROCESS ─────────────────────────────── */
 
     .process-strip {
@@ -1868,7 +2162,7 @@
       .field-row  { flex-direction: column; }
       .footer-top { grid-template-columns: 1fr; gap: 2.5rem; }
 
-      section, #about, #services, #contact, .process-strip, .stats-band { padding: 70px 0; }
+      section, #about, #services, #contact, .process-strip, .stats-band, .reviews-section { padding: 70px 0; }
       .container  { padding: 0 1.25rem; }
     }
 
@@ -2170,11 +2464,12 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               </div>
-              <div class="service-name">System Replacements</div>
-              <p class="service-desc">Full change-outs with duct review, proper line-set practices, permitting, and a thorough homeowner orientation upon completion.</p>
+              <div class="service-name">System Replacements &amp; Removal</div>
+              <p class="service-desc">Full change-outs with duct review, proper line-set practices, and permitting. Includes complete removal and disposal of old equipment and a thorough homeowner orientation upon completion.</p>
               <div class="service-tags">
                 <span class="service-tag">High-efficiency</span>
                 <span class="service-tag">Heat pumps</span>
+                <span class="service-tag">Old unit removal</span>
                 <span class="service-tag">Financing available</span>
               </div>
               <a href="#contact" class="service-cta">
@@ -2190,10 +2485,11 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M14.66 7.34a6 6 0 0 1 0 9.32M9.34 7.34a6 6 0 0 0 0 9.32M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
               </div>
-              <div class="service-name">Controls &amp; Smart Thermostats</div>
-              <p class="service-desc">Upgrading thermostats, zoning systems, and controls for homes, rentals, and small commercial spaces — manage comfort from anywhere.</p>
+              <div class="service-name">Controls, Thermostats &amp; Zoning</div>
+              <p class="service-desc">Thermostat installation and repair, zoning system upgrades, and controls for homes, rentals, and small commercial spaces — manage comfort from anywhere.</p>
               <div class="service-tags">
                 <span class="service-tag">Nest &amp; Ecobee</span>
+                <span class="service-tag">Thermostat repair</span>
                 <span class="service-tag">Zoning systems</span>
               </div>
               <a href="#contact" class="service-cta">
@@ -2209,9 +2505,11 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect width="6" height="4" x="9" y="3" rx="2"/><path d="m9 14 2 2 4-4"/></svg>
               </div>
-              <div class="service-name">Maintenance Programs</div>
-              <p class="service-desc">Planned inspections, cleaning, and checks to keep your system reliable through South Florida's long and demanding cooling seasons.</p>
+              <div class="service-name">Maintenance &amp; AC Cleaning</div>
+              <p class="service-desc">Planned tune-ups, coil and unit cleaning, refrigerant checks, and drain flushes to keep your system running reliably through South Florida's long cooling season.</p>
               <div class="service-tags">
+                <span class="service-tag">AC cleaning</span>
+                <span class="service-tag">Coil cleaning</span>
                 <span class="service-tag">Priority response</span>
                 <span class="service-tag">Program pricing</span>
               </div>
@@ -2221,7 +2519,186 @@
               </a>
             </div>
           </article>
+
+          <article class="service-card">
+            <div class="service-card-top"></div>
+            <div class="service-card-body">
+              <div class="service-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 8h2"/><path d="M15 8h2"/><path d="M11 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0"/></svg>
+              </div>
+              <div class="service-name">Ductless Mini-Splits &amp; Heating</div>
+              <p class="service-desc">Single-zone and multi-zone ductless mini-split AC and heating systems for rooms, additions, garages, condos, and small commercial spaces. Installation and repair on all major brands.</p>
+              <div class="service-tags">
+                <span class="service-tag">Mitsubishi &amp; Daikin</span>
+                <span class="service-tag">Heating &amp; cooling</span>
+                <span class="service-tag">Single &amp; multi-zone</span>
+              </div>
+              <a href="#contact" class="service-cta">
+                Get a quote
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-top"></div>
+            <div class="service-card-body">
+              <div class="service-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+              </div>
+              <div class="service-name">Portable A/C Services</div>
+              <p class="service-desc">Portable air conditioning unit setup, repair, and maintenance across South Florida. We service all portable A/C brands and help with proper installation for maximum efficiency.</p>
+              <div class="service-tags">
+                <span class="service-tag">All portable brands</span>
+                <span class="service-tag">Setup &amp; repair</span>
+              </div>
+              <a href="#contact" class="service-cta">
+                Book service
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ─── REVIEWS ────────────────────────────── -->
+    <section class="reviews-section" aria-label="Customer reviews">
+      <div class="container">
+
+        <div class="reviews-header">
+          <div class="eyebrow" style="justify-content:center;color:var(--cyan-lt);">What Our Clients Say</div>
+          <h2 class="section-title">5 stars across the <em style="color:var(--cyan-lt);-webkit-text-fill-color:var(--cyan-lt);">board</em>.</h2>
+          <p class="section-sub">Real reviews from real South Florida homeowners.</p>
+          <div class="reviews-rating-bar">
+            <div class="reviews-stars">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="reviews-rating-text">5.0 &nbsp;·&nbsp; 5 reviews</span>
+            <span class="reviews-rating-source">
+              <span class="google-g"></span>
+              Google
+            </span>
+          </div>
+        </div>
+
+        <!-- Top row — 3 cards -->
+        <div class="reviews-grid">
+
+          <div class="review-card">
+            <div class="review-google-badge"><span class="google-g"></span> Google</div>
+            <div class="review-card-stars">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-quote">Great job! Universe Services made sure I was taken care of. Price was reasonable and the tech was knowledgeable!</p>
+            <div class="review-author">
+              <div class="review-avatar">S</div>
+              <div>
+                <div class="review-name">Savanna</div>
+                <div class="review-meta">Google Review</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-google-badge"><span class="google-g"></span> Google</div>
+            <div class="review-card-stars">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-quote">Had trouble finding someone that would come quick to repair my AC at my home for a reasonable price. Thankfully I found Universe Services.</p>
+            <div class="review-author">
+              <div class="review-avatar">J</div>
+              <div>
+                <div class="review-name">Javier Lacaba</div>
+                <div class="review-meta">Google Review &nbsp;·&nbsp; 8 reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-google-badge"><span class="google-g"></span> Google</div>
+            <div class="review-card-stars">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-quote">Se me daño el aire y no enfriaba. Vinieron rapido y lo arreglaron el mismo dia. Buen servicio.</p>
+            <div class="review-author">
+              <div class="review-avatar">J</div>
+              <div>
+                <div class="review-name">Jonathan Reyes</div>
+                <div class="review-meta">Google Review</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom row — 2 cards centered -->
+        <div class="reviews-grid-bottom">
+
+          <div class="review-card">
+            <div class="review-google-badge"><span class="google-g"></span> Google</div>
+            <div class="review-card-stars">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-quote">Estoy muy sorprendida por el buen trabajo de esta compañía. Son muy puntuales y rápidos en realizar su trabajo.</p>
+            <div class="review-author">
+              <div class="review-avatar">N</div>
+              <div>
+                <div class="review-name">Natividad Suarez</div>
+                <div class="review-meta">Google Review &nbsp;·&nbsp; 3 reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-google-badge"><span class="google-g"></span> Google</div>
+            <div class="review-card-stars">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-quote"></p>
+            <div class="review-author">
+              <div class="review-avatar">C</div>
+              <div>
+                <div class="review-name">Carlos Nieves</div>
+                <div class="review-meta">Google Review</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="reviews-cta">
+          <a href="https://maps.app.goo.gl/s9pDUX8BNAS5eWNG6" target="_blank" rel="noopener noreferrer">
+            <span class="google-g"></span>
+            See all reviews on Google
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -2312,8 +2789,11 @@
                   <select id="serviceType" name="service_type">
                     <option>Service / repair</option>
                     <option>System replacement</option>
-                    <option>Controls / smart thermostat</option>
-                    <option>Maintenance program</option>
+                    <option>System removal / dismantlement</option>
+                    <option>Ductless mini-split</option>
+                    <option>Controls / thermostat install or repair</option>
+                    <option>Maintenance / AC cleaning</option>
+                    <option>Portable A/C service</option>
                     <option>Other A/C need</option>
                   </select>
                 </div>
@@ -2410,9 +2890,11 @@
           <div class="footer-col-title">Services</div>
           <div class="footer-links-list">
             <a href="#services">Diagnostics &amp; Repair</a>
-            <a href="#services">System Replacements</a>
-            <a href="#services">Smart Thermostats</a>
-            <a href="#services">Maintenance Programs</a>
+            <a href="#services">System Replacements &amp; Removal</a>
+            <a href="#services">Ductless Mini-Splits &amp; Heating</a>
+            <a href="#services">Thermostats &amp; Controls</a>
+            <a href="#services">Maintenance &amp; AC Cleaning</a>
+            <a href="#services">Portable A/C Services</a>
           </div>
         </div>
       </div>

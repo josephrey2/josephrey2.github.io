@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Universe Services | Miami A/C & Mechanical</title>
+  <title>Air Conditioning Repair Miami | Universe AC Repair Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Universe Services — Miami's trusted mechanical and A/C contractor for service, retrofits, and replacements." />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />

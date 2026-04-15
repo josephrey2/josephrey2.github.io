@@ -141,7 +141,7 @@
         "@type": "Review",
         "author": { "@type": "Person", "name": "Javier Lacaba" },
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Had trouble finding someone that would come quick to repair my AC at my home for a reasonable price. Thankfully I found Universe Services."
+        "reviewBody": "Had trouble finding someone that would come quick to repair my AC at my home for a reasonable price. Thankfully I found these guys. They worked quick, were friendly, and everything was reasonably priced. I have their number saved on my phone now just in case something breaks again. Would recommend 100%."
       },
       {
         "@type": "Review",
@@ -153,7 +153,7 @@
         "@type": "Review",
         "author": { "@type": "Person", "name": "Natividad Suarez" },
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Estoy muy sorprendida por el buen trabajo de esta compañía. Son muy puntuales y rápidos en realizar su trabajo."
+        "reviewBody": "Estoy muy sorprendida por el buen trabajo de esta compañía. Son muy puntuales y rápidos en realizar su trabajo. Están altamente calificados, son muy respetuosos y amables. Resolvieron el problema en el tiempo y con la calidad requerida. Incluso me dieron garantía por el trabajo y los teléfonos a llamar en caso de necesitar algo. Estoy muy contenta por haberlos seleccionado."
       },
       {
         "@type": "Review",
@@ -2617,7 +2617,7 @@
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <p class="review-quote">Had trouble finding someone that would come quick to repair my AC at my home for a reasonable price. Thankfully I found Universe Services.</p>
+            <p class="review-quote">Had trouble finding someone that would come quick to repair my AC at my home for a reasonable price. Thankfully I found these guys. They worked quick, were friendly, and everything was reasonably priced. I have their number saved on my phone now just in case something breaks again. Would recommend 100%.</p>
             <div class="review-author">
               <div class="review-avatar">J</div>
               <div>
@@ -2660,7 +2660,7 @@
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <p class="review-quote">Estoy muy sorprendida por el buen trabajo de esta compañía. Son muy puntuales y rápidos en realizar su trabajo.</p>
+            <p class="review-quote">Estoy muy sorprendida por el buen trabajo de esta compañía. Son muy puntuales y rápidos en realizar su trabajo. Están altamente calificados, son muy respetuosos y amables. Resolvieron el problema en el tiempo y con la calidad requerida. Incluso me dieron garantía por el trabajo y los teléfonos a llamar en caso de necesitar algo. Estoy muy contenta por haberlos seleccionado.</p>
             <div class="review-author">
               <div class="review-avatar">N</div>
               <div>

@@ -4,8 +4,137 @@
   <meta charset="UTF-8" />
   <title>Air Conditioning Repair Miami | Universe AC Repair Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Universe Services — Miami's trusted mechanical and A/C contractor for service, retrofits, and replacements." />
+  <!-- Primary SEO meta tags -->
+  <meta name="description" content="Top-rated AC repair in Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines & South Florida. Universe Services — same &amp; next-day air conditioning repair, replacement &amp; maintenance. Call (786) 361-9783." />
+  <meta name="keywords" content="AC repair Miami, air conditioning repair Miami, AC repair near me, air conditioning repair near me, AC repair Hialeah, AC repair Doral, AC repair Kendall, AC repair Coral Gables, AC repair Pembroke Pines, AC repair Miramar, AC repair Miami Lakes, AC repair Hialeah Gardens, AC repair Sweetwater, AC repair Homestead, HVAC repair Miami, air conditioner repair Miami-Dade, air conditioner repair Broward, AC replacement Miami, emergency AC repair Miami, same day AC repair Miami" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Universe Services" />
+  <link rel="canonical" href="https://universeservicesac.com/" />
+
+  <!-- Open Graph — controls how link looks when shared on Facebook, iMessage, WhatsApp etc -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://universeservicesac.com/" />
+  <meta property="og:title"       content="Air Conditioning Repair Miami | Universe AC Repair Services" />
+  <meta property="og:description" content="Family-owned AC repair company serving Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines &amp; all of South Florida. Same &amp; next-day service. Call (786) 361-9783." />
+  <meta property="og:image"       content="https://universeservicesac.com/Universe Services Logo White.png" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:site_name"   content="Universe Services" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Air Conditioning Repair Miami | Universe AC Repair Services" />
+  <meta name="twitter:description" content="Same &amp; next-day AC repair across Miami-Dade &amp; Broward. Call (786) 361-9783." />
+  <meta name="twitter:image"       content="https://universeservicesac.com/Universe Services Logo White.png" />
+
+  <!-- Geo tags — reinforce local relevance to search engines -->
+  <meta name="geo.region"      content="US-FL" />
+  <meta name="geo.placename"   content="Miami, Florida" />
+  <meta name="geo.position"    content="25.7617;-80.1918" />
+  <meta name="ICBM"            content="25.7617, -80.1918" />
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- ═══════════════════════════════════════════
+       LOCAL BUSINESS SCHEMA — HVACBusiness
+       Targets: AC repair near me, air conditioning repair [city],
+       Google Business Profile signals
+  ═══════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "Universe Services",
+    "alternateName": "Universe AC Repair Services",
+    "description": "Family-owned HVAC and air conditioning repair company serving Miami, Hialeah, Hialeah Gardens, Coral Gables, Kendall, Pembroke Pines, Miami Lakes, Miramar, Doral, Sweetwater, and Homestead. Specializing in AC repair, system replacements, ductless mini-splits, smart thermostats, and maintenance programs. Same and next-day service available.",
+    "url": "https://universeservicesac.com/",
+    "telephone": "+17863619783",
+    "email": "info@universeservicesac.com",
+    "priceRange": "$$",
+    "image": "https://universeservicesac.com/Universe Services Logo White.png",
+    "logo": "https://universeservicesac.com/Universe Services Logo White.png",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Check",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Miami",
+      "addressRegion": "FL",
+      "postalCode": "33018",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.7617,
+      "longitude": -80.1918
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Miami",              "sameAs": "https://en.wikipedia.org/wiki/Miami" },
+      { "@type": "City", "name": "Hialeah",            "sameAs": "https://en.wikipedia.org/wiki/Hialeah,_Florida" },
+      { "@type": "City", "name": "Hialeah Gardens",    "sameAs": "https://en.wikipedia.org/wiki/Hialeah_Gardens,_Florida" },
+      { "@type": "City", "name": "Coral Gables",       "sameAs": "https://en.wikipedia.org/wiki/Coral_Gables,_Florida" },
+      { "@type": "City", "name": "Kendall",            "sameAs": "https://en.wikipedia.org/wiki/Kendall,_Florida" },
+      { "@type": "City", "name": "Pembroke Pines",     "sameAs": "https://en.wikipedia.org/wiki/Pembroke_Pines,_Florida" },
+      { "@type": "City", "name": "Miami Lakes",        "sameAs": "https://en.wikipedia.org/wiki/Miami_Lakes,_Florida" },
+      { "@type": "City", "name": "Miramar",            "sameAs": "https://en.wikipedia.org/wiki/Miramar,_Florida" },
+      { "@type": "City", "name": "Doral",              "sameAs": "https://en.wikipedia.org/wiki/Doral,_Florida" },
+      { "@type": "City", "name": "Sweetwater",         "sameAs": "https://en.wikipedia.org/wiki/Sweetwater,_Florida" },
+      { "@type": "City", "name": "Homestead",          "sameAs": "https://en.wikipedia.org/wiki/Homestead,_Florida" },
+      { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+      { "@type": "AdministrativeArea", "name": "Broward County" }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.7617,
+        "longitude": -80.1918
+      },
+      "geoRadius": "80000"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "00:00",
+        "description": "After-hours and weekend service available at premium rates"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "HVAC & Air Conditioning Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repair Miami",                      "description": "Same and next-day air conditioner diagnostics and repair for all major brands across Miami-Dade and Broward County." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air Conditioning Repair Near Me",      "description": "Local AC repair serving Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines, Miramar, Miami Lakes, Sweetwater, and Homestead." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air Conditioning System Replacement",  "description": "Full AC system replacements with duct review, permitting, and high-efficiency unit options." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ductless Mini-Split Installation",     "description": "Ductless mini-split AC installation and repair for homes, condos, and commercial spaces." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart Thermostat Installation",        "description": "Nest, Ecobee, and zoning system installation and configuration." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC Maintenance Programs",            "description": "Planned AC maintenance and tune-up programs to keep systems running through South Florida's cooling season." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Indoor Air Quality Solutions",         "description": "Air quality testing, filtration, and UV light solutions for South Florida homes and businesses." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency AC Repair",                  "description": "After-hours and weekend emergency air conditioning repair available at premium rates." } }
+      ]
+    },
+    "sameAs": [
+      "https://maps.app.goo.gl/s9pDUX8BNAS5eWNG6"
+    ],
+    "knowsAbout": [
+      "Air Conditioning Repair",
+      "HVAC Service",
+      "AC Replacement",
+      "Ductless Mini-Split",
+      "Smart Thermostat",
+      "Indoor Air Quality",
+      "South Florida HVAC",
+      "Miami AC Repair",
+      "Emergency AC Service"
+    ]
+  }
+  </script>
 
   <style>
     /* ═══════════════════════════════════════════

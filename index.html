@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xml:lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Air Conditioning Repair Miami | Universe AC Repair Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Primary SEO meta tags -->
-  <meta name="description" content="Top-rated AC repair in Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines & South Florida. Universe Services — same &amp; next-day air conditioning repair, replacement &amp; maintenance. Call (786) 361-9783." />
-  <meta name="keywords" content="AC repair Miami, air conditioning repair Miami, AC repair near me, air conditioning repair near me, AC repair Hialeah, AC repair Doral, AC repair Kendall, AC repair Coral Gables, AC repair Pembroke Pines, AC repair Miramar, AC repair Miami Lakes, AC repair Hialeah Gardens, AC repair Sweetwater, AC repair Homestead, HVAC repair Miami, air conditioner repair Miami-Dade, air conditioner repair Broward, AC replacement Miami, emergency AC repair Miami, same day AC repair Miami" />
+  <meta name="description" content="Top-rated AC repair in Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines & South Florida. Universe Services — same &amp; next-day air conditioning repair, replacement &amp; maintenance. Se habla español. Call (786) 361-9783." />
+  <meta name="keywords" content="AC repair Miami, air conditioning repair Miami, AC repair near me, air conditioning repair near me, AC repair Hialeah, AC repair Doral, AC repair Kendall, AC repair Coral Gables, AC repair Pembroke Pines, AC repair Miramar, AC repair Miami Lakes, AC repair Hialeah Gardens, AC repair Sweetwater, AC repair Homestead, HVAC repair Miami, air conditioner repair Miami-Dade, air conditioner repair Broward, AC replacement Miami, emergency AC repair Miami, same day AC repair Miami, reparación de aire acondicionado Miami, arreglo de aire acondicionado Miami, aire acondicionado no enfría, reparación de AC Miami, servicio de aire acondicionado Miami, técnico de aire acondicionado Miami, mantenimiento de aire acondicionado, instalación de aire acondicionado Miami, aire acondicionado Hialeah, reparación de AC Hialeah, aire acondicionado Doral, reparación de aire acondicionado cerca de mi, arreglo de AC cerca de mi, aire acondicionado no funciona, se habla español aire acondicionado Miami" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Universe Services" />
   <link rel="canonical" href="https://universeservicesac.com/" />
@@ -17,8 +17,9 @@
   <meta property="og:title"       content="Air Conditioning Repair Miami | Universe AC Repair Services" />
   <meta property="og:description" content="Family-owned AC repair company serving Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines &amp; all of South Florida. Same &amp; next-day service. Call (786) 361-9783." />
   <meta property="og:image"       content="https://universeservicesac.com/Universe Services Logo White.png" />
-  <meta property="og:locale"      content="en_US" />
-  <meta property="og:site_name"   content="Universe Services" />
+  <meta property="og:locale"            content="en_US" />
+  <meta property="og:locale:alternate" content="es_US" />
+  <meta property="og:site_name"        content="Universe Services" />
 
   <!-- Twitter / X card -->
   <meta name="twitter:card"        content="summary_large_image" />
@@ -44,8 +45,14 @@
     "@context": "https://schema.org",
     "@type": "HVACBusiness",
     "name": "Universe Services",
-    "alternateName": "Universe AC Repair Services",
-    "description": "Family-owned HVAC and air conditioning repair company serving Miami, Hialeah, Hialeah Gardens, Coral Gables, Kendall, Pembroke Pines, Miami Lakes, Miramar, Doral, Sweetwater, and Homestead. Specializing in AC repair, system replacements, ductless mini-splits, smart thermostats, and maintenance programs. Same and next-day service available.",
+    "alternateName": [
+      "Universe AC Repair Services",
+      "Reparación de Aire Acondicionado Miami",
+      "Arreglo de Aire Acondicionado Miami",
+      "Servicio de Aire Acondicionado Miami"
+    ],
+    "description": "Family-owned HVAC and air conditioning repair company serving Miami, Hialeah, Hialeah Gardens, Coral Gables, Kendall, Pembroke Pines, Miami Lakes, Miramar, Doral, Sweetwater, and Homestead. Specializing in AC repair, system replacements, ductless mini-splits, smart thermostats, and maintenance programs. Same and next-day service available. Se habla español — reparación de aire acondicionado, arreglo de AC, aire acondicionado no enfría, mantenimiento de aire acondicionado, instalación de aire acondicionado.",
+    "availableLanguage": ["English", "Spanish"],
     "url": "https://universeservicesac.com/",
     "telephone": "+17863619783",
     "email": "info@universeservicesac.com",
@@ -171,7 +178,14 @@
       "Indoor Air Quality",
       "South Florida HVAC",
       "Miami AC Repair",
-      "Emergency AC Service"
+      "Emergency AC Service",
+      "Reparación de Aire Acondicionado",
+      "Arreglo de Aire Acondicionado",
+      "Aire Acondicionado no Enfría",
+      "Mantenimiento de Aire Acondicionado",
+      "Instalación de Aire Acondicionado",
+      "Técnico de Aire Acondicionado",
+      "Servicio de Aire Acondicionado"
     ]
   }
   </script>
@@ -190,8 +204,16 @@
     "@type": "Service",
     "serviceType": "Air Conditioning Repair",
     "name": "AC Repair & Air Conditioning Repair",
-    "alternateName": ["AC Repair Near Me", "Air Conditioning Repair Near Me", "Air Conditioner Repair"],
-    "description": "Same and next-day AC repair and air conditioning repair across Miami-Dade and Broward County. We fix no-cool calls, refrigerant leaks, electrical issues, compressor problems, and all air conditioning failures on all major brands. Serving Miami, Hialeah, Hialeah Gardens, Doral, Kendall, West Kendall, Coral Gables, Miami Lakes, Sweetwater, Miami Gardens, Westchester, Fontainebleau, Tamiami, Pinecrest, Palmetto Bay, Cutler Bay, South Miami, Coconut Grove, Homestead, Pembroke Pines, Miramar, Weston, Cooper City, Davie, Plantation, Sunrise, Coral Springs, Parkland, Coconut Creek, and Tamarac.",
+    "alternateName": [
+      "AC Repair Near Me", "Air Conditioning Repair Near Me", "Air Conditioner Repair",
+      "Reparación de Aire Acondicionado", "Arreglo de Aire Acondicionado",
+      "Aire Acondicionado no Enfría", "Reparación de AC", "Arreglo de AC",
+      "Técnico de Aire Acondicionado", "Reparación de Aire Acondicionado Cerca de Mi",
+      "Arreglo de Aire Acondicionado Miami", "Reparación de AC Miami",
+      "Aire Acondicionado no Funciona", "Mi Aire no Enfría"
+    ],
+    "description": "Same and next-day AC repair and air conditioning repair — reparación de aire acondicionado — across Miami-Dade and Broward County. We fix no-cool calls, refrigerant leaks, electrical issues, compressor problems, and all air conditioning failures on all major brands. Se habla español. Serving Miami, Hialeah, Hialeah Gardens, Doral, Kendall, West Kendall, Coral Gables, Miami Lakes, Sweetwater, Miami Gardens, Westchester, Fontainebleau, Tamiami, Pinecrest, Palmetto Bay, Cutler Bay, South Miami, Coconut Grove, Homestead, Pembroke Pines, Miramar, Weston, Cooper City, Davie, Plantation, Sunrise, Coral Springs, Parkland, Coconut Creek, and Tamarac.",
+    "availableLanguage": ["English", "Spanish"],
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -246,8 +268,14 @@
     "@type": "Service",
     "serviceType": "Air Conditioning Diagnostics",
     "name": "AC Diagnostics & Air Conditioning Diagnostics",
-    "alternateName": ["AC Diagnostic Near Me", "Air Conditioner Diagnostic", "AC Troubleshooting"],
-    "description": "Professional AC diagnostics and air conditioning troubleshooting for homes and businesses across South Florida. Our technicians identify the root cause of no-cool calls, unusual noises, high energy bills, water leaks, and comfort issues — with upfront pricing before any work begins. Serving Miami, Hialeah, Doral, Kendall, Coral Gables, Pinecrest, Palmetto Bay, Weston, Coral Springs, Plantation, and surrounding areas.",
+    "alternateName": [
+      "AC Diagnostic Near Me", "Air Conditioner Diagnostic", "AC Troubleshooting",
+      "Diagnóstico de Aire Acondicionado", "Por qué mi Aire no Enfría",
+      "Aire Acondicionado Hace Ruido", "Revisión de Aire Acondicionado",
+      "Chequeo de Aire Acondicionado", "Diagnóstico de AC"
+    ],
+    "description": "Professional AC diagnostics and air conditioning troubleshooting — diagnóstico de aire acondicionado — for homes and businesses across South Florida. Our technicians identify the root cause of no-cool calls, unusual noises, high energy bills, water leaks, and comfort issues — with upfront pricing before any work begins. Se habla español. Serving Miami, Hialeah, Doral, Kendall, Coral Gables, Pinecrest, Palmetto Bay, Weston, Coral Springs, Plantation, and surrounding areas.",
+    "availableLanguage": ["English", "Spanish"],
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -285,8 +313,14 @@
     "@type": "Service",
     "serviceType": "Air Conditioning Replacement",
     "name": "AC Replacement, Air Conditioning System Replacement & AC System Removal",
-    "alternateName": ["AC Installation", "Air Conditioning Installation", "New AC System", "Air Conditioner Replacement Near Me", "AC System Dismantlement", "Air Conditioning System Removal", "Old AC Removal"],
-    "description": "Full air conditioning system replacements, new AC installations, and old AC system dismantlement and removal across Miami-Dade and Broward County. Includes duct review, proper line-set practices, permitting, high-efficiency unit options, heat pumps, complete system removal of old units, and homeowner orientation. Serving Coral Gables, Pinecrest, Palmetto Bay, Weston, Parkland, Coral Springs, Plantation, Coconut Grove, South Miami, Kendall, Doral, Miami Lakes, and all surrounding suburban communities.",
+    "alternateName": [
+      "AC Installation", "Air Conditioning Installation", "New AC System", "Air Conditioner Replacement Near Me",
+      "AC System Dismantlement", "Air Conditioning System Removal", "Old AC Removal",
+      "Instalación de Aire Acondicionado", "Reemplazo de Aire Acondicionado",
+      "Cambio de Aire Acondicionado", "Aire Acondicionado Nuevo", "Instalar Aire Acondicionado Miami"
+    ],
+    "description": "Full air conditioning system replacements, new AC installations — instalación de aire acondicionado — and old AC system dismantlement and removal across Miami-Dade and Broward County. Includes duct review, proper line-set practices, permitting, high-efficiency unit options, heat pumps, complete system removal of old units, and homeowner orientation. Se habla español. Serving Coral Gables, Pinecrest, Palmetto Bay, Weston, Parkland, Coral Springs, Plantation, Coconut Grove, South Miami, Kendall, Doral, Miami Lakes, and all surrounding suburban communities.",
+    "availableLanguage": ["English", "Spanish"],
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -330,8 +364,16 @@
     "@type": "Service",
     "serviceType": "Air Conditioning Maintenance",
     "name": "AC Maintenance, Air Conditioning Tune-Up & AC Cleaning",
-    "alternateName": ["AC Tune-Up", "Air Conditioning Tune-Up", "HVAC Maintenance", "AC Maintenance Near Me", "Air Conditioning Service Near Me", "AC Cleaning", "Air Conditioner Cleaning", "AC Coil Cleaning", "Air Conditioning Cleaning Near Me", "A/C Preventive Maintenance"],
-    "description": "Planned air conditioning maintenance, AC tune-ups, AC cleaning, and HVAC maintenance programs designed for South Florida's long and demanding cooling seasons. Includes evaporator and condenser coil cleaning, air conditioner cleaning, refrigerant check, electrical inspection, drain line flush, and filter replacement. Priority response for maintenance program members. Serving all suburban communities in Miami-Dade and Broward including Weston, Coral Springs, Parkland, Plantation, Kendall, Pinecrest, Palmetto Bay, Coral Gables, Doral, Miami Lakes, and more.",
+    "alternateName": [
+      "AC Tune-Up", "Air Conditioning Tune-Up", "HVAC Maintenance", "AC Maintenance Near Me",
+      "Air Conditioning Service Near Me", "AC Cleaning", "Air Conditioner Cleaning",
+      "AC Coil Cleaning", "Air Conditioning Cleaning Near Me", "A/C Preventive Maintenance",
+      "Mantenimiento de Aire Acondicionado", "Limpieza de Aire Acondicionado",
+      "Mantenimiento de AC", "Servicio de Mantenimiento de Aire Acondicionado",
+      "Limpieza de AC", "Mantenimiento Preventivo de Aire Acondicionado"
+    ],
+    "description": "Planned air conditioning maintenance, AC tune-ups, AC cleaning — mantenimiento y limpieza de aire acondicionado — and HVAC maintenance programs designed for South Florida's long and demanding cooling seasons. Includes evaporator and condenser coil cleaning, air conditioner cleaning, refrigerant check, electrical inspection, drain line flush, and filter replacement. Priority response for maintenance program members. Se habla español. Serving all suburban communities in Miami-Dade and Broward including Weston, Coral Springs, Parkland, Plantation, Kendall, Pinecrest, Palmetto Bay, Coral Gables, Doral, Miami Lakes, and more.",
+    "availableLanguage": ["English", "Spanish"],
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -375,8 +417,14 @@
     "@type": "Service",
     "serviceType": "Emergency Air Conditioning Repair",
     "name": "Emergency AC Repair & Emergency Air Conditioning Repair",
-    "alternateName": ["Emergency AC Service", "24 Hour AC Repair", "After Hours AC Repair", "Emergency Air Conditioner Repair Near Me"],
-    "description": "After-hours and weekend emergency AC repair and emergency air conditioning service across Miami-Dade and Broward County. When your air conditioner stops working in South Florida's heat, we respond fast. Available outside standard business hours at premium rates. Call (786) 361-9783 for emergency AC service in Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines, Miramar, Weston, Coral Springs, and all surrounding areas.",
+    "alternateName": [
+      "Emergency AC Service", "24 Hour AC Repair", "After Hours AC Repair", "Emergency Air Conditioner Repair Near Me",
+      "Reparación de Emergencia de Aire Acondicionado", "Arreglo de Emergencia de AC",
+      "Aire Acondicionado Roto Emergencia", "Urgente Aire Acondicionado",
+      "Mi Aire se Dañó", "Aire Acondicionado no Enciende"
+    ],
+    "description": "After-hours and weekend emergency AC repair — reparación de emergencia de aire acondicionado — across Miami-Dade and Broward County. When your air conditioner stops working in South Florida's heat, we respond fast. Available outside standard business hours at premium rates. Se habla español. Call (786) 361-9783 for emergency AC service in Miami, Hialeah, Doral, Kendall, Coral Gables, Pembroke Pines, Miramar, Weston, Coral Springs, and all surrounding areas.",
+    "availableLanguage": ["English", "Spanish"],
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -416,8 +464,14 @@
     "@type": "Service",
     "serviceType": "Ductless Mini-Split Installation and Repair",
     "name": "Ductless Mini-Split AC & Heating Installation and Repair",
-    "alternateName": ["Mini Split Installation", "Mini Split Repair", "Ductless AC Installation", "Ductless Air Conditioning Installation Near Me", "Ductless Heating and Cooling", "Ductless Heating & AC Services", "Mini Split Heating", "Ductless HVAC Installation"],
-    "description": "Ductless mini-split air conditioning and heating installation and repair for homes, condos, additions, garages, and small commercial spaces across South Florida. Energy-efficient single-zone and multi-zone ductless heating and cooling systems on all major brands including Mitsubishi, Daikin, LG, and Samsung. Serving Miami, Hialeah, Doral, Coral Gables, Kendall, Pinecrest, Palmetto Bay, Weston, Plantation, Coral Springs, Coconut Grove, South Miami, and surrounding communities in Miami-Dade and Broward County.",
+    "alternateName": [
+      "Mini Split Installation", "Mini Split Repair", "Ductless AC Installation", "Ductless Air Conditioning Installation Near Me",
+      "Ductless Heating and Cooling", "Ductless Heating & AC Services", "Mini Split Heating", "Ductless HVAC Installation",
+      "Instalación de Mini Split", "Reparación de Mini Split", "Mini Split Miami",
+      "Aire Acondicionado Mini Split", "Instalación de Aire Acondicionado Sin Ductos"
+    ],
+    "description": "Ductless mini-split air conditioning and heating installation and repair — instalación de mini split — for homes, condos, additions, garages, and small commercial spaces across South Florida. Energy-efficient single-zone and multi-zone ductless heating and cooling systems on all major brands including Mitsubishi, Daikin, LG, and Samsung. Se habla español. Serving Miami, Hialeah, Doral, Coral Gables, Kendall, Pinecrest, Palmetto Bay, Weston, Plantation, Coral Springs, Coconut Grove, South Miami, and surrounding communities in Miami-Dade and Broward County.",
+    "availableLanguage": ["English", "Spanish"],
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -457,8 +511,15 @@
     "@type": "Service",
     "serviceType": "Smart Thermostat Installation",
     "name": "Smart Thermostat Installation, Repair & Zoning Systems",
-    "alternateName": ["Nest Thermostat Installation", "Ecobee Installation", "AC Thermostat Replacement", "Smart Thermostat Installation Near Me", "Thermostat Repair", "Thermostat Repair Near Me", "AC Thermostat Repair", "Install Thermostat", "Thermostat Not Working"],
-    "description": "Professional smart thermostat installation, thermostat repair, and zoning system upgrades for homes and businesses across South Florida. We install and repair Nest, Ecobee, Honeywell, and all major thermostat brands. Multi-zone systems installed and configured. If your thermostat is not working, not responding, or showing wrong temperatures, we diagnose and repair it same or next day. Serving Miami, Coral Gables, Pinecrest, Palmetto Bay, Kendall, Doral, Weston, Parkland, Coral Springs, Plantation, and all surrounding areas in Miami-Dade and Broward County.",
+    "alternateName": [
+      "Nest Thermostat Installation", "Ecobee Installation", "AC Thermostat Replacement",
+      "Smart Thermostat Installation Near Me", "Thermostat Repair", "Thermostat Repair Near Me",
+      "AC Thermostat Repair", "Install Thermostat", "Thermostat Not Working",
+      "Instalación de Termostato", "Reparación de Termostato", "Termostato no Funciona",
+      "Cambio de Termostato", "Termostato Inteligente Miami"
+    ],
+    "description": "Professional smart thermostat installation, thermostat repair — instalación y reparación de termostato — and zoning system upgrades for homes and businesses across South Florida. We install and repair Nest, Ecobee, Honeywell, and all major thermostat brands. Multi-zone systems installed and configured. If your thermostat is not working, not responding, or showing wrong temperatures, we diagnose and repair it same or next day. Se habla español. Serving Miami, Coral Gables, Pinecrest, Palmetto Bay, Kendall, Doral, Weston, Parkland, Coral Springs, Plantation, and all surrounding areas in Miami-Dade and Broward County.",
+    "availableLanguage": ["English", "Spanish"],
     "provider": {
       "@type": "HVACBusiness",
       "name": "Universe Services",
@@ -527,7 +588,13 @@
     "@type": "Service",
     "serviceType": "Air Conditioning Services",
     "name": "Air Conditioning Services Near Me — South Florida",
-    "alternateName": ["AC Services Near Me", "HVAC Services Near Me", "AC Company Near Me", "Air Conditioning Company Near Me"],
+    "alternateName": [
+      "AC Services Near Me", "HVAC Services Near Me", "AC Company Near Me", "Air Conditioning Company Near Me",
+      "Servicios de Aire Acondicionado Miami", "Empresa de Aire Acondicionado Miami",
+      "Técnico de Aire Acondicionado Cerca de Mi", "Reparación de Aire Acondicionado Cerca de Mi",
+      "Arreglo de AC Cerca de Mi", "Se Habla Español Aire Acondicionado"
+    ],
+    "availableLanguage": ["English", "Spanish"],
     "description": "Universe Services is a family-owned air conditioning company providing AC repair, air conditioning repair, AC replacement, air conditioning installation, AC maintenance, air conditioning tune-ups, ductless mini-split installation, and smart thermostat services across Miami-Dade and Broward County. We serve Miami, Hialeah, Hialeah Gardens, Doral, Kendall, West Kendall, Coral Gables, Pinecrest, Palmetto Bay, Cutler Bay, South Miami, Coconut Grove, Westchester, Fontainebleau, Tamiami, Miami Lakes, Miami Gardens, Sweetwater, Homestead, Pembroke Pines, Miramar, Weston, Cooper City, Davie, Plantation, Sunrise, Coral Springs, Parkland, Coconut Creek, and Tamarac.",
     "provider": {
       "@type": "HVACBusiness",
@@ -2273,9 +2340,15 @@
       <div class="container hero-inner">
         <div class="hero-grid">
           <div>
-            <div class="hero-tag">
-              <span class="hero-tag-dot"></span>
-              Mechanical Contractor — Miami
+            <div style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:1.4rem;animation:fadeUp .5s var(--ease2) .1s both;">
+              <div class="hero-tag" style="margin-bottom:0;animation:none;">
+                <span class="hero-tag-dot"></span>
+                Mechanical Contractor — Miami
+              </div>
+              <div style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.5);border-radius:99px;padding:.35rem .9rem;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;box-shadow:0 0 8px rgba(245,158,11,.9);flex-shrink:0;display:block;"></span>
+                <span style="font-size:.7rem;font-weight:700;color:#fde68a;letter-spacing:.12em;text-transform:uppercase;">Se habla español</span>
+              </div>
             </div>
 
             <h1 class="hero-headline">
@@ -2854,6 +2927,20 @@
     </section>
 
   </main>
+
+  <!-- Spanish SEO content block — visible to Google, styled as a subtle footer note -->
+  <div style="background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.04);padding:2rem 0;" aria-label="Servicio en español">
+    <div class="container" style="text-align:center;">
+      <p style="font-size:.78rem;color:rgba(255,255,255,.28);line-height:1.9;max-width:780px;margin:0 auto;">
+        <strong style="color:rgba(255,255,255,.45);">Servicio en español disponible.</strong>
+        Universe Services ofrece reparación de aire acondicionado, arreglo de AC, instalación de aire acondicionado,
+        mantenimiento de aire acondicionado, y limpieza de AC en Miami, Hialeah, Doral, Kendall, Coral Gables,
+        Pembroke Pines, Miramar, Weston, Miami Lakes, Pinecrest, Palmetto Bay y toda el área de Miami-Dade y Broward.
+        Si su aire acondicionado no enfría, no enciende, hace ruido, o tiene una emergencia —
+        llámenos al (786) 361-9783. Técnicos de aire acondicionado disponibles el mismo día.
+      </p>
+    </div>
+  </div>
 
   <!-- ─── FOOTER ────────────────────────────── -->
   <footer>

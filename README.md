@@ -134,8 +134,8 @@
       "ratingValue": "5",
       "bestRating": "5",
       "worstRating": "1",
-      "ratingCount": "5",
-      "reviewCount": "5"
+      "ratingCount": "10",
+      "reviewCount": "10"
     },
     "review": [
       {
@@ -164,9 +164,21 @@
       },
       {
         "@type": "Review",
-        "author": { "@type": "Person", "name": "Carlos Nieves" },
+        "author": { "@type": "Person", "name": "Kevin Gesto" },
         "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "5-star rating."
+        "reviewBody": "Los trabajadores son buenas gente y honesta. Me arreglaron el aire acondicionado roto en el mismo día en el mejor precio que encontré. Los recomiendo."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Dio" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Was having leaking issues with my AC and Universe AC Repair did a great job of helping me with a permanent fix! Would highly recommend."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Steffano Ruta" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Needed a last minute check on our AC unit when it stopped working overnight and AC Repair Services were able to show up same day to diagnose and fix the problem. Incredibly efficient and affordable pricing, highly recommended."
       }
     ],
     "knowsAbout": [
@@ -1726,8 +1738,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.25rem;
-      max-width: 780px;
-      margin: 0 auto;
     }
 
     .review-card {
@@ -2651,7 +2661,7 @@
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <span class="reviews-rating-text">5.0 &nbsp;·&nbsp; 5 reviews</span>
+            <span class="reviews-rating-text">5.0 &nbsp;·&nbsp; 10+ reviews</span>
             <span class="reviews-rating-source">
               <span class="google-g"></span>
               Google
@@ -2721,7 +2731,7 @@
 
         </div>
 
-        <!-- Bottom row — 2 cards centered -->
+        <!-- Bottom row — 4 cards, 2 columns -->
         <div class="reviews-grid-bottom">
 
           <div class="review-card">
@@ -2752,12 +2762,50 @@
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <p class="review-quote"></p>
+            <p class="review-quote">Los trabajadores son buenas gente y honesta. Me arreglaron el aire acondicionado roto en el mismo día en el mejor precio que encontré. Los recomiendo.</p>
             <div class="review-author">
-              <div class="review-avatar">C</div>
+              <div class="review-avatar">K</div>
               <div>
-                <div class="review-name">Carlos Nieves</div>
-                <div class="review-meta">Google Review</div>
+                <div class="review-name">Kevin Gesto</div>
+                <div class="review-meta">Google Review &nbsp;·&nbsp; 4 reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-google-badge"><span class="google-g"></span> Google</div>
+            <div class="review-card-stars">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-quote">Was having leaking issues with my AC and Universe AC Repair did a great job of helping me with a permanent fix! Would highly recommend.</p>
+            <div class="review-author">
+              <div class="review-avatar">D</div>
+              <div>
+                <div class="review-name">Dio</div>
+                <div class="review-meta">Google Review &nbsp;·&nbsp; 7 reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-google-badge"><span class="google-g"></span> Google</div>
+            <div class="review-card-stars">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-quote">Needed a last minute check on our AC unit when it stopped working overnight and AC Repair Services were able to show up same day to diagnose and fix the problem. Incredibly efficient and affordable pricing, highly recommended.</p>
+            <div class="review-author">
+              <div class="review-avatar">S</div>
+              <div>
+                <div class="review-name">Steffano Ruta</div>
+                <div class="review-meta">Google Review &nbsp;·&nbsp; 6 reviews</div>
               </div>
             </div>
           </div>

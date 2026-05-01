@@ -756,6 +756,87 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* ─── ADA / ACCESSIBILITY ────────────────── */
+
+    /* Screen-reader-only utility — visually hidden but accessible */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Skip to main content link — visible only on focus */
+    .skip-link {
+      position: fixed;
+      top: -100%;
+      left: 1rem;
+      z-index: 9999;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: .9rem;
+      padding: .75rem 1.4rem;
+      border-radius: 0 0 10px 10px;
+      text-decoration: none;
+      transition: top .15s;
+      outline: 3px solid var(--cyan);
+      outline-offset: 2px;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Global focus indicator — keyboard users must always see focus */
+    :focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Override outline:none on inputs — use our styled focus instead */
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 0;
+    }
+
+    /* Buttons and links need visible focus */
+    .btn:focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 3px;
+    }
+    .nav-links a:focus-visible,
+    .nav-mobile-inner a:focus-visible,
+    .footer-links-list a:focus-visible,
+    .footer-bottom-links a:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+    .nav-toggle:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 3px;
+    }
+    .service-cta:focus-visible,
+    .reviews-cta a:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Minimum touch target size — 44x44px per WCAG 2.5.5 */
+    .service-cta {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .floating-call a {
+      min-height: 44px;
+    }
+
     html {
       scroll-behavior: smooth;
       font-size: 16px;
@@ -2248,6 +2329,9 @@
 </head>
 <body>
 
+  <!-- ─── SKIP NAVIGATION (ADA) ─────────────────── -->
+  <a href="#home" class="skip-link">Skip to main content</a>
+
   <!-- ─── NAVBAR ──────────────────────────────── -->
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
@@ -2267,8 +2351,8 @@
         <a href="#contact" class="btn btn-primary" style="padding:.5rem 1.2rem;font-size:.8rem;">Request Service</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <div class="hamburger"><span></span><span></span><span></span></div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMobile">
+        <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
       </button>
     </div>
   </header>
@@ -2516,7 +2600,7 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
               </div>
-              <div class="service-name">Diagnostics &amp; Repair</div>
+              <h3 class="service-name">Diagnostics &amp; Repair</h3>
               <p class="service-desc">Troubleshooting no-cool calls, water leaks, electrical issues, and comfort problems on all major brands — most resolved in a single visit.</p>
               <div class="service-tags">
                 <span class="service-tag">Same / Next-day</span>
@@ -2536,7 +2620,7 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               </div>
-              <div class="service-name">System Replacements &amp; Removal</div>
+              <h3 class="service-name">System Replacements &amp; Removal</h3>
               <p class="service-desc">Full change-outs with duct review, proper line-set practices, and permitting. Includes complete removal and disposal of old equipment and a thorough homeowner orientation upon completion.</p>
               <div class="service-tags">
                 <span class="service-tag">High-efficiency</span>
@@ -2557,7 +2641,7 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M14.66 7.34a6 6 0 0 1 0 9.32M9.34 7.34a6 6 0 0 0 0 9.32M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
               </div>
-              <div class="service-name">Controls, Thermostats &amp; Zoning</div>
+              <h3 class="service-name">Controls, Thermostats &amp; Zoning</h3>
               <p class="service-desc">Thermostat installation and repair, zoning system upgrades, and controls for homes, rentals, and small commercial spaces — manage comfort from anywhere.</p>
               <div class="service-tags">
                 <span class="service-tag">Nest &amp; Ecobee</span>
@@ -2577,7 +2661,7 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect width="6" height="4" x="9" y="3" rx="2"/><path d="m9 14 2 2 4-4"/></svg>
               </div>
-              <div class="service-name">Maintenance &amp; AC Cleaning</div>
+              <h3 class="service-name">Maintenance &amp; AC Cleaning</h3>
               <p class="service-desc">Planned tune-ups, coil and unit cleaning, refrigerant checks, and drain flushes to keep your system running reliably through South Florida's long cooling season.</p>
               <div class="service-tags">
                 <span class="service-tag">AC cleaning</span>
@@ -2598,7 +2682,7 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 8h2"/><path d="M15 8h2"/><path d="M11 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0"/></svg>
               </div>
-              <div class="service-name">Ductless Mini-Splits &amp; Heating</div>
+              <h3 class="service-name">Ductless Mini-Splits &amp; Heating</h3>
               <p class="service-desc">Single-zone and multi-zone ductless mini-split AC and heating systems for rooms, additions, garages, condos, and small commercial spaces. Installation and repair on all major brands.</p>
               <div class="service-tags">
                 <span class="service-tag">Mitsubishi &amp; Daikin</span>
@@ -2618,7 +2702,7 @@
               <div class="service-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
               </div>
-              <div class="service-name">Portable A/C Services</div>
+              <h3 class="service-name">Portable A/C Services</h3>
               <p class="service-desc">Portable air conditioning unit setup, repair, and maintenance across South Florida. We service all portable A/C brands and help with proper installation for maximum efficiency.</p>
               <div class="service-tags">
                 <span class="service-tag">All portable brands</span>
@@ -2799,25 +2883,25 @@
 
         <div class="process-grid">
           <div class="process-step">
-            <div class="process-bg-num">01</div>
+            <div class="process-bg-num" aria-hidden="true">01</div>
             <div class="process-num">1</div>
             <div class="process-step-title">Reach Out</div>
             <p class="process-step-text">Call us or submit a request online. We get back to you fast — no hold music, no runaround.</p>
           </div>
           <div class="process-step">
-            <div class="process-bg-num">02</div>
+            <div class="process-bg-num" aria-hidden="true">02</div>
             <div class="process-num">2</div>
             <div class="process-step-title">Diagnose</div>
             <p class="process-step-text">Our tech inspects the system, explains the issue in plain language, and gives upfront pricing — before any work starts.</p>
           </div>
           <div class="process-step">
-            <div class="process-bg-num">03</div>
+            <div class="process-bg-num" aria-hidden="true">03</div>
             <div class="process-num">3</div>
             <div class="process-step-title">Repair or Replace</div>
             <p class="process-step-text">We complete the work cleanly and efficiently, respecting your home and your schedule.</p>
           </div>
           <div class="process-step">
-            <div class="process-bg-num">04</div>
+            <div class="process-bg-num" aria-hidden="true">04</div>
             <div class="process-num">4</div>
             <div class="process-step-title">Stay Supported</div>
             <p class="process-step-text">We're available long after the job is done. Call us any time if something comes up.</p>
@@ -2851,7 +2935,7 @@
               <div class="field-row">
                 <div class="field">
                   <label for="name">Full Name</label>
-                  <input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name" />
+                  <input id="name" name="name" type="text" placeholder="Your name" required aria-required="true" autocomplete="name" />
                 </div>
                 <div class="field">
                   <label for="phone">Mobile Phone</label>
@@ -2862,7 +2946,7 @@
               <div class="field-row">
                 <div class="field">
                   <label for="email">Email</label>
-                  <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required aria-required="true" autocomplete="email" />
                 </div>
                 <div class="field">
                   <label for="city">Address</label>
@@ -2903,7 +2987,7 @@
               <div class="form-footer">
                 <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:.82rem 1.5rem;font-size:.9rem;">Submit Request</button>
                 <p class="form-disclaimer">By submitting you agree we may contact you by phone, text, or email regarding your request.</p>
-                <div id="formMsg" style="display:none;text-align:center;margin-top:.8rem;padding:.75rem 1rem;border-radius:10px;font-size:.84rem;font-weight:500;"></div>
+                <div id="formMsg" role="status" aria-live="polite" style="display:none;text-align:center;margin-top:.8rem;padding:.75rem 1rem;border-radius:10px;font-size:.84rem;font-weight:500;"></div>
               </div>
             </form>
           </div>
@@ -3033,10 +3117,12 @@
       navMobile.style.top = navbar.getBoundingClientRect().height + 'px';
       navMobile.style.display = 'block';
       navToggle.classList.add('active');
+      navToggle.setAttribute('aria-expanded', 'true');
     }
     function closeMenu() {
       navMobile.style.display = 'none';
       navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
     }
     navToggle.addEventListener('click', function() {
       navMobile.style.display === 'block' ? closeMenu() : openMenu();
@@ -3285,6 +3371,15 @@
       draw(needle);
       requestAnimationFrame(frame);
     })();
+
+    // ── ADA: mark decorative SVGs as hidden from screen readers ──
+    document.querySelectorAll('svg').forEach(function(svg) {
+      if (!svg.getAttribute('role') && !svg.getAttribute('aria-label') && !svg.getAttribute('aria-labelledby')) {
+        svg.setAttribute('aria-hidden', 'true');
+        svg.setAttribute('focusable', 'false');
+      }
+    });
+
   </script>
 </body>
 </html>
